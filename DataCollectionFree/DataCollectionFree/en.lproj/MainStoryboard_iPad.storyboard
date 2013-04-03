@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <deployment version="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Sqy-cw-a4T">
+                                <rect key="frame" x="20" y="116" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="1Ax-bj-JfH">
+                                <rect key="frame" x="20" y="155" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="C36-3q-Lkf">
+                                <rect key="frame" x="20" y="195" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="dbw-NT-XLh">
+                                <rect key="frame" x="587" y="105" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="7bM-5S-4wc">
+                                <rect key="frame" x="587" y="144" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="N8R-4C-FFx">
+                                <rect key="frame" x="587" y="184" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="lLN-xl-opV">
+                                <rect key="frame" x="20" y="263" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="eNw-LV-dkD">
+                                <rect key="frame" x="20" y="302" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="AK1-dl-qsy">
+                                <rect key="frame" x="20" y="343" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="m28-Rx-nrT">
+                                <rect key="frame" x="587" y="252" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="9ca-Iz-dZH">
+                                <rect key="frame" x="587" y="291" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="uFM-wH-NoE">
+                                <rect key="frame" x="587" y="332" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="VW9-8G-6UU">
+                                <rect key="frame" x="20" y="411" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="URw-y7-jfA">
+                                <rect key="frame" x="20" y="450" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="oVS-Ht-BVF">
+                                <rect key="frame" x="20" y="491" width="548" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="PNI-b8-CUw">
+                                <rect key="frame" x="587" y="400" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="1Mn-6i-KkY">
+                                <rect key="frame" x="587" y="439" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4IG-aN-NIj">
+                                <rect key="frame" x="587" y="480" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="le7-ay-WLR">
+                                <rect key="frame" x="669" y="54" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="isRecording:" destination="2" eventType="valueChanged" id="djZ-fN-Z0l"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recording" lineBreakMode="tailTruncation" minimumFontSize="10" id="nh4-5g-D9M">
+                                <rect key="frame" x="549" y="49" width="112" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Roll:" lineBreakMode="tailTruncation" minimumFontSize="18" id="TId-v8-9fI">
+                                <rect key="frame" x="20" y="568" width="350" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="72"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pitch:" lineBreakMode="tailTruncation" minimumFontSize="18" id="8rb-Hd-7lU">
+                                <rect key="frame" x="20" y="676" width="350" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="72"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="18" id="Net-EA-wP3">
+                                <rect key="frame" x="20" y="784" width="350" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="72"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vYU-PJ-Uc0">
+                                <rect key="frame" x="0.0" y="938" width="768" height="66"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Accelerometer" lineBreakMode="tailTruncation" minimumFontSize="10" id="ni5-Sw-45C">
+                                <rect key="frame" x="237" y="77" width="123" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gyroscope" lineBreakMode="tailTruncation" minimumFontSize="10" id="aAB-Vx-igJ">
+                                <rect key="frame" x="252" y="224" width="123" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Magnetometer" lineBreakMode="tailTruncation" minimumFontSize="10" id="Ein-zo-M1W">
+                                <rect key="frame" x="237" y="372" width="123" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="axes.png" id="Qc6-tP-9vi">
+                                <rect key="frame" x="429" y="564" width="279" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-X" lineBreakMode="tailTruncation" minimumFontSize="10" id="usi-44-GOM">
+                                <rect key="frame" x="406" y="661" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Y" lineBreakMode="tailTruncation" minimumFontSize="10" id="gbT-Es-5Kn">
+                                <rect key="frame" x="546" y="539" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Y" lineBreakMode="tailTruncation" minimumFontSize="10" id="0qP-Lf-iYN">
+                                <rect key="frame" x="546" y="887" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Z" lineBreakMode="tailTruncation" minimumFontSize="10" id="XO4-dt-VHo">
+                                <rect key="frame" x="397" y="777" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Z" lineBreakMode="tailTruncation" minimumFontSize="10" id="z8S-jC-D8P">
+                                <rect key="frame" x="706" y="640" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+X" lineBreakMode="tailTruncation" minimumFontSize="10" id="MOs-nb-qFF">
+                                <rect key="frame" x="706" y="772" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="6in-0r-PiI">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Sensors" id="JXJ-Yy-EdM">
+                                        <barButtonItem key="leftBarButtonItem" title="Rate Us!" id="0yI-UF-MpR">
+                                            <connections>
+                                                <action selector="userClickedRateUs:" destination="2" id="ftg-17-M86"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" id="AZT-Q5-RdU">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Pc3-Ws-ynP">
+                                                <rect key="frame" x="743" y="12" width="18" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="sed-u4-mng" kind="modal" modalTransitionStyle="coverVertical" id="ukZ-Hk-Xl4"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="vYU-PJ-Uc0" id="rLL-ZJ-MTy"/>
+                        <outlet property="info" destination="Pc3-Ws-ynP" id="pbo-JT-nCb"/>
+                        <outlet property="pitch" destination="8rb-Hd-7lU" id="YRT-h1-t3F"/>
+                        <outlet property="recording" destination="le7-ay-WLR" id="bDh-mn-2jf"/>
+                        <outlet property="roll" destination="TId-v8-9fI" id="pQe-vL-B8N"/>
+                        <outlet property="x_accel" destination="Sqy-cw-a4T" id="3ma-xh-5zW"/>
+                        <outlet property="x_accel_label" destination="dbw-NT-XLh" id="YK3-2W-8uK"/>
+                        <outlet property="x_gyro" destination="lLN-xl-opV" id="Vfr-kN-UQn"/>
+                        <outlet property="x_gyro_label" destination="m28-Rx-nrT" id="WEx-hW-igJ"/>
+                        <outlet property="x_mag" destination="VW9-8G-6UU" id="gHp-z7-vWx"/>
+                        <outlet property="x_mag_label" destination="PNI-b8-CUw" id="htV-VS-3E9"/>
+                        <outlet property="y_accel" destination="1Ax-bj-JfH" id="eC0-AA-9Gb"/>
+                        <outlet property="y_accel_label" destination="7bM-5S-4wc" id="ETl-Sk-i6R"/>
+                        <outlet property="y_gyro" destination="eNw-LV-dkD" id="bse-IW-McF"/>
+                        <outlet property="y_gyro_label" destination="9ca-Iz-dZH" id="ZFk-5B-1gI"/>
+                        <outlet property="y_mag" destination="URw-y7-jfA" id="9NN-Uv-Xbn"/>
+                        <outlet property="y_mag_label" destination="1Mn-6i-KkY" id="DTk-6l-wQY"/>
+                        <outlet property="yaw" destination="Net-EA-wP3" id="yMk-y0-Tgg"/>
+                        <outlet property="z_accel" destination="C36-3q-Lkf" id="Vqr-E5-0Ca"/>
+                        <outlet property="z_accel_label" destination="N8R-4C-FFx" id="pG4-Mh-Lz8"/>
+                        <outlet property="z_gyro" destination="AK1-dl-qsy" id="If6-cF-s37"/>
+                        <outlet property="z_gyro_label" destination="uFM-wH-NoE" id="Lf5-GR-qQi"/>
+                        <outlet property="z_mag" destination="oVS-Ht-BVF" id="4b5-VF-2Ld"/>
+                        <outlet property="z_mag_label" destination="4IG-aN-NIj" id="yBg-BD-bc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-28"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="5He-fe-azw">
+            <objects>
+                <viewController id="sed-u4-mng" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPc-0B-2ut">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="LZI-45-GJA">
+                                <rect key="frame" x="20" y="66" width="728" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This app records accelerometer, gyroscope, and magnetometer data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="axes.png" id="Fqq-V5-87f">
+                                <rect key="frame" x="245" y="190" width="279" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-X" lineBreakMode="tailTruncation" minimumFontSize="10" id="Uei-CS-9Cu">
+                                <rect key="frame" x="222" y="287" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Y" lineBreakMode="tailTruncation" minimumFontSize="10" id="7dJ-cZ-JNx">
+                                <rect key="frame" x="362" y="165" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Y" lineBreakMode="tailTruncation" minimumFontSize="10" id="c4v-za-MJT">
+                                <rect key="frame" x="362" y="513" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Z" lineBreakMode="tailTruncation" minimumFontSize="10" id="O8s-Gk-WFb">
+                                <rect key="frame" x="213" y="403" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Z" lineBreakMode="tailTruncation" minimumFontSize="10" id="WPt-kS-Dl0">
+                                <rect key="frame" x="522" y="266" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+X" lineBreakMode="tailTruncation" minimumFontSize="10" id="ib3-P2-knt">
+                                <rect key="frame" x="522" y="398" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="piM-T1-x2d">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Info" id="q5m-Ej-fN6">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="lId-7y-H49">
+                                            <connections>
+                                                <action selector="goBack" destination="sed-u4-mng" id="qng-mz-EYK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uas-y4-rHd">
+                                <rect key="frame" x="0.0" y="938" width="768" height="66"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="uas-y4-rHd" id="r4h-Cg-Va1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pac-Q2-5AX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="axes.png" width="320" height="360"/>
+    </resources>
+    <classes>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goBack"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailResults"/>
+                <relationship kind="action" name="isRecording:"/>
+                <relationship kind="action" name="userClickedRateUs:"/>
+                <relationship kind="outlet" name="back" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="info" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pitch" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recording" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="roll" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_mag_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_mag_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yaw" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_mag_label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

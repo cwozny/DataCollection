@@ -83,7 +83,7 @@ int samplingFrequency = 1;
     navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"ConfigTitle", nil)];
     goButton.title = [NSString stringWithFormat:NSLocalizedString(@"GoButton", nil)];
     rateUsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    rateUsButton.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)];
+    [rateUsButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)] forState:UIControlStateNormal];
 }
 
 

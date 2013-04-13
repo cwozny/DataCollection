@@ -251,11 +251,11 @@ double startup = 0;
 
 -(IBAction)emailResults
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Results" 
-                                                    message:@"Would you like to email the collected data?" 
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Results", nil)]
+                                                    message:[NSString stringWithFormat:NSLocalizedString(@"Email", nil)]
                                                     delegate:self
-                                                    cancelButtonTitle:@"Yes"
-                                                    otherButtonTitles:@"No",
+                                                    cancelButtonTitle:[NSString stringWithFormat:NSLocalizedString(@"Yes", nil)]
+                                                    otherButtonTitles:[NSString stringWithFormat:NSLocalizedString(@"No", nil)],
                                                     nil];
     [alert show];
 }
@@ -269,11 +269,11 @@ double startup = 0;
         [mailComposer setMailComposeDelegate:self];
         [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
 #ifdef FREE_VERSION
-        [mailComposer setSubject:@"Accelerometer, Gyroscope, and Magnetometer data from Data Collection Free App"];
-        [mailComposer setMessageBody:@"I've attached 10 seconds of collected data from the free version of the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">here</a>." isHTML:YES];
+        [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectFree", nil)]];
+        [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyFree", nil)] isHTML:YES];
 #else
-        [mailComposer setSubject:@"Accelerometer, Gyroscope, Magnetometer, and GPS data from Data Collection App"];
-        [mailComposer setMessageBody:@"I've attached the collected data from the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) GPS is ordered as latitude, longitude, and altitude (meters). You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">here</a>." isHTML:YES];
+        [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectPaid", nil)]];
+        [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyPaid", nil)] isHTML:YES];
 #endif
         NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
         [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.txt",dateString]];
@@ -297,7 +297,9 @@ double startup = 0;
 		data = [[NSMutableString alloc] init];
         data = [NSMutableString stringWithString:@""];
         [data appendString:[NSMutableString stringWithFormat:@"(Preferred) sampling frequency set to %d Hz.\nYour device may not support this sampling frequency, so always check your timestamps!\n",freq]];
-#ifndef FREE_VERSION
+#ifdef FREE_VERSION
+        rateButton.enabled = false;
+#else
         back.enabled = false;
 #endif
         info.enabled = false;
@@ -305,8 +307,10 @@ double startup = 0;
 	// If record data is off and data has been written to the NSArray, dump it to a file.
 	else if(!recording.on)
 	{
-#ifndef FREE_VERSION
-        back.enabled = false;
+#ifdef FREE_VERSION
+        rateButton.enabled = true;
+#else
+        back.enabled = true;
 #endif
         info.enabled = true;
 		// Get an array of all the directories in the app's bundle

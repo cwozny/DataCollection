@@ -1,0 +1,46 @@
+/*
+ Localizable.strings
+ DataCollection
+ 
+ Created by Chris Wozny on 4/13/13.
+ Copyright (c) 2013 Chris Wozny. All rights reserved.
+ */
+
+// Common
+"BackButton" = "Zurück";
+
+// Info View
+"InfoText" = "Diese App records Beschleunigungsmesser, Gyroskop, Magnetometer und GPS-Daten und schreibt sie in eine Datei in der Anwendung Documents Directory. Sie können die Datei über iTunes abrufen. Ein Referenzbild für die Geräte-Achsen ist nachfolgend dargestellt:";
+"InfoTitle" = "Information";
+
+// Config View
+"GoButton" = "Machen!";
+"ConfigTitle" = "Konfiguration";
+"SetRateText" = "Bitte stellen Sie die Abtastrate in Hertz:";
+"NoteText" = "HINWEIS: Wie schnell kann das Gerät Probe wird auf die Belastung des Gerätes (und die maximale Abtastrate des Geräts) Für die beste Leistung, schließen Sie alle Hintergrund apps, bevor Sie basiert.";
+"RateUsText" = "Wie die App? Bitte bewerten Sie es, so dass andere sich über sie als gut.";
+"RateUsButton" = "Werten";
+
+// Sensor View
+"SensorTitle" = "Sensoren";
+"AccelerometerLabel" = "Accelerometer (g)";
+"GyroscopeLabel" = "Gyroskop (rad/s)";
+"MagnetometerLabel" = "Magnetometer (μT)";
+"RecordingLabel" = "Rekord";
+"Unavailable" = "Verfügbar";
+"Pitch" = "Steigung:";
+"Roll" = "Drehen:";
+"Yaw" = "Gieren:";
+"Latitude" = "Lat:";
+"Longitude" = "Lon:";
+"Altitude" = "Alt:";
+
+// Mail View
+"Results" = "Werte";
+"Email" = "Möchten sie die gesammelten daten per E-Mail?";
+"Yes" = "Ja";
+"No" = "Nicht";
+"SubjectFree" = "Beschleunigungsmesser, Kreisel und Magnetometer Daten aus Data Collection Free App";
+"SubjectPaid" = "Beschleunigungsmesser, Kreisel, Magnetometer und GPS-Daten von Data Collection App";
+"MessageBodyPaid" = "Ich habe die gesammelten Daten aus dem Data Collection App angebracht. Die rohen Werte werden als x, y und z für die Kreisel (deg / s), Magnetometer (Mikrotesla), und Beschleunigungsmesser (g-Kraft) geordnet. Attitude (Grad) wird als Pitch, Roll und Yaw (falls vorhanden). GPS wird als Breitengrad, Längengrad und Höhe (Meter) bestellt wurden. Sie können die App <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">hier bekommen</a>.";
+"MessageBodyFree" = "Ich habe 10 Sekunden gesammelten Daten von der kostenlosen Version der Data Collection App angebracht. Die rohen Werte werden als x, y und z für die Kreisel (deg / s), Magnetometer (Mikrotesla), und Beschleunigungsmesser (g-Kraft) geordnet. Attitude (Grad) wird als Pitch, Roll und Yaw bestellt werden (falls verfügbar.) Sie können die App <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">hier bekommen</a>.";

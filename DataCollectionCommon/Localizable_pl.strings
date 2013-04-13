@@ -1,0 +1,46 @@
+/*
+ Localizable.strings
+ DataCollection
+ 
+ Created by Chris Wozny on 4/13/13.
+ Copyright (c) 2013 Chris Wozny. All rights reserved.
+ */
+
+// Common
+"BackButton" = "Powrotem";
+
+// Info View
+"InfoText" = "Ta aplikacja rekordy akcelerometr, żyroskop, magnetometr, a dane GPS i zapisuje je do pliku w katalogu aplikacji pod dokumenty. Możesz pobrać plik za pomocą programu iTunes.Obraz odniesienia dla osi urządzenia znajduje się poniżej:";
+"InfoTitle" = "Informacja";
+
+// Config View
+"GoButton" = "Iść";
+"ConfigTitle" = "Konfiguracja";
+"SetRateText" = "Proszę ustawić częstotliwość próbkowania w Hz:";
+"NoteText" = "UWAGA: Jak szybko można spróbować urządzenie jest oparte na obciążeniu urządzenia (i maksymalna prędkość próbkowania urządzenia.) Aby uzyskać najlepszą wydajność, zamknij wszystkie aplikacje tła przed użyciem.";
+"RateUsText" = "Podobnie jak w aplikacji? Proszę ocenić to, aby inni mogli dowiedzieć się o tym, jak również.";
+"RateUsButton" = "Oceń Nas";
+
+// Sensor View
+"SensorTitle" = "Czujniki";
+"AccelerometerLabel" = "Akcelerometr (g)";
+"GyroscopeLabel" = "Żyroskop (rad/s)";
+"MagnetometerLabel" = "Magnetometr (μT)";
+"RecordingLabel" = "Zapis";
+"Unavailable" = "Niedostępny";
+"Pitch" = "Pitch:";
+"Roll" = "Roll:";
+"Yaw" = "Yaw:";
+"Latitude" = "Lat:";
+"Longitude" = "Lon:";
+"Altitude" = "Alt:";
+
+// Mail View
+"Results" = "Wyniki";
+"Email" = "Chcesz wysłać zebrane dane?";
+"Yes" = "Tak";
+"No" = "Nie";
+"SubjectFree" = "Akcelerometr, żyroskop i Magnetometr danych Data Collection Free App bezpłatny";
+"SubjectPaid" = "Akcelerometr, żyroskop, Magnetometr i GPS dane z Data Collection App";
+"MessageBodyPaid" = "Mam załączeniu zgromadzone dane od aplikacji zbierania danych. Surowe wartości są sortowane jako X, Y i Z dla żyroskopu (deg / s), magnetometry (microteslas) i akcelerometry (G-force). Attitude (stopni) zarządza się, co pochylenie, przechylenie, i odchylenie (jeśli jest dostępny). GPS jest zamawiany w szerokości, długości i wysokości (metry). Można dostać się na aplikację <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">tutaj</a>.";
+"MessageBodyFree" = "Mam przypisane 10 sekund zebranych danych od wersji bezpłatnej zbierania danych aplikacji. Surowe wartości są sortowane jako X, Y i Z dla żyroskopu (deg / s), magnetometry (microteslas) i akcelerometry (G-force). Attitude (stopni) zarządza się, co pochylenie, przechylenie, i odchylenie (jeśli jest dostępny). Możesz pobrać aplikację <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">tutaj</a>.";

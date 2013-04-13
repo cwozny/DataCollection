@@ -265,8 +265,13 @@ double startup = 0;
         mailComposer  = [[MFMailComposeViewController alloc] init];
         [mailComposer setMailComposeDelegate:self];
         [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
-        [mailComposer setSubject:@"Accelerometer, Gyroscope, and Magnetometer data from Data Collection App"];
-        [mailComposer setMessageBody:@"I've attached the collected data from the Data Collection app. The raw values are ordered as x, y, and z for gyro, magnetometers, and accelerometers. Attitude is ordered as pitch, roll, and yaw (if available.) You can get it here at http://ece.arizona.edu/~cwozny/index.php/DataCollection/DataCollection" isHTML:NO];
+#ifdef FREE_VERSION
+        [mailComposer setSubject:@"Accelerometer, Gyroscope, and Magnetometer data from Data Collection Free App"];
+        [mailComposer setMessageBody:@"I've attached 10 seconds of collected data from the free version of the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">here</a>." isHTML:YES];
+#else
+        [mailComposer setSubject:@"Accelerometer, Gyroscope, Magnetometer, and GPS data from Data Collection App"];
+        [mailComposer setMessageBody:@"I've attached the collected data from the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) GPS is ordered as latitude, longitude, and altitude (meters). You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">here</a>." isHTML:YES];
+#endif
         NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
         [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.txt",dateString]];
         [self presentViewController:mailComposer animated:YES completion:nil];

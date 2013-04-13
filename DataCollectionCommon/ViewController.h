@@ -49,11 +49,7 @@
     UILabel *roll,*rollLabel;
     UILabel *pitch,*pitchLabel;
     UILabel *yaw,*yawLabel;
-    
-    UILabel *latitude,*latitudeLabel;
-    UILabel *longitude,*longitudeLabel;
-    UILabel *altitude,*altitudeLabel;
-    
+
     UILabel *accelerometerLabel,*magnetometerLabel,*gyroscopeLabel;
     
     UILabel *recordingLabel;
@@ -66,20 +62,22 @@
 
 #ifdef FREE_VERSION
     ADBannerView *bannerView;
+    UIBarButtonItem *rateButton;
 #else
     CLLocationManager *locMan;
     UIBarButtonItem *backButton;
+    UILabel *latitude,*latitudeLabel;
+    UILabel *longitude,*longitudeLabel;
+    UILabel *altitude,*altitudeLabel;
+    UIBarButtonItem *back;
 #endif
     
     UIButton *info;
-    UIBarButtonItem *back;
-    UIBarButtonItem *plot;
 }
 
 @property (nonatomic, retain) CMMotionManager *mgr;
 @property (nonatomic, retain) IBOutlet UINavigationItem *navTitle;
 @property (nonatomic, retain) IBOutlet UIButton *info;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
 @property (nonatomic, retain) IBOutlet UIProgressView *x_accel;
 @property (nonatomic, retain) IBOutlet UIProgressView *y_accel;
 @property (nonatomic, retain) IBOutlet UIProgressView *z_accel;
@@ -105,12 +103,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *rollLabel;
 @property (nonatomic, retain) IBOutlet UILabel *pitchLabel;
 @property (nonatomic, retain) IBOutlet UILabel *yawLabel;
-@property (nonatomic, retain) IBOutlet UILabel *latitude;
-@property (nonatomic, retain) IBOutlet UILabel *longitude;
-@property (nonatomic, retain) IBOutlet UILabel *altitude;
-@property (nonatomic, retain) IBOutlet UILabel *latitudeLabel;
-@property (nonatomic, retain) IBOutlet UILabel *longitudeLabel;
-@property (nonatomic, retain) IBOutlet UILabel *altitudeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *accelerometerLabel;
 @property (nonatomic, retain) IBOutlet UILabel *magnetometerLabel;
 @property (nonatomic, retain) IBOutlet UILabel *gyroscopeLabel;
@@ -118,10 +110,18 @@
 @property (nonatomic) int freq;
 #ifdef FREE_VERSION
 @property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *rateButton;
 
 -(IBAction)userClickedRateUs:(id)sender;
 #else
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
 @property (nonatomic, retain) CLLocationManager *locMan;
+@property (nonatomic, retain) IBOutlet UILabel *latitude;
+@property (nonatomic, retain) IBOutlet UILabel *longitude;
+@property (nonatomic, retain) IBOutlet UILabel *altitude;
+@property (nonatomic, retain) IBOutlet UILabel *latitudeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *longitudeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *altitudeLabel;
 #endif
 
 // Function that is called when the UISwitch recordData is toggled.

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		940EB89B1509455700645E70 /* axes.png in Resources */ = {isa = PBXBuildFile; fileRef = 940EB8981509455700645E70 /* axes.png */; };
+		943DD3DE1719487800F5C732 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 943DD3E01719487800F5C732 /* Localizable.strings */; };
 		945339601509467F009D4E97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453395F1509467F009D4E97 /* MessageUI.framework */; };
 		9453396215094685009D4E97 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453396115094685009D4E97 /* AddressBook.framework */; };
 		945339641509468E009D4E97 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945339631509468E009D4E97 /* AddressBookUI.framework */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		940EB8981509455700645E70 /* axes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = axes.png; sourceTree = "<group>"; };
+		943DD3DF1719487800F5C732 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943DD3E11719488600F5C732 /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9453394E150945B3009D4E97 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
 		9453394F150945B3009D4E97 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		94533950150945B3009D4E97 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -158,6 +161,7 @@
 				94CD37EC1509446B0068BB5A /* DataCollectionFree-Info.plist */,
 				94CD37ED1509446B0068BB5A /* InfoPlist.strings */,
 				94CD37F21509446B0068BB5A /* DataCollectionFree-Prefix.pch */,
+				943DD3E01719487800F5C732 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +201,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 94CD37D51509446A0068BB5A;
 			productRefGroup = 94CD37E11509446A0068BB5A /* Products */;
@@ -226,6 +231,7 @@
 				94B53208170BDD7C0004E3D4 /* 72x72_icon_free.png in Resources */,
 				94B5320A170BDD830004E3D4 /* 144x144_icon_free.png in Resources */,
 				94F9095A170BE1D500B9021D /* Default-568h@2x.png in Resources */,
+				943DD3DE1719487800F5C732 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +252,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		943DD3E01719487800F5C732 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				943DD3DF1719487800F5C732 /* en */,
+				943DD3E11719488600F5C732 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		94CD37ED1509446B0068BB5A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

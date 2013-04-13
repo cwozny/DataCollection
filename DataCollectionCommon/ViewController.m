@@ -16,15 +16,17 @@
 @synthesize recording;
 @synthesize pitch,roll,yaw,pitchLabel,rollLabel,yawLabel;
 @synthesize freq;
-@synthesize info,back;
-@synthesize latitude,latitudeLabel, longitude, longitudeLabel, altitude, altitudeLabel, accelerometerLabel, gyroscopeLabel, magnetometerLabel,recordingLabel;
+@synthesize info;
+@synthesize accelerometerLabel, gyroscopeLabel, magnetometerLabel,recordingLabel;
 @synthesize navTitle;
 #ifdef FREE_VERSION
-@synthesize bannerView;
+@synthesize bannerView,rateButton;
 
 int iterations = 0;
 #else
 @synthesize locMan;
+@synthesize back;
+@synthesize latitude,latitudeLabel, longitude, longitudeLabel, altitude, altitudeLabel;
 #endif
 NSMutableString *data;
 NSString *dateString;
@@ -295,14 +297,17 @@ double startup = 0;
 		data = [[NSMutableString alloc] init];
         data = [NSMutableString stringWithString:@""];
         [data appendString:[NSMutableString stringWithFormat:@"(Preferred) sampling frequency set to %d Hz.\nYour device may not support this sampling frequency, so always check your timestamps!\n",freq]];
-        
+#ifndef FREE_VERSION
         back.enabled = false;
+#endif
         info.enabled = false;
 	}
 	// If record data is off and data has been written to the NSArray, dump it to a file.
 	else if(!recording.on)
 	{
-        back.enabled = true;
+#ifndef FREE_VERSION
+        back.enabled = false;
+#endif
         info.enabled = true;
 		// Get an array of all the directories in the app's bundle
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -354,9 +359,7 @@ double startup = 0;
 
 #ifdef FREE_VERSION
     freq = 10;
-    latitudeLabel.hidden = YES;
-    longitudeLabel.hidden = YES;
-    altitudeLabel.hidden = YES;
+    rateButton.title = [NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)];
 #else
     // Initialize the location manager and set the delegate to us.
 	locMan = [[CLLocationManager alloc] init];
@@ -368,6 +371,9 @@ double startup = 0;
 	// Start updating the GPS location.
 	[locMan startUpdatingLocation];
     back.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
+    latitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Latitude", nil)];
+    longitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Longitude", nil)];
+    altitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Altitude", nil)];
 #endif
     navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"SensorTitle", nil)];
     accelerometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"AccelerometerLabel", nil)];
@@ -377,9 +383,6 @@ double startup = 0;
     pitchLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Pitch", nil)];
     rollLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Roll", nil)];
     yawLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Yaw", nil)];
-    latitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Latitude", nil)];
-    longitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Longitude", nil)];
-    altitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Altitude", nil)];
     mgr = [[CMMotionManager alloc] init];
     
     [mgr startAccelerometerUpdates];

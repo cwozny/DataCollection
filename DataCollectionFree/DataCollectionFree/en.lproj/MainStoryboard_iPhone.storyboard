@@ -334,16 +334,11 @@
                             <constraint firstItem="uvp-qv-z41" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="3Cq-Bq-5DJ"/>
                             <constraint firstItem="KiA-CW-iSo" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="47" id="3Kq-gd-8dB"/>
                             <constraint firstItem="P0W-n5-1PX" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="6GR-OS-9AZ"/>
-                            <constraint firstItem="iCy-Av-XEy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="102" type="user" id="8iu-tx-AAx"/>
-                            <constraint firstItem="Zrc-yy-Lxy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="201" type="user" id="8ze-Eq-G6N"/>
                             <constraint firstItem="Xj1-PL-LVq" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="A3k-tq-mGJ"/>
                             <constraint firstItem="GLz-kw-Qzy" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="AV8-SH-QpL"/>
                             <constraint firstItem="4Yj-za-W5e" firstAttribute="trailing" secondItem="fsI-22-EHq" secondAttribute="trailing" type="default" id="BRF-6T-T0g"/>
-                            <constraint firstItem="E9a-uU-hSK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="146" type="user" id="ByQ-A6-j1V"/>
                             <constraint firstItem="enb-XU-Ycb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="CNx-ky-HBW"/>
-                            <constraint firstItem="O5O-sN-USh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="117" type="user" id="Ces-wn-Kzu"/>
                             <constraint firstItem="GLz-kw-Qzy" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Fbx-Np-b5g"/>
-                            <constraint firstItem="aUC-PW-rnG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="227" type="user" id="Ftk-LS-FDI"/>
                             <constraint firstItem="6bK-n7-SNH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="314" type="user" id="G22-c8-Sy4"/>
                             <constraint firstItem="KiA-CW-iSo" firstAttribute="centerX" secondItem="E9a-uU-hSK" secondAttribute="centerX" type="default" id="Gct-Ud-tXa"/>
                             <constraint firstItem="enb-XU-Ycb" firstAttribute="leading" secondItem="6bK-n7-SNH" secondAttribute="leading" type="default" id="HWf-Xa-emg"/>
@@ -360,7 +355,6 @@
                             <constraint firstItem="Ous-R2-gGU" firstAttribute="trailing" secondItem="M9b-yr-Nfa" secondAttribute="trailing" type="default" id="Njg-yh-phB"/>
                             <constraint firstItem="uvp-qv-z41" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="user" id="NrX-fE-TzW"/>
                             <constraint firstItem="E9a-uU-hSK" firstAttribute="top" secondItem="Gan-ef-3ug" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="O01-TG-dYI"/>
-                            <constraint firstItem="fqg-QC-4nW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="164" type="user" id="Oi1-kY-Ohr"/>
                             <constraint firstItem="XtA-M3-kmQ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="OtY-fh-sB1"/>
                             <constraint firstItem="GNs-QN-EkF" firstAttribute="top" secondItem="aUC-PW-rnG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="PEv-a8-6lN"/>
                             <constraint firstItem="M9b-yr-Nfa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="325" type="user" id="Pta-Uk-YAt"/>
@@ -373,7 +367,6 @@
                             <constraint firstItem="yxe-lp-yq5" firstAttribute="top" secondItem="GNs-QN-EkF" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Tyc-bu-uE4"/>
                             <constraint firstAttribute="bottom" secondItem="4Yj-za-W5e" secondAttribute="bottom" constant="88" id="U6s-7Z-MQd"/>
                             <constraint firstItem="dKV-LT-6tC" firstAttribute="top" secondItem="KiA-CW-iSo" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Uj5-8d-Y1Y"/>
-                            <constraint firstItem="Gan-ef-3ug" firstAttribute="top" secondItem="3" secondAttribute="top" constant="129" type="user" id="VDO-nx-puR"/>
                             <constraint firstItem="70w-mU-VDm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="216" id="Vf8-Hw-kWl"/>
                             <constraint firstItem="9CN-tH-rBn" firstAttribute="top" secondItem="3" secondAttribute="top" constant="65" id="Vh2-WH-8QN"/>
                             <constraint firstItem="iCy-Av-XEy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="102" id="Vo9-hY-atT"/>
@@ -386,13 +379,9 @@
                             <constraint firstItem="4Yj-za-W5e" firstAttribute="leading" secondItem="xvV-Sl-5zt" secondAttribute="leading" type="default" id="aqU-8R-jF4"/>
                             <constraint firstItem="XtA-M3-kmQ" firstAttribute="leading" secondItem="fqg-QC-4nW" secondAttribute="leading" type="default" id="bZw-Zm-Tzj"/>
                             <constraint firstItem="KiA-CW-iSo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" type="user" id="coa-zU-hcC"/>
-                            <constraint firstItem="Xj1-PL-LVq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="91" type="user" id="ejA-M1-wcA"/>
                             <constraint firstItem="fqg-QC-4nW" firstAttribute="leading" secondItem="O5O-sN-USh" secondAttribute="leading" type="default" id="f1a-AB-HAu"/>
-                            <constraint firstItem="9CN-tH-rBn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="65" type="user" id="gLS-I2-pdd"/>
-                            <constraint firstItem="KiA-CW-iSo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="47" type="user" id="gNx-PZ-qH2"/>
                             <constraint firstItem="XtA-M3-kmQ" firstAttribute="leading" secondItem="70w-mU-VDm" secondAttribute="leading" type="default" id="ghT-fl-2AB"/>
                             <constraint firstItem="O5O-sN-USh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="hWc-sN-h6V"/>
-                            <constraint firstItem="O5O-sN-USh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="117" type="user" id="hqL-fp-HLZ"/>
                             <constraint firstItem="NXA-tF-6Xt" firstAttribute="trailing" secondItem="Gan-ef-3ug" secondAttribute="trailing" type="default" id="ikS-n8-m9k"/>
                             <constraint firstItem="70w-mU-VDm" firstAttribute="leading" secondItem="P0W-n5-1PX" secondAttribute="leading" type="default" id="izd-0f-f3n"/>
                             <constraint firstAttribute="bottom" secondItem="ArQ-Vm-ycW" secondAttribute="bottom" constant="100" id="jeY-FT-GZi"/>
@@ -406,7 +395,6 @@
                             <constraint firstItem="O5O-sN-USh" firstAttribute="leading" secondItem="Xj1-PL-LVq" secondAttribute="leading" type="default" id="qEF-w5-HRx"/>
                             <constraint firstItem="enb-XU-Ycb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="288" type="user" id="qTv-bw-UBE"/>
                             <constraint firstItem="uvp-qv-z41" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="user" id="r1Z-Ly-6Ye"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ArQ-Vm-ycW" secondAttribute="bottom" constant="100" type="user" id="rqZ-Ti-3cK"/>
                             <constraint firstItem="yxe-lp-yq5" firstAttribute="leading" secondItem="Ous-R2-gGU" secondAttribute="leading" type="default" id="s7d-cQ-ORK"/>
                             <constraint firstItem="uvp-qv-z41" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="sRg-9l-Akw"/>
                             <constraint firstItem="6bK-n7-SNH" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="sUC-QT-vn7"/>
@@ -417,11 +405,9 @@
                             <constraint firstItem="Xj1-PL-LVq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="vSx-h1-mcj"/>
                             <constraint firstItem="aUC-PW-rnG" firstAttribute="leading" secondItem="Zrc-yy-Lxy" secondAttribute="leading" type="default" id="wAs-1w-Z3d"/>
                             <constraint firstItem="fqg-QC-4nW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="164" id="wKd-34-GC6"/>
-                            <constraint firstItem="XtA-M3-kmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="190" type="user" id="wel-DI-chq"/>
                             <constraint firstItem="yxe-lp-yq5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="273" type="user" id="woF-Uc-oBr"/>
                             <constraint firstItem="70w-mU-VDm" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="xyw-i4-Mst"/>
                             <constraint firstItem="4Yj-za-W5e" firstAttribute="leading" secondItem="fsI-22-EHq" secondAttribute="leading" type="default" id="yOd-ep-uvo"/>
-                            <constraint firstItem="70w-mU-VDm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="216" type="user" id="yPY-wf-3Q2"/>
                             <constraint firstItem="GNs-QN-EkF" firstAttribute="top" secondItem="3" secondAttribute="top" constant="244" type="user" id="yl8-GW-jIk"/>
                             <constraint firstItem="uvp-qv-z41" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="user" id="yyy-c9-ba3"/>
                         </constraints>
@@ -478,9 +464,12 @@
                 <relationship kind="action" name="emailResults"/>
                 <relationship kind="action" name="isRecording:"/>
                 <relationship kind="action" name="userClickedRateUs:"/>
+                <relationship kind="outlet" name="altitudeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="back" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
                 <relationship kind="outlet" name="info" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pitch" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="recording" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="roll" candidateClass="UILabel"/>

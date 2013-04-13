@@ -46,13 +46,19 @@
     UILabel *y_mag_label;
     UILabel *z_mag_label;
     
-    UILabel *roll;
-    UILabel *pitch;
-    UILabel *yaw;
+    UILabel *roll,*rollLabel;
+    UILabel *pitch,*pitchLabel;
+    UILabel *yaw,*yawLabel;
     
-    UILabel *latitudeLabel;
-    UILabel *longitudeLabel;
-    UILabel *altitudeLabel;
+    UILabel *latitude,*latitudeLabel;
+    UILabel *longitude,*longitudeLabel;
+    UILabel *altitude,*altitudeLabel;
+    
+    UILabel *accelerometerLabel,*magnetometerLabel,*gyroscopeLabel;
+    
+    UILabel *recordingLabel;
+    
+    UINavigationItem *navTitle;
     
     CMMotionManager *mgr;
     
@@ -62,6 +68,7 @@
     ADBannerView *bannerView;
 #else
     CLLocationManager *locMan;
+    UIBarButtonItem *backButton;
 #endif
     
     UIButton *info;
@@ -70,6 +77,7 @@
 }
 
 @property (nonatomic, retain) CMMotionManager *mgr;
+@property (nonatomic, retain) IBOutlet UINavigationItem *navTitle;
 @property (nonatomic, retain) IBOutlet UIButton *info;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
 @property (nonatomic, retain) IBOutlet UIProgressView *x_accel;
@@ -94,10 +102,20 @@
 @property (nonatomic, retain) IBOutlet UILabel *roll;
 @property (nonatomic, retain) IBOutlet UILabel *pitch;
 @property (nonatomic, retain) IBOutlet UILabel *yaw;
-@property (nonatomic) int freq;
+@property (nonatomic, retain) IBOutlet UILabel *rollLabel;
+@property (nonatomic, retain) IBOutlet UILabel *pitchLabel;
+@property (nonatomic, retain) IBOutlet UILabel *yawLabel;
+@property (nonatomic, retain) IBOutlet UILabel *latitude;
+@property (nonatomic, retain) IBOutlet UILabel *longitude;
+@property (nonatomic, retain) IBOutlet UILabel *altitude;
 @property (nonatomic, retain) IBOutlet UILabel *latitudeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *longitudeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *altitudeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *accelerometerLabel;
+@property (nonatomic, retain) IBOutlet UILabel *magnetometerLabel;
+@property (nonatomic, retain) IBOutlet UILabel *gyroscopeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *recordingLabel;
+@property (nonatomic) int freq;
 #ifdef FREE_VERSION
 @property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
 

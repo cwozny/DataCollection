@@ -10,6 +10,9 @@
 @implementation ConfigViewController
 
 @synthesize textRate,sliderRate;
+@synthesize noteText,rateUsText,setRate;
+@synthesize goButton,rateUsButton;
+@synthesize navTitle;
 
 int samplingFrequency = 1;
 
@@ -33,7 +36,7 @@ int samplingFrequency = 1;
 }
 
 - (BOOL)disablesAutomaticKeyboardDismissal {
-    return NO;
+    return YES;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -73,6 +76,14 @@ int samplingFrequency = 1;
     samplingFrequency = 120;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [textRate addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
+    
+    setRate.text = [NSString stringWithFormat:NSLocalizedString(@"SetRateText", nil)];
+    noteText.text = [NSString stringWithFormat:NSLocalizedString(@"NoteText", nil)];
+    rateUsText.text = [NSString stringWithFormat:NSLocalizedString(@"RateUsText", nil)];
+    navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"ConfigTitle", nil)];
+    goButton.title = [NSString stringWithFormat:NSLocalizedString(@"GoButton", nil)];
+    rateUsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    rateUsButton.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)];
 }
 
 

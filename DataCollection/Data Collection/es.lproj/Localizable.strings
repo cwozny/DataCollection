@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  DataCollection
+
+  Created by Chris Wozny on 4/13/13.
+  Copyright (c) 2013 Chris Wozny. All rights reserved.
+*/
+
+// Common
+"BackButton" = "Respaldar";
+
+// Info View
+"InfoText" = "Este acelerómetro App registros, giroscopio, magnetómetro, y los datos del GPS y lo escribe en un archivo en el directorio de las aplicaciones sobre los documentos. Puede recuperar el archivo a través de iTunes. Una imagen de referencia para los ejes de dispositivo se muestra a continuación:";
+"InfoTitle" = "Información";
+
+// Config View
+"GoButton" = "Ir!";
+"ConfigTitle" = "Configuración";
+"SetRateText" = "Por favor, ajuste la frecuencia de muestreo en hercios:";
+"NoteText" = "NOTA: La rapidez con que el dispositivo puede degustar se basa en la carga del dispositivo (y la velocidad de muestreo máxima del dispositivo.) Para un mejor funcionamiento, cierre todas las aplicaciones de fondo antes de usar.";
+"RateUsText" = "Al igual que la aplicación? Por favor califique de manera que otros puedan encontrar información sobre él también.";
+"RateUsButton" = "Tasa de Nosotros";
+
+// Sensor View
+"SensorTitle" = "Sensores";
+"AccelerometerLabel" = "Acelerómetro (g)";
+"GyroscopeLabel" = "Giroscopio (rad/s)";
+"MagnetometerLabel" = "Magnetómetro (μT)";
+"RecordingLabel" = "Grabar";
+"Unavailable" = "Inasequible";
+"Pitch" = "Cabeceo:";
+"Roll" = "Alabeo:";
+"Yaw" = "Guiñado:";
+"Latitude" = "Lat:";
+"Longitude" = "Lon:";
+"Altitude" = "Alt:";

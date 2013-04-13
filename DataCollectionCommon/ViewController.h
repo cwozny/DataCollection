@@ -109,7 +109,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *recordingLabel;
 @property (nonatomic) int freq;
 #ifdef FREE_VERSION
-@property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
+@property (nonatomic, strong) IBOutlet ADBannerView *bannerView;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *rateButton;
 
 -(IBAction)userClickedRateUs:(id)sender;

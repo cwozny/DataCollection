@@ -1,0 +1,46 @@
+/*
+ Localizable.strings
+ DataCollection
+ 
+ Created by Chris Wozny on 4/13/13.
+ Copyright (c) 2013 Chris Wozny. All rights reserved.
+ */
+
+// Common
+"BackButton" = "Back";
+
+// Info View
+"InfoText" = "This app records accelerometer, gyroscope, magnetometer, and GPS data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:";
+"InfoTitle" = "Information";
+
+// Config View
+"GoButton" = "Go!";
+"ConfigTitle" = "Configuration";
+"SetRateText" = "Please set the sampling rate in hertz:";
+"NoteText" = "NOTE: How quickly the device can sample is based on the load of the device (and the maximum sampling speed of the device.) For best performance, close all background apps before using.";
+"RateUsText" = "Like the app? Please rate it so that others can find out about it as well.";
+"RateUsButton" = "Rate Us";
+
+// Sensor View
+"SensorTitle" = "Sensors";
+"AccelerometerLabel" = "Accelerometer (g)";
+"GyroscopeLabel" = "Gyroscope (rad/s)";
+"MagnetometerLabel" = "Magnetometer (μT)";
+"RecordingLabel" = "Record";
+"Unavailable" = "Unavailable";
+"Pitch" = "Pitch:";
+"Roll" = "Roll:";
+"Yaw" = "Yaw:";
+"Latitude" = "Lat:";
+"Longitude" = "Lon:";
+"Altitude" = "Alt:";
+
+// Mail View
+"Results" = "Results";
+"Email" = "Would you like to email the collected data?";
+"Yes" = "Yes";
+"No" = "No";
+"SubjectFree" = "Accelerometer, Gyroscope, and Magnetometer data from Data Collection Free App";
+"SubjectPaid" = "Accelerometer, Gyroscope, Magnetometer, and GPS data from Data Collection App";
+"MessageBodyPaid" = "I've attached the collected data from the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) GPS is ordered as latitude, longitude, and altitude (meters). You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">here</a>.";
+"MessageBodyFree" = "I've attached 10 seconds of collected data from the free version of the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">here</a>.";

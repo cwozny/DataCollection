@@ -293,7 +293,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="LZI-45-GJA">
                                 <rect key="frame" x="20" y="66" width="728" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This app records accelerometer, gyroscope, and magnetometer data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
+                                <string key="text">This app records accelerometer, gyroscope, and magnetometer data for 10 seconds and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -376,6 +376,51 @@
     <resources>
         <image name="axes.png" width="320" height="360"/>
     </resources>
+    <classes>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goBack"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailResults"/>
+                <relationship kind="action" name="isRecording:"/>
+                <relationship kind="action" name="userClickedRateUs:"/>
+                <relationship kind="outlet" name="altitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="back" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="info" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pitch" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recording" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="roll" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_mag_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_mag_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yaw" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_mag_label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

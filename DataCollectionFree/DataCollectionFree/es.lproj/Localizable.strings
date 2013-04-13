@@ -10,7 +10,7 @@
 "BackButton" = "Respaldar";
 
 // Info View
-"InfoText" = "Este acelerómetro App registros, giroscopio, y los datos del magnetómetro durante 10 segundos y se escribe en un archivo en el directorio de las aplicaciones sobre los documentos. Puede recuperar el archivo a través de iTunes. Una imagen de referencia para los ejes de dispositivo se muestra a continuación:";
+"InfoText" = "Este acelerómetro App registros, giroscopio, magnetómetro, y los datos del GPS y lo escribe en un archivo en el directorio de las aplicaciones sobre los documentos. Puede recuperar el archivo a través de iTunes. Una imagen de referencia para los ejes de dispositivo se muestra a continuación:";
 "InfoTitle" = "Información";
 
 // Config View
@@ -34,3 +34,13 @@
 "Latitude" = "Lat:";
 "Longitude" = "Lon:";
 "Altitude" = "Alt:";
+
+// Mail View
+"Results" = "Resultados";
+"Email" = "¿Quieres enviar por correo electrónico los datos recogidos?";
+"Yes" = "Sí";
+"No" = "No";
+"SubjectFree" = "Acelerómetro, giroscopio y magnetómetro datos de Data Collection App gratuita";
+"SubjectPaid" = "Acelerómetro, giroscopio, magnetómetro, y el GPS los datos de Data Collection App";
+"MessageBodyPaid" = "He adjuntado los datos recopilados a partir de la aplicación de recopilación de datos. Los valores brutos están clasificadas como x, y, z de giro (deg / s), magnetómetros (microteslas), y acelerómetros (fuerza g). Actitud (grados) se pide como cabeceo, balanceo y guiñada (si está disponible.) GPS se ordena como latitud, longitud y altitud (metros). Puede obtener la aplicación <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">aquí</a>.";
+"MessageBodyFree" = "He adjuntado 10 segundos de los datos recogidos de la versión gratuita de la aplicación Data Collection. Los valores brutos están clasificadas como x, y, z de giro (deg / s), magnetómetros (microteslas), y acelerómetros (fuerza g). Actitud (grados) se pide como cabeceo, balanceo y guiñada (si está disponible). Puede obtener la aplicación <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">aquí</a>.";

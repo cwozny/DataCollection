@@ -30,5 +30,6 @@
 -(IBAction)sliderChanged:(id)sender;
 -(IBAction)textChanged:(id)sender;
 -(IBAction)userClickedRateUs:(id)sender;
+-(void)dismissKeyboard;
 
 @end

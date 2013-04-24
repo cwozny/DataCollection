@@ -24,10 +24,21 @@ int samplingFrequency = 1;
 
 -(IBAction)textChanged:(id)sender
 {
-    samplingFrequency = [textRate.text intValue];
+    if([textRate.text intValue] > 500)
+    {
+        samplingFrequency = 500;
+    }
+    else if([textRate.text intValue] <= 0)
+    {
+        samplingFrequency = 1;
+    }
+    else
+    {
+        samplingFrequency = [textRate.text intValue];
+    }
+    
     textRate.text = [NSString stringWithFormat:@"%d",samplingFrequency];
     sliderRate.value = samplingFrequency;
-    [textRate resignFirstResponder];
 }
 
 -(IBAction)userClickedRateUs:(id)sender
@@ -35,28 +46,20 @@ int samplingFrequency = 1;
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=479348835"]];
 }
 
-- (BOOL)disablesAutomaticKeyboardDismissal {
-    return YES;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)dismissKeyboard
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [textRate resignFirstResponder];
 }
 
-#ifndef FREE_VERSION
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    [textRate resignFirstResponder];
+    
 	if ([segue.identifier isEqualToString:@"SendFrequency"])
 	{
 		[segue.destinationViewController setFrequency:samplingFrequency];
 	}
 }
-#endif
 
 - (void)didReceiveMemoryWarning
 {
@@ -77,6 +80,12 @@ int samplingFrequency = 1;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [textRate addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
     setRate.text = [NSString stringWithFormat:NSLocalizedString(@"SetRateText", nil)];
     noteText.text = [NSString stringWithFormat:NSLocalizedString(@"NoteText", nil)];
     rateUsText.text = [NSString stringWithFormat:NSLocalizedString(@"RateUsText", nil)];
@@ -85,7 +94,6 @@ int samplingFrequency = 1;
     rateUsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [rateUsButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)] forState:UIControlStateNormal];
 }
-
 
 - (void)viewDidUnload
 {

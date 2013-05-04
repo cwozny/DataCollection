@@ -41,129 +41,139 @@ double startup = 0;
 
 -(void)gyroUpdate:(double)p q:(double)q r:(double)r
 {
-    // Sets the labels to the respective values of the axes gyro rates.
-    x_gyro_label.text = [NSString stringWithFormat:@"%1.2f", p];
-    y_gyro_label.text = [NSString stringWithFormat:@"%1.2f", q];
-    z_gyro_label.text = [NSString stringWithFormat:@"%1.2f", r];
-    
-    // Sets the value of the progress bar to the absolute value of the gyro rates for each respective axis.
-    self.x_gyro.progress = ABS(p)/M_PI;
-    self.y_gyro.progress = ABS(q)/M_PI;
-    self.z_gyro.progress = ABS(r)/M_PI;
-    
-    if(p < 0)
-        self.x_gyro.progressTintColor = [UIColor redColor];
-    else
-        self.x_gyro.progressTintColor = [UIColor blueColor];
-    
-    if(q < 0)
-        self.y_gyro.progressTintColor = [UIColor redColor];
-    else
-        self.y_gyro.progressTintColor = [UIColor blueColor];
-    
-    if(r < 0)
-        self.z_gyro.progressTintColor = [UIColor redColor];
-    else
-        self.z_gyro.progressTintColor = [UIColor blueColor];
-    
     // If record data is on then write the gyro data to the NSArray.
     if(recording.on)
     {
         [self writeData:@"GYRO" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:p secondValue:q thirdValue:r];
     }
+    else
+    {
+        // Sets the labels to the respective values of the axes gyro rates.
+        x_gyro_label.text = [NSString stringWithFormat:@"%1.2f", p];
+        y_gyro_label.text = [NSString stringWithFormat:@"%1.2f", q];
+        z_gyro_label.text = [NSString stringWithFormat:@"%1.2f", r];
+        
+        // Sets the value of the progress bar to the absolute value of the gyro rates for each respective axis.
+        self.x_gyro.progress = ABS(p)/M_PI;
+        self.y_gyro.progress = ABS(q)/M_PI;
+        self.z_gyro.progress = ABS(r)/M_PI;
+        
+        if(p < 0)
+            self.x_gyro.progressTintColor = [UIColor redColor];
+        else
+            self.x_gyro.progressTintColor = [UIColor blueColor];
+        
+        if(q < 0)
+            self.y_gyro.progressTintColor = [UIColor redColor];
+        else
+            self.y_gyro.progressTintColor = [UIColor blueColor];
+        
+        if(r < 0)
+            self.z_gyro.progressTintColor = [UIColor redColor];
+        else
+            self.z_gyro.progressTintColor = [UIColor blueColor];
+    }
 }
 
 -(void)accelUpdate:(double)x y:(double)y z:(double)z
 {
-    // Sets the labels to the respective values of the axes acceleration.
-    x_accel_label.text = [NSString stringWithFormat:@"%1.2f", x];
-    y_accel_label.text = [NSString stringWithFormat:@"%1.2f", y];
-    z_accel_label.text = [NSString stringWithFormat:@"%1.2f", z];
-    
-    // Sets the value of the progress bar to the absolute value of the acceleration for each respective axis.
-    self.x_accel.progress = ABS(x);
-    self.y_accel.progress = ABS(y);
-    self.z_accel.progress = ABS(z);
-    
-    if(x < 0)
-        self.x_accel.progressTintColor = [UIColor redColor];
-    else
-        self.x_accel.progressTintColor = [UIColor blueColor];
-    
-    if(y < 0)
-        self.y_accel.progressTintColor = [UIColor redColor];
-    else
-        self.y_accel.progressTintColor = [UIColor blueColor];
-    
-    if(z < 0)
-        self.z_accel.progressTintColor = [UIColor redColor];
-    else
-        self.z_accel.progressTintColor = [UIColor blueColor];
-    
     // If record data is on then write the accelerometer data to the NSArray.
     if(recording.on)
     {
         [self writeData:@"ACCEL" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:x secondValue:y thirdValue:z];
     }
+    else
+    {
+        // Sets the labels to the respective values of the axes acceleration.
+        x_accel_label.text = [NSString stringWithFormat:@"%1.2f", x];
+        y_accel_label.text = [NSString stringWithFormat:@"%1.2f", y];
+        z_accel_label.text = [NSString stringWithFormat:@"%1.2f", z];
+        
+        // Sets the value of the progress bar to the absolute value of the acceleration for each respective axis.
+        self.x_accel.progress = ABS(x);
+        self.y_accel.progress = ABS(y);
+        self.z_accel.progress = ABS(z);
+        
+        if(x < 0)
+            self.x_accel.progressTintColor = [UIColor redColor];
+        else
+            self.x_accel.progressTintColor = [UIColor blueColor];
+        
+        if(y < 0)
+            self.y_accel.progressTintColor = [UIColor redColor];
+        else
+            self.y_accel.progressTintColor = [UIColor blueColor];
+        
+        if(z < 0)
+            self.z_accel.progressTintColor = [UIColor redColor];
+        else
+            self.z_accel.progressTintColor = [UIColor blueColor];
+    }
 }
 
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z
-{    
-    // Sets the labels to the respective values of the axes gyro rates.
-    x_mag_label.text = [NSString stringWithFormat:@"%1.2f", x];
-    y_mag_label.text = [NSString stringWithFormat:@"%1.2f", y];
-    z_mag_label.text = [NSString stringWithFormat:@"%1.2f", z];
-    
-    // Sets the value of the progress bar to the absolute value of the gyro rates for each respective axis.
-    self.x_mag.progress = ABS(x)/300;
-    self.y_mag.progress = ABS(y)/300;
-    self.z_mag.progress = ABS(z)/300;
-    
-    if(x < 0)
-        self.x_mag.progressTintColor = [UIColor redColor];
-    else
-        self.x_mag.progressTintColor = [UIColor blueColor];
-    
-    if(y < 0)
-        self.y_mag.progressTintColor = [UIColor redColor];
-    else
-        self.y_mag.progressTintColor = [UIColor blueColor];
-    
-    if(z < 0)
-        self.z_mag.progressTintColor = [UIColor redColor];
-    else
-        self.z_mag.progressTintColor = [UIColor blueColor];
-    
+{
     // If record data is on then write the magnetometer data to the NSArray.
     if(recording.on)
     {
         [self writeData:@"MAGNETO" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:x secondValue:y thirdValue:z];
     }
+    else
+    {
+        // Sets the labels to the respective values of the axes gyro rates.
+        x_mag_label.text = [NSString stringWithFormat:@"%1.2f", x];
+        y_mag_label.text = [NSString stringWithFormat:@"%1.2f", y];
+        z_mag_label.text = [NSString stringWithFormat:@"%1.2f", z];
+        
+        // Sets the value of the progress bar to the absolute value of the gyro rates for each respective axis.
+        self.x_mag.progress = ABS(x)/300;
+        self.y_mag.progress = ABS(y)/300;
+        self.z_mag.progress = ABS(z)/300;
+        
+        if(x < 0)
+            self.x_mag.progressTintColor = [UIColor redColor];
+        else
+            self.x_mag.progressTintColor = [UIColor blueColor];
+        
+        if(y < 0)
+            self.y_mag.progressTintColor = [UIColor redColor];
+        else
+            self.y_mag.progressTintColor = [UIColor blueColor];
+        
+        if(z < 0)
+            self.z_mag.progressTintColor = [UIColor redColor];
+        else
+            self.z_mag.progressTintColor = [UIColor blueColor];
+    }
 }
 
 -(void)attitudeUpdate:(double)p rollValue:(double)r yawValue:(double)y
 {
-    pitch.text = [NSString stringWithFormat:@"%1.0f°", p];
-    roll.text = [NSString stringWithFormat:@"%1.0f°", r];
-    yaw.text = [NSString stringWithFormat:@"%1.0f°", y];
-    
     if(recording.on)
     {
         [self writeData:@"ATTITUDE" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:p secondValue:r thirdValue:y];
+    }
+    else
+    {
+        pitch.text = [NSString stringWithFormat:@"%1.0f°", p];
+        roll.text = [NSString stringWithFormat:@"%1.0f°", r];
+        yaw.text = [NSString stringWithFormat:@"%1.0f°", y];
     }
 }
 
 #ifndef FREE_VERSION
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt
 {
-    // Set the latitude, longitude, and altitude everytime the locationManager updates to a new location.
-	latitude.text = [NSString stringWithFormat:@"%1.3f", lat];
-    longitude.text = [NSString stringWithFormat:@"%1.3f", lon];
-    altitude.text = [NSString stringWithFormat:@"%1.2f m", alt];
-    
     if(recording.on)
     {
         [self writeData:@"GPS" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:lat secondValue:lon thirdValue:alt];
+    }
+    else
+    {
+        // Set the latitude, longitude, and altitude everytime the locationManager updates to a new location.
+        latitude.text = [NSString stringWithFormat:@"%1.3f", lat];
+        longitude.text = [NSString stringWithFormat:@"%1.3f", lon];
+        altitude.text = [NSString stringWithFormat:@"%1.2f m", alt];
     }
 }
 

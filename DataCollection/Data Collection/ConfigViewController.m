@@ -57,7 +57,7 @@ int samplingFrequency = 1;
     
 	if ([segue.identifier isEqualToString:@"SendFrequency"])
 	{
-		[segue.destinationViewController setFrequency:samplingFrequency];
+		[segue.destinationViewController setSamplingRate:samplingFrequency];
 	}
 }
 

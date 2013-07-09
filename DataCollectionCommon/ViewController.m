@@ -457,7 +457,7 @@ double startup = 0;
         [self dismissViewControllerAnimated:true completion:nil];
 }
 
--(void)setFrequency:(int)frequency
+-(void)setSamplingRate:(int)frequency
 {
     freq = frequency;
     

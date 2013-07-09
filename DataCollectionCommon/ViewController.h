@@ -65,13 +65,11 @@
     UIBarButtonItem *rateButton;
 #else
     CLLocationManager *locMan;
-    UIBarButtonItem *backButton;
     UILabel *latitude,*latitudeLabel;
     UILabel *longitude,*longitudeLabel;
     UILabel *altitude,*altitudeLabel;
     UIBarButtonItem *back;
 #endif
-    
     UIButton *info;
 }
 
@@ -133,7 +131,7 @@
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z;
 -(void)attitudeUpdate:(double)p rollValue:(double)r yawValue:(double)y;
 #ifndef FREE_VERSION
--(void)setFrequency:(int)frequency;
+-(void)setSamplingRate:(int)frequency;
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt;
 #endif
 

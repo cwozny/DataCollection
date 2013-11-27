@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		940EB89B1509455700645E70 /* axes.png in Resources */ = {isa = PBXBuildFile; fileRef = 940EB8981509455700645E70 /* axes.png */; };
 		943DD3DE1719487800F5C732 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 943DD3E01719487800F5C732 /* Localizable.strings */; };
+		944959FA184599B60032C839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944959F9184599B60032C839 /* Images.xcassets */; };
 		945339601509467F009D4E97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453395F1509467F009D4E97 /* MessageUI.framework */; };
 		9453396215094685009D4E97 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453396115094685009D4E97 /* AddressBook.framework */; };
 		945339641509468E009D4E97 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945339631509468E009D4E97 /* AddressBookUI.framework */; };
@@ -41,6 +42,7 @@
 		943E3A901719549A00EA1A89 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		943E3A91171954A700EA1A89 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		943E3A92171954B500EA1A89 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		944959F9184599B60032C839 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9453394E150945B3009D4E97 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
 		9453394F150945B3009D4E97 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		94533950150945B3009D4E97 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -144,6 +146,7 @@
 				940EB8981509455700645E70 /* axes.png */,
 				94CD37F61509446B0068BB5A /* MainStoryboard_iPhone.storyboard */,
 				94CD37F91509446B0068BB5A /* MainStoryboard_iPad.storyboard */,
+				944959F9184599B60032C839 /* Images.xcassets */,
 				94CD37EB1509446B0068BB5A /* Supporting Files */,
 			);
 			path = DataCollectionFree;
@@ -235,6 +238,7 @@
 				940EB89B1509455700645E70 /* axes.png in Resources */,
 				94B34D2A1523A63C00C8181F /* Default-Portrait~ipad.png in Resources */,
 				94B34D2C1523A64800C8181F /* Default.png in Resources */,
+				944959FA184599B60032C839 /* Images.xcassets in Resources */,
 				94B34D2E1523A66500C8181F /* Default-Portrait@2x~ipad.png in Resources */,
 				94B34D2F1523A67B00C8181F /* Default@2x.png in Resources */,
 				94B53204170BDD6C0004E3D4 /* 57x57_icon_free.png in Resources */,
@@ -333,6 +337,8 @@
 		94B34D421523AB9000C8181F /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -412,6 +418,8 @@
 		94CD38021509446B0068BB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -434,6 +442,8 @@
 		94CD38031509446B0068BB5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

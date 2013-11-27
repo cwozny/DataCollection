@@ -37,6 +37,7 @@
     [bannerView setDelegate:self];
     bannerView = [[ADBannerView alloc] init];
 #endif
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     infoText.text = [NSString stringWithFormat:NSLocalizedString(@"InfoText", nil)];
     backButton.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
     navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"InfoTitle", nil)];
@@ -47,6 +48,11 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

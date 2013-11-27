@@ -432,6 +432,11 @@ double startup = 0;
 #endif
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 #ifdef FREE_VERSION
 -(IBAction)userClickedRateUs:(id)sender
 {

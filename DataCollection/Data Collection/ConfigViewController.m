@@ -9,25 +9,16 @@
 
 @implementation ConfigViewController
 
-@synthesize textRate,sliderRate;
+@synthesize textRate;
 @synthesize noteText,rateUsText,setRate;
 @synthesize goButton,rateUsButton;
 @synthesize navTitle;
 
 float samplingFrequency = 1.0f;
 
--(IBAction)sliderChanged:(id)sender
-{
-    samplingFrequency = [sliderRate value];
-    textRate.text = [NSString stringWithFormat:@"%1.2f",samplingFrequency];
-}
-
 -(IBAction)textChanged:(id)sender
 {
-    samplingFrequency = MAX(0.01f, MIN([textRate.text floatValue], 500.0f));
-    
-    textRate.text = [NSString stringWithFormat:@"%1.2f",samplingFrequency];
-    sliderRate.value = samplingFrequency;
+    samplingFrequency = [textRate.text floatValue];
 }
 
 -(IBAction)userClickedRateUs:(id)sender

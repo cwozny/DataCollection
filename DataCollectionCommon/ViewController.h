@@ -131,7 +131,7 @@
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z;
 -(void)attitudeUpdate:(double)p rollValue:(double)r yawValue:(double)y;
 #ifndef FREE_VERSION
--(void)setSamplingRate:(int)frequency;
+-(void)setSamplingRate:(float)frequency;
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt;
 #endif
 

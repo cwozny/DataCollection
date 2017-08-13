@@ -440,7 +440,7 @@ double startup = 0;
 #ifdef FREE_VERSION
 -(IBAction)userClickedRateUs:(id)sender
 {
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=485523535"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/data-collection-free/id485523535"]];
 }
 
 #pragma mark ADBannerViewDelegate
@@ -462,12 +462,9 @@ double startup = 0;
         [self dismissViewControllerAnimated:true completion:nil];
 }
 
--(void)setSamplingRate:(int)frequency
+-(void)setSamplingRate:(float)frequency
 {
     freq = frequency;
-    
-    if(freq < 1)
-        freq = 1;
 }
 #endif
 @end

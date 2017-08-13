@@ -14,36 +14,25 @@
 @synthesize goButton,rateUsButton;
 @synthesize navTitle;
 
-int samplingFrequency = 1;
+float samplingFrequency = 1.0f;
 
 -(IBAction)sliderChanged:(id)sender
 {
     samplingFrequency = [sliderRate value];
-    textRate.text = [NSString stringWithFormat:@"%d",samplingFrequency];
+    textRate.text = [NSString stringWithFormat:@"%1.2f",samplingFrequency];
 }
 
 -(IBAction)textChanged:(id)sender
 {
-    if([textRate.text intValue] > 500)
-    {
-        samplingFrequency = 500;
-    }
-    else if([textRate.text intValue] <= 0)
-    {
-        samplingFrequency = 1;
-    }
-    else
-    {
-        samplingFrequency = [textRate.text intValue];
-    }
+    samplingFrequency = MAX(0.01f, MIN([textRate.text floatValue], 500.0f));
     
-    textRate.text = [NSString stringWithFormat:@"%d",samplingFrequency];
+    textRate.text = [NSString stringWithFormat:@"%1.2f",samplingFrequency];
     sliderRate.value = samplingFrequency;
 }
 
 -(IBAction)userClickedRateUs:(id)sender
 {
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=479348835"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/data-collection/id479348835"]];
 }
 
 -(void)dismissKeyboard

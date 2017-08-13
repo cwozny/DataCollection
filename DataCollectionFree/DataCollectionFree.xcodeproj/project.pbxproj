@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -199,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "BAE Systems";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					94CD37DF1509446A0068BB5A = {
 						DevelopmentTeam = E43C8EG48H;
@@ -207,7 +207,7 @@
 				};
 			};
 			buildConfigurationList = 94CD37DA1509446A0068BB5A /* Build configuration list for PBXProject "DataCollectionFree" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (

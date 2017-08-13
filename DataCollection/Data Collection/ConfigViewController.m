@@ -23,7 +23,7 @@ float samplingFrequency = 1.0f;
 
 -(IBAction)userClickedRateUs:(id)sender
 {
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/data-collection/id479348835"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id479348835"]];
 }
 
 -(void)dismissKeyboard

@@ -273,7 +273,7 @@ double startup = 0;
 		// Allocate memory for data string.
 		data = [[NSMutableString alloc] init];
         data = [NSMutableString stringWithString:@""];
-        [data appendString:[NSMutableString stringWithFormat:@"(Preferred) sampling frequency set to %d Hz.\nYour device may not support this sampling frequency, so always check your timestamps!\n",freq]];
+        [data appendString:[NSMutableString stringWithFormat:@"(Preferred) sampling frequency set to %f Hz.\nYour device may not support this sampling frequency, so always check your timestamps!\n",freq]];
 #ifdef FREE_VERSION
         rateButton.enabled = false;
 #else

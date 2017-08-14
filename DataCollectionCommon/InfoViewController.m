@@ -11,9 +11,6 @@
 @synthesize infoText;
 @synthesize navTitle;
 @synthesize backButton;
-#ifdef FREE_VERSION
-@synthesize bannerView;
-#endif
 
 -(IBAction)goBack
 {
@@ -33,10 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-#ifdef FREE_VERSION
-    [bannerView setDelegate:self];
-    bannerView = [[ADBannerView alloc] init];
-#endif
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     infoText.text = [NSString stringWithFormat:NSLocalizedString(@"InfoText", nil)];
     backButton.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
@@ -61,18 +54,4 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#ifdef FREE_VERSION
-
-#pragma mark ADBannerViewDelegate
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-	[bannerView setHidden:NO];
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-	[bannerView setHidden:YES];
-}
-#endif
 @end

@@ -6,26 +6,13 @@
 
 #import <UIKit/UIKit.h>
 
-#ifdef FREE_VERSION
-#import <iAd/iAd.h>
-#endif
-
 @interface InfoViewController : UIViewController
-#ifdef FREE_VERSION
-<ADBannerViewDelegate>
-#endif
 {
-#ifdef FREE_VERSION
-    ADBannerView *bannerView;
-#endif
     UILabel *infoText;
     UINavigationItem *navTitle;
     UIBarButtonItem *backButton;
 }
 
-#ifdef FREE_VERSION
-@property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
-#endif
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *backButton;
 @property (nonatomic, retain) IBOutlet UINavigationItem *navTitle;
 @property (nonatomic, retain) IBOutlet UILabel *infoText;

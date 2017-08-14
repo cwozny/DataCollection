@@ -13,7 +13,6 @@
 		945339601509467F009D4E97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453395F1509467F009D4E97 /* MessageUI.framework */; };
 		9453396215094685009D4E97 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453396115094685009D4E97 /* AddressBook.framework */; };
 		945339641509468E009D4E97 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945339631509468E009D4E97 /* AddressBookUI.framework */; };
-		9453396615094693009D4E97 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9453396515094693009D4E97 /* iAd.framework */; };
 		94533968150946A0009D4E97 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94533967150946A0009D4E97 /* CoreMotion.framework */; };
 		94B34D2A1523A63C00C8181F /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9453394E150945B3009D4E97 /* Default-Portrait~ipad.png */; };
 		94B34D2C1523A64800C8181F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9453394F150945B3009D4E97 /* Default.png */; };
@@ -49,7 +48,6 @@
 		9453395F1509467F009D4E97 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9453396115094685009D4E97 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		945339631509468E009D4E97 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		9453396515094693009D4E97 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		94533967150946A0009D4E97 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		94B34D2D1523A66500C8181F /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		94B53203170BDD6C0004E3D4 /* 57x57_icon_free.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 57x57_icon_free.png; path = ../57x57_icon_free.png; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94533968150946A0009D4E97 /* CoreMotion.framework in Frameworks */,
-				9453396615094693009D4E97 /* iAd.framework in Frameworks */,
 				945339641509468E009D4E97 /* AddressBookUI.framework in Frameworks */,
 				9453396215094685009D4E97 /* AddressBook.framework in Frameworks */,
 				945339601509467F009D4E97 /* MessageUI.framework in Frameworks */,
@@ -128,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				94533967150946A0009D4E97 /* CoreMotion.framework */,
-				9453396515094693009D4E97 /* iAd.framework */,
 				945339631509468E009D4E97 /* AddressBookUI.framework */,
 				9453396115094685009D4E97 /* AddressBook.framework */,
 				9453395F1509467F009D4E97 /* MessageUI.framework */,
@@ -200,11 +196,6 @@
 			attributes = {
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "";
-				TargetAttributes = {
-					94CD37DF1509446A0068BB5A = {
-						DevelopmentTeam = E43C8EG48H;
-					};
-				};
 			};
 			buildConfigurationList = 94CD37DA1509446A0068BB5A /* Build configuration list for PBXProject "DataCollectionFree" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -353,17 +344,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E43C8EG48H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = FREE_VERSION;
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollectionfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv6";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -460,6 +452,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E43C8EG48H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -468,12 +461,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollectionfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				VALID_ARCHS = "armv7 armv6";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -485,17 +478,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E43C8EG48H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = FREE_VERSION;
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollectionfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv6";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

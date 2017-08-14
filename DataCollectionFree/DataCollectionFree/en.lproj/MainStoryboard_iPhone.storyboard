@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment version="4144" identifier="iOS"/>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-Jw-dEJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-Jw-dEJ">
                                 <rect key="frame" x="42" y="52" width="291" height="325"/>
                                 <string key="text">This app records accelerometer, gyroscope, and magnetometer data for 10 seconds and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="axes.png" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-sI-SK0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="axes.png" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-sI-SK0">
                                 <rect key="frame" x="76" y="385" width="223" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="223" id="AUb-Vg-6Tn"/>
@@ -91,7 +91,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-NL-XO8">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-NL-XO8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Info" id="ID3-pG-mFV">
@@ -103,25 +103,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mTA-zD-aQC">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="eF3-u9-XHh"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="q7M-og-Sf2" id="4gH-wU-H5u"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TMj-EP-JcV" secondAttribute="bottom" constant="198" id="07r-Gi-7Ot"/>
                             <constraint firstItem="7EI-sI-SK0" firstAttribute="top" secondItem="Qa1-Jw-dEJ" secondAttribute="bottom" constant="8" symbolic="YES" id="15w-Vi-xwG"/>
                             <constraint firstAttribute="bottom" secondItem="F6z-f9-j3j" secondAttribute="bottom" constant="251" id="2r0-9K-fCD"/>
-                            <constraint firstItem="mTA-zD-aQC" firstAttribute="centerX" secondItem="7EI-sI-SK0" secondAttribute="centerX" id="2xS-bJ-x8b"/>
                             <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="PsP-MS-afd" secondAttribute="bottom" constant="213" id="5Px-hm-5uX"/>
                             <constraint firstAttribute="trailing" secondItem="F6z-f9-j3j" secondAttribute="trailing" constant="120" id="69d-Td-Go3"/>
-                            <constraint firstItem="mTA-zD-aQC" firstAttribute="bottom" secondItem="q7M-og-Sf2" secondAttribute="bottom" id="7aV-zz-2gI"/>
                             <constraint firstItem="7EI-sI-SK0" firstAttribute="bottom" secondItem="8v9-x2-1IP" secondAttribute="bottom" id="95n-CL-ugh"/>
                             <constraint firstAttribute="bottom" secondItem="PsP-MS-afd" secondAttribute="bottom" constant="213" id="E94-2n-iY2"/>
                             <constraint firstAttribute="bottom" secondItem="TMj-EP-JcV" secondAttribute="bottom" constant="198" id="EkS-Sr-Mot"/>
@@ -133,11 +122,9 @@
                             <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="TMj-EP-JcV" secondAttribute="bottom" constant="198" id="QRO-Eh-Cse"/>
                             <constraint firstItem="gdA-NL-XO8" firstAttribute="centerX" secondItem="Qa1-Jw-dEJ" secondAttribute="centerX" id="SlZ-so-rnc"/>
                             <constraint firstItem="gdA-NL-XO8" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" id="TSU-Pr-HTN"/>
-                            <constraint firstItem="mTA-zD-aQC" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" id="UEJ-0z-w9m"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zIS-Jk-HSU" secondAttribute="bottom" constant="129" id="WPi-PB-mvZ"/>
                             <constraint firstItem="gdA-NL-XO8" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" id="YI0-dy-Lk2"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8v9-x2-1IP" secondAttribute="bottom" constant="72" id="a2r-lj-WMS"/>
-                            <constraint firstItem="mTA-zD-aQC" firstAttribute="trailing" secondItem="q7M-og-Sf2" secondAttribute="trailing" id="ajA-zc-P7P"/>
                             <constraint firstItem="PsP-MS-afd" firstAttribute="leading" secondItem="zIS-Jk-HSU" secondAttribute="leading" id="cVv-nf-U8N"/>
                             <constraint firstAttribute="trailing" secondItem="PsP-MS-afd" secondAttribute="trailing" constant="28" id="gBj-8H-Iwb"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="F6z-f9-j3j" secondAttribute="bottom" constant="251" id="hVh-ID-1ML"/>
@@ -153,7 +140,6 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="gnV-24-Pe4" id="vVi-rb-5AC"/>
-                        <outlet property="bannerView" destination="mTA-zD-aQC" id="VbH-Rw-ImB"/>
                         <outlet property="infoText" destination="Qa1-Jw-dEJ" id="mlY-Xf-HFN"/>
                         <outlet property="navTitle" destination="ID3-pG-mFV" id="WnT-I9-TrL"/>
                     </connections>
@@ -282,7 +268,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-Sl-5zt">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-Sl-5zt">
                                 <rect key="frame" x="98" y="590" width="101" height="19"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -300,7 +286,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-FN-KOh">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-FN-KOh">
                                 <rect key="frame" x="20" y="590" width="70" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="7QU-ed-k6C"/>
@@ -309,7 +295,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-pP-DFi">
+                            <switch opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-pP-DFi">
                                 <rect key="frame" x="306" y="578" width="51" height="31"/>
                                 <connections>
                                     <action selector="isRecording:" destination="2" eventType="valueChanged" id="oYE-Er-kbK"/>
@@ -483,15 +469,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-s7-Ehc">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jbt-ce-9Pp"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="3" id="jfh-Uq-NOO"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -507,7 +484,6 @@
                             <constraint firstItem="Xj1-PL-LVq" firstAttribute="leading" secondItem="iCy-Av-XEy" secondAttribute="trailing" constant="8" symbolic="YES" id="8v3-RB-tZz"/>
                             <constraint firstItem="E9a-uU-hSK" firstAttribute="trailing" secondItem="GNs-QN-EkF" secondAttribute="trailing" id="9UD-L4-OIk"/>
                             <constraint firstItem="GLz-kw-Qzy" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="AV8-SH-QpL"/>
-                            <constraint firstItem="qr1-s7-Ehc" firstAttribute="top" secondItem="fNl-FN-KOh" secondAttribute="bottom" constant="8" symbolic="YES" id="AhL-hS-AcN"/>
                             <constraint firstItem="fNl-FN-KOh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="AzY-Sz-SpI"/>
                             <constraint firstItem="r4V-bm-3pj" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="BK8-t4-6v5"/>
                             <constraint firstItem="4Yj-za-W5e" firstAttribute="trailing" secondItem="fsI-22-EHq" secondAttribute="trailing" id="BRF-6T-T0g"/>
@@ -525,7 +501,6 @@
                             <constraint firstItem="P0W-n5-1PX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="267" id="JtP-3W-3SM"/>
                             <constraint firstItem="4Yj-za-W5e" firstAttribute="baseline" secondItem="99N-8g-Ar7" secondAttribute="baseline" id="Kgv-PK-Z7s"/>
                             <constraint firstItem="9CN-tH-rBn" firstAttribute="leading" secondItem="dKV-LT-6tC" secondAttribute="trailing" constant="8" symbolic="YES" id="LfM-Wg-8x1"/>
-                            <constraint firstItem="qr1-s7-Ehc" firstAttribute="top" secondItem="6B4-pP-DFi" secondAttribute="bottom" constant="8" symbolic="YES" id="NSN-9e-7wX"/>
                             <constraint firstItem="E9a-uU-hSK" firstAttribute="top" secondItem="Gan-ef-3ug" secondAttribute="bottom" constant="8" symbolic="YES" id="O01-TG-dYI"/>
                             <constraint firstItem="GNs-QN-EkF" firstAttribute="top" secondItem="aUC-PW-rnG" secondAttribute="bottom" constant="8" symbolic="YES" id="PEv-a8-6lN"/>
                             <constraint firstItem="XtA-M3-kmQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="195" id="PsK-8B-pQs"/>
@@ -533,7 +508,6 @@
                             <constraint firstItem="Imv-wt-pga" firstAttribute="top" secondItem="3" secondAttribute="top" constant="200" id="QQd-HL-swG"/>
                             <constraint firstItem="fqg-QC-4nW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="169" id="QSb-8H-A7e"/>
                             <constraint firstItem="M9b-yr-Nfa" firstAttribute="leading" secondItem="Ous-R2-gGU" secondAttribute="leading" id="QZ3-Bp-CH8"/>
-                            <constraint firstItem="qr1-s7-Ehc" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="RPR-cC-WLY"/>
                             <constraint firstAttribute="trailing" secondItem="Xj1-PL-LVq" secondAttribute="trailing" constant="20" symbolic="YES" id="RXr-Q9-HhR"/>
                             <constraint firstItem="NXA-tF-6Xt" firstAttribute="leading" secondItem="Zrc-yy-Lxy" secondAttribute="leading" id="Ram-6J-pVc"/>
                             <constraint firstItem="6Hq-I7-YXh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="Rji-lJ-elC"/>
@@ -584,7 +558,6 @@
                             <constraint firstAttribute="trailing" secondItem="XtA-M3-kmQ" secondAttribute="trailing" constant="20" symbolic="YES" id="kmr-YO-lGC"/>
                             <constraint firstItem="jPk-f2-0nY" firstAttribute="centerY" secondItem="70w-mU-VDm" secondAttribute="centerY" id="laC-zJ-SI2"/>
                             <constraint firstAttribute="trailing" secondItem="P0W-n5-1PX" secondAttribute="trailing" constant="20" symbolic="YES" id="lyW-rl-M2B"/>
-                            <constraint firstItem="qr1-s7-Ehc" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="mKa-WS-dMy"/>
                             <constraint firstItem="9w8-ru-JnC" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="nPA-KZ-dYp"/>
                             <constraint firstItem="s1X-wo-tho" firstAttribute="trailing" secondItem="jPk-f2-0nY" secondAttribute="trailing" id="nwb-0k-f2X"/>
                             <constraint firstItem="O5O-sN-USh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="123" id="oG9-6s-VZX"/>
@@ -594,7 +567,6 @@
                             <constraint firstItem="enb-XU-Ycb" firstAttribute="leading" secondItem="Ous-R2-gGU" secondAttribute="trailing" constant="8" symbolic="YES" id="qdS-5n-Kpr"/>
                             <constraint firstAttribute="trailing" secondItem="ArQ-Vm-ycW" secondAttribute="trailing" constant="20" symbolic="YES" id="riP-aM-kdN"/>
                             <constraint firstItem="yxe-lp-yq5" firstAttribute="leading" secondItem="Ous-R2-gGU" secondAttribute="leading" id="s7d-cQ-ORK"/>
-                            <constraint firstItem="qr1-s7-Ehc" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="sBX-vo-PIF"/>
                             <constraint firstItem="xqj-E5-GeE" firstAttribute="top" secondItem="3" secondAttribute="top" constant="128" id="sFq-mk-4QZ"/>
                             <constraint firstItem="xqj-E5-GeE" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="uEC-Jq-VE9"/>
                             <constraint firstItem="9w8-ru-JnC" firstAttribute="trailing" secondItem="d5w-k0-YT9" secondAttribute="trailing" id="vSU-WJ-ne3"/>
@@ -611,7 +583,6 @@
                     </view>
                     <connections>
                         <outlet property="accelerometerLabel" destination="KiA-CW-iSo" id="E09-li-W71"/>
-                        <outlet property="bannerView" destination="qr1-s7-Ehc" id="J9D-He-sXb"/>
                         <outlet property="gyroscopeLabel" destination="E9a-uU-hSK" id="Lnf-tB-6Mt"/>
                         <outlet property="info" destination="jOw-dv-F3r" id="Lyl-N6-l8J"/>
                         <outlet property="magnetometerLabel" destination="GNs-QN-EkF" id="hwX-55-APv"/>

@@ -2,7 +2,7 @@
 //  Data Collection
 //
 //  Created by Chris Wozny on 10/22/11.
-//  Copyright (c) 2013 Chris Wozny. All rights reserved.
+//  Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
 
 #import "ViewController.h"
 #import "InfoViewController.h"
@@ -19,15 +19,9 @@
 @synthesize info;
 @synthesize accelerometerLabel, gyroscopeLabel, magnetometerLabel,recordingLabel;
 @synthesize navTitle;
-#ifdef FREE_VERSION
-@synthesize rateButton;
-
-int iterations = 0;
-#else
 @synthesize locMan;
 @synthesize back;
 @synthesize latitude,latitudeLabel, longitude, longitudeLabel, altitude, altitudeLabel;
-#endif
 NSMutableString *data;
 NSString *dateString;
 NSString *fileName;
@@ -128,7 +122,6 @@ double startup = 0;
     }
 }
 
-#ifndef FREE_VERSION
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt
 {
     if(recording.on)
@@ -145,8 +138,10 @@ double startup = 0;
 }
 
 // Called when the GPS has detected a movement.
--(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)new fromLocation:(CLLocation *)old
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations
 {
+    CLLocation* new = [locations lastObject];
+
     [self gpsUpdate:new.coordinate.latitude longitude:new.coordinate.longitude altitude:new.altitude];
 }
 
@@ -154,9 +149,13 @@ double startup = 0;
 {
 	// Check the error code if the LocationManager failed.
 	if(error.code == kCLErrorLocationUnknown)
+    {
 		NSLog(@"Currently unable to retrieve location.");
+    }
 	else if(error.code == kCLErrorNetwork)
+    {
 		NSLog(@"Network used to retrieve location is unavailable.");
+    }
 	else if(error.code == kCLErrorDenied)
 	{
 		// If the user denied access for the program to use GPS, then stop attempting to update the location.
@@ -169,21 +168,9 @@ double startup = 0;
     longitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
     altitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
 }
-#endif
 
 - (void)updateCounter:(NSTimer*)timer
 {
-#ifdef FREE_VERSION
-    if(iterations >= 10*freq && recording.on)
-    {
-        recording.on = false;
-        [self isRecording:self];
-        iterations = 0;
-    }
-    else if(recording.on)
-        iterations++;
-#endif
-    
     if([mgr isDeviceMotionAvailable] && [mgr isDeviceMotionActive])
     {
         [self attitudeUpdate:mgr.deviceMotion.attitude.pitch*180/M_PI rollValue:mgr.deviceMotion.attitude.roll*180/M_PI yawValue:mgr.deviceMotion.attitude.yaw*180/M_PI];
@@ -228,34 +215,38 @@ double startup = 0;
 
 -(IBAction)emailResults
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Results", nil)]
-                                                    message:[NSString stringWithFormat:NSLocalizedString(@"Email", nil)]
-                                                    delegate:self
-                                                    cancelButtonTitle:[NSString stringWithFormat:NSLocalizedString(@"Yes", nil)]
-                                                    otherButtonTitles:[NSString stringWithFormat:NSLocalizedString(@"No", nil)],
-                                                    nil];
-    [alert show];
-}
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Results", nil)]
+                                 message:[NSString stringWithFormat:NSLocalizedString(@"Email", nil)]
+                                 preferredStyle:UIAlertControllerStyleAlert];
 
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex == 0)
-    {
-        MFMailComposeViewController *mailComposer; 
-        mailComposer  = [[MFMailComposeViewController alloc] init];
-        [mailComposer setMailComposeDelegate:self];
-        [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
-#ifdef FREE_VERSION
-        [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectFree", nil)]];
-        [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyFree", nil)] isHTML:YES];
-#else
-        [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectPaid", nil)]];
-        [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyPaid", nil)] isHTML:YES];
-#endif
-        NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
-        [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.txt",dateString]];
-        [self presentViewController:mailComposer animated:YES completion:nil];
-    }
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Yes", nil)]
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    MFMailComposeViewController *mailComposer;
+                                    mailComposer  = [[MFMailComposeViewController alloc] init];
+                                    [mailComposer setMailComposeDelegate:self];
+                                    [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
+                                    [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectPaid", nil)]];
+                                    [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyPaid", nil)] isHTML:YES];
+                                    NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
+                                    [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.txt",dateString]];
+                                    [self presentViewController:mailComposer animated:YES completion:nil];
+                                }];
+    
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:[NSString stringWithFormat:NSLocalizedString(@"No", nil)]
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle no, thanks button
+                               }];
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
@@ -274,21 +265,13 @@ double startup = 0;
 		data = [[NSMutableString alloc] init];
         data = [NSMutableString stringWithString:@""];
         [data appendString:[NSMutableString stringWithFormat:@"(Preferred) sampling frequency set to %f Hz.\nYour device may not support this sampling frequency, so always check your timestamps!\n",freq]];
-#ifdef FREE_VERSION
-        rateButton.enabled = false;
-#else
         back.enabled = false;
-#endif
         info.enabled = false;
 	}
 	// If record data is off and data has been written to the NSArray, dump it to a file.
 	else if(!recording.on)
 	{
-#ifdef FREE_VERSION
-        rateButton.enabled = true;
-#else
         back.enabled = true;
-#endif
         info.enabled = true;
 		// Get an array of all the directories in the app's bundle
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -327,7 +310,15 @@ double startup = 0;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
     // Release any cached data, images, etc that aren't in use.
+    recording.on = false;
+    
+    [mgr stopGyroUpdates];
+    [mgr stopAccelerometerUpdates];
+    [mgr stopMagnetometerUpdates];
+    [mgr stopDeviceMotionUpdates];
+    [locMan stopUpdatingLocation];
 }
 
 #pragma mark - View lifecycle
@@ -337,64 +328,49 @@ double startup = 0;
     [super viewDidLoad];
     
 	recording.on = false;
-
-#ifdef FREE_VERSION
-    freq = 10;
-    rateButton.title = [NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)];
-#else
-    // Initialize the location manager and set the delegate to us.
-	locMan = [[CLLocationManager alloc] init];
-    locMan.delegate = self;
-	// Set the distance filter so that it will update the location manager whenever we move.
-	locMan.distanceFilter = kCLDistanceFilterNone;
-	// Set the desired accuracy to the best possible accuracy.
-	locMan.desiredAccuracy = kCLLocationAccuracyBest;
-	// Start updating the GPS location.
-	[locMan startUpdatingLocation];
-    back.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
-    latitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Latitude", nil)];
-    longitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Longitude", nil)];
-    altitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Altitude", nil)];
-#endif
-    navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"SensorTitle", nil)];
-    accelerometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"AccelerometerLabel", nil)];
-    gyroscopeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"GyroscopeLabel", nil)];
-    magnetometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"MagnetometerLabel", nil)];
-    recordingLabel.text = [NSString stringWithFormat:NSLocalizedString(@"RecordingLabel", nil)];
-    pitchLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Pitch", nil)];
-    rollLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Roll", nil)];
-    yawLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Yaw", nil)];
-    mgr = [[CMMotionManager alloc] init];
     
-    [mgr startAccelerometerUpdates];
-    [mgr startGyroUpdates];
-    [mgr startMagnetometerUpdates];
-    [mgr startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical];
-    
-	[NSTimer scheduledTimerWithTimeInterval:1.0/freq
-                                     target:self
-                                   selector:@selector(updateCounter:)
-                                   userInfo:nil
-                                    repeats:YES];
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    
-    startup = CFAbsoluteTimeGetCurrent();
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    
-    recording.on = false;
-    
-    [mgr stopGyroUpdates];
-    [mgr stopAccelerometerUpdates];
-    [mgr stopMagnetometerUpdates];
-    [mgr stopDeviceMotionUpdates];
-#ifndef FREE_VERSION
-    [locMan stopUpdatingLocation];
-#endif
+    if([CLLocationManager locationServicesEnabled])
+    {
+        // Initialize the location manager and set the delegate to us.
+        locMan = [[CLLocationManager alloc] init];
+        locMan.delegate = self;
+        // Set the distance filter so that it will update the location manager whenever we move.
+        locMan.distanceFilter = kCLDistanceFilterNone;
+        // Set the desired accuracy to the best possible accuracy.
+        locMan.desiredAccuracy = kCLLocationAccuracyBest;
+        // Start updating the GPS location.
+        [locMan startUpdatingLocation];
+        back.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
+        latitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Latitude", nil)];
+        longitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Longitude", nil)];
+        altitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Altitude", nil)];
+        navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"SensorTitle", nil)];
+        accelerometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"AccelerometerLabel", nil)];
+        gyroscopeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"GyroscopeLabel", nil)];
+        magnetometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"MagnetometerLabel", nil)];
+        recordingLabel.text = [NSString stringWithFormat:NSLocalizedString(@"RecordingLabel", nil)];
+        pitchLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Pitch", nil)];
+        rollLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Roll", nil)];
+        yawLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Yaw", nil)];
+        mgr = [[CMMotionManager alloc] init];
+        
+        [mgr startAccelerometerUpdates];
+        [mgr startGyroUpdates];
+        [mgr startMagnetometerUpdates];
+        [mgr startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical];
+        
+        [NSTimer scheduledTimerWithTimeInterval:1.0/freq
+                                         target:self
+                                       selector:@selector(updateCounter:)
+                                       userInfo:nil
+                                        repeats:YES];
+        
+        startup = CFAbsoluteTimeGetCurrent();
+    }
+    else
+    {
+        NSLog(@"HH: Location services are disabled");
+    }
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -402,13 +378,6 @@ double startup = 0;
     return YES;
 }
 
-#ifdef FREE_VERSION
--(IBAction)userClickedRateUs:(id)sender
-{
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id485523535"]];
-}
-
-#else
 -(IBAction)goBack
 {
     if(!recording.on)
@@ -419,5 +388,4 @@ double startup = 0;
 {
     freq = frequency;
 }
-#endif
 @end

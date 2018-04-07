@@ -2,7 +2,7 @@
 //  Data Collection
 //
 //  Created by Chris Wozny on 11/8/11.
-//  Copyright (c) 2013 Chris Wozny. All rights reserved.
+//  Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
 
 #import "InfoViewController.h"
 
@@ -30,28 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     infoText.text = [NSString stringWithFormat:NSLocalizedString(@"InfoText", nil)];
     backButton.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
     navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"InfoTitle", nil)];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

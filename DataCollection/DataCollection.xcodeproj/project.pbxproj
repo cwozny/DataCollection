@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9406F0EF1453B93900A3DEC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9406F0EE1453B93900A3DEC5 /* UIKit.framework */; };
 		9406F0F11453B93900A3DEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9406F0F01453B93900A3DEC5 /* Foundation.framework */; };
-		9406F0F31453B93900A3DEC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9406F0F21453B93900A3DEC5 /* CoreGraphics.framework */; };
 		9406F0F91453B93900A3DEC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9406F0F71453B93900A3DEC5 /* InfoPlist.strings */; };
 		9406F1021453B93900A3DEC5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9406F1001453B93900A3DEC5 /* MainStoryboard_iPhone.storyboard */; };
 		9406F1051453B93900A3DEC5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9406F1031453B93900A3DEC5 /* MainStoryboard_iPad.storyboard */; };
@@ -95,7 +94,6 @@
 				9406F1271453BD9200A3DEC5 /* CoreMotion.framework in Frameworks */,
 				9406F0EF1453B93900A3DEC5 /* UIKit.framework in Frameworks */,
 				9406F0F11453B93900A3DEC5 /* Foundation.framework in Frameworks */,
-				9406F0F31453B93900A3DEC5 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +444,7 @@
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
 				PROVISIONING_PROFILE = "";
@@ -467,7 +465,7 @@
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
 				PROVISIONING_PROFILE = "";
@@ -540,7 +538,7 @@
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
 				PROVISIONING_PROFILE = "";

@@ -32,7 +32,6 @@
 		9406F0EA1453B93900A3DEC5 /* DataCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9406F0EE1453B93900A3DEC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9406F0F01453B93900A3DEC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9406F0F21453B93900A3DEC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9406F0F61453B93900A3DEC5 /* DataCollection-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataCollection-Info.plist"; sourceTree = "<group>"; };
 		9406F0F81453B93900A3DEC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9406F0FC1453B93900A3DEC5 /* DataCollection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataCollection-Prefix.pch"; sourceTree = "<group>"; };
@@ -108,7 +107,6 @@
 				9406F1261453BD9200A3DEC5 /* CoreMotion.framework */,
 				9406F0EE1453B93900A3DEC5 /* UIKit.framework */,
 				9406F0F01453B93900A3DEC5 /* Foundation.framework */,
-				9406F0F21453B93900A3DEC5 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

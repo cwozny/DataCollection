@@ -3,7 +3,7 @@
   DataCollection
 
   Created by Chris Wozny on 4/13/13.
-  Copyright (c) 2013 Chris Wozny. All rights reserved.
+  Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
 */
 
 // Common
@@ -41,4 +41,4 @@
 "Yes" = "Sí";
 "No" = "No";
 "Subject" = "Acelerómetro, giroscopio, magnetómetro, y el GPS los datos de Data Collection App";
-"MessageBody" = "He adjuntado los datos recopilados a partir de la aplicación de recopilación de datos. Puede obtener la aplicación <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">aquí</a>.";
+"MessageBody" = "He adjuntado los datos recopilados a partir de la aplicación de recopilación de datos. Puede obtener la aplicación <a href=\"http://itunes.apple.com/es/app/data-collection/id479348835\">aquí</a>.";

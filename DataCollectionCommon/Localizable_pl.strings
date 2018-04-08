@@ -3,7 +3,7 @@
  DataCollection
  
  Created by Chris Wozny on 4/13/13.
- Copyright (c) 2013 Chris Wozny. All rights reserved.
+ Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
  */
 
 // Common
@@ -41,4 +41,4 @@
 "Yes" = "Tak";
 "No" = "Nie";
 "Subject" = "Akcelerometr, żyroskop, Magnetometr i GPS dane z Data Collection App";
-"MessageBody" = "Mam załączeniu zgromadzone dane od aplikacji zbierania danych. Można dostać się na aplikację <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">tutaj</a>.";
+"MessageBody" = "Mam załączeniu zgromadzone dane od aplikacji zbierania danych. Można dostać się na aplikację <a href=\"http://itunes.apple.com/pl/app/data-collection/id479348835\">tutaj</a>.";

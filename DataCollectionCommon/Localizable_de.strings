@@ -40,7 +40,5 @@
 "Email" = "Möchten sie die gesammelten daten per E-Mail?";
 "Yes" = "Ja";
 "No" = "Nicht";
-"SubjectFree" = "Beschleunigungsmesser, Kreisel und Magnetometer Daten aus Data Collection Free App";
 "SubjectPaid" = "Beschleunigungsmesser, Kreisel, Magnetometer und GPS-Daten von Data Collection App";
-"MessageBodyPaid" = "Ich habe die gesammelten Daten aus dem Data Collection App angebracht. Die rohen Werte werden als x, y und z für die Kreisel (deg / s), Magnetometer (Mikrotesla), und Beschleunigungsmesser (g-Kraft) geordnet. Attitude (Grad) wird als Pitch, Roll und Yaw (falls vorhanden). GPS wird als Breitengrad, Längengrad und Höhe (Meter) bestellt wurden. Sie können die App <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">hier bekommen</a>.";
-"MessageBodyFree" = "Ich habe 10 Sekunden gesammelten Daten von der kostenlosen Version der Data Collection App angebracht. Die rohen Werte werden als x, y und z für die Kreisel (deg / s), Magnetometer (Mikrotesla), und Beschleunigungsmesser (g-Kraft) geordnet. Attitude (Grad) wird als Pitch, Roll und Yaw bestellt werden (falls verfügbar.) Sie können die App <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">hier bekommen</a>.";
+"MessageBody" = "Ich habe die gesammelten Daten aus dem Data Collection App angebracht. Sie können die App <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">hier bekommen</a>.";

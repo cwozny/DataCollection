@@ -40,7 +40,5 @@
 "Email" = "Chcesz wysłać zebrane dane?";
 "Yes" = "Tak";
 "No" = "Nie";
-"SubjectFree" = "Akcelerometr, żyroskop i Magnetometr danych Data Collection Free App bezpłatny";
-"SubjectPaid" = "Akcelerometr, żyroskop, Magnetometr i GPS dane z Data Collection App";
-"MessageBodyPaid" = "Mam załączeniu zgromadzone dane od aplikacji zbierania danych. Surowe wartości są sortowane jako X, Y i Z dla żyroskopu (deg / s), magnetometry (microteslas) i akcelerometry (G-force). Attitude (stopni) zarządza się, co pochylenie, przechylenie, i odchylenie (jeśli jest dostępny). GPS jest zamawiany w szerokości, długości i wysokości (metry). Można dostać się na aplikację <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">tutaj</a>.";
-"MessageBodyFree" = "Mam przypisane 10 sekund zebranych danych od wersji bezpłatnej zbierania danych aplikacji. Surowe wartości są sortowane jako X, Y i Z dla żyroskopu (deg / s), magnetometry (microteslas) i akcelerometry (G-force). Attitude (stopni) zarządza się, co pochylenie, przechylenie, i odchylenie (jeśli jest dostępny). Możesz pobrać aplikację <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">tutaj</a>.";
+"Subject" = "Akcelerometr, żyroskop, Magnetometr i GPS dane z Data Collection App";
+"MessageBody" = "Mam załączeniu zgromadzone dane od aplikacji zbierania danych. Można dostać się na aplikację <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">tutaj</a>.";

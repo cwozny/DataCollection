@@ -21,11 +21,13 @@
 @synthesize navTitle;
 @synthesize locMan;
 @synthesize back;
-@synthesize latitude,latitudeLabel, longitude, longitudeLabel, altitude, altitudeLabel;
+@synthesize latitude, latitudeLabel, longitude, longitudeLabel, altitude, altitudeLabel;
 NSMutableString *data;
 NSString *dateString;
 NSString *fileName;
 int filesWritten = 0;
+
+bool isLocationUpdating = false;
 
 -(void)gyroUpdate:(double)p q:(double)q r:(double)r
 {
@@ -111,9 +113,7 @@ int filesWritten = 0;
 // Called when the GPS has detected a movement.
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations
 {
-    CLLocation* new = [locations lastObject];
-
-    [self gpsUpdate:new.coordinate.latitude longitude:new.coordinate.longitude altitude:new.altitude];
+    isLocationUpdating = true;
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -135,9 +135,7 @@ int filesWritten = 0;
 		locMan = nil;
 	}
     
-    latitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
-    longitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
-    altitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
+    isLocationUpdating = false;
 }
 
 - (void)updateCounter:(NSTimer*)timer
@@ -160,7 +158,7 @@ int filesWritten = 0;
     {
         pitch.text = [NSString stringWithFormat:@"%@", @"N/A"];
         roll.text = [NSString stringWithFormat:@"%@", @"N/A"];
-        yaw.text =[NSString stringWithFormat:@"%@", @"N/A"];
+        yaw.text = [NSString stringWithFormat:@"%@", @"N/A"];
     }
     
     if([mgr isAccelerometerAvailable])
@@ -205,9 +203,18 @@ int filesWritten = 0;
         self.x_mag.progress = self.y_mag.progress = self.z_mag.progress = 0;
     }
     
-    lla[0] = locMan.location.coordinate.latitude;
-    lla[1] = locMan.location.coordinate.longitude;
-    lla[2] = locMan.location.altitude;
+    if(isLocationUpdating)
+    {
+        lla[0] = locMan.location.coordinate.latitude;
+        lla[1] = locMan.location.coordinate.longitude;
+        lla[2] = locMan.location.altitude;
+        
+        [self gpsUpdate:lla[0] longitude:lla[1] altitude:lla[2]];
+    }
+    else
+    {
+        latitude.text = longitude.text = altitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
+    }
     
     // Append time
     [data appendString:[NSString stringWithFormat:@"%f,", CFAbsoluteTimeGetCurrent()]];
@@ -220,7 +227,7 @@ int filesWritten = 0;
     // Append magnetic
     [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", magnetic[0], magnetic[1], magnetic[2]]];
     // Append GPS
-    [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", lla[0], lla[1], lla[2]]];
+    [data appendString:[NSString stringWithFormat:@"%f,%f,%f", lla[0], lla[1], lla[2]]];
     // Append newline
     [data appendString:@"\n"];
 }
@@ -241,8 +248,8 @@ int filesWritten = 0;
                                     mailComposer  = [[MFMailComposeViewController alloc] init];
                                     [mailComposer setMailComposeDelegate:self];
                                     [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
-                                    [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectPaid", nil)]];
-                                    [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyPaid", nil)] isHTML:YES];
+                                    [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"Subject", nil)]];
+                                    [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBody", nil)] isHTML:YES];
                                     NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
                                     [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.csv",dateString]];
                                     [self presentViewController:mailComposer animated:YES completion:nil];

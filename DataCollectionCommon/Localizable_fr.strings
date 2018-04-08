@@ -40,7 +40,5 @@
 "Email" = "Voulez-vous envoyer les données collectées?";
 "Yes" = "Oui";
 "No" = "Non";
-"SubjectFree" = "Données de l'accéléromètre, gyroscope, et magnétomètre de Data Collection Free App";
-"SubjectPaid" = "Les données de l'accéléromètre, gyroscope, magnétomètre et un GPS de Data Collection App";
-"MessageBodyPaid" = "J'ai joint les données recueillies à partir de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (rad / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). GPS est ordonné que la latitude, la longitude et l'altitude (en mètres). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">ici</a>.";
-"MessageBodyFree" = "J'ai joint 10 secondes de données collectées à partir de la version gratuite de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (rad / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">ici</a>.";
+"Subject" = "Les données de l'accéléromètre, gyroscope, magnétomètre et un GPS de Data Collection App";
+"MessageBody" = "J'ai joint les données recueillies à partir de l'application de collecte de données. Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">ici</a>.";

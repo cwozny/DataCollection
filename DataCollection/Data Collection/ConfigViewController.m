@@ -2,10 +2,12 @@
 //  DataCollection
 //
 //  Created by Chris Wozny on 2/28/12.
-//  Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
+//  Copyright (c) 2013, 2018, 2021 Chris Wozny. All rights reserved.
 
 #import "ConfigViewController.h"
 #import "ViewController.h"
+
+#import <StoreKit/StoreKit.h>
 
 @implementation ConfigViewController
 
@@ -23,7 +25,7 @@ float samplingFrequency = 1.0f;
 
 -(IBAction)userClickedRateUs:(id)sender
 {
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id479348835"] options:@{} completionHandler:nil];
+    [SKStoreReviewController requestReviewInScene:self.view.window.windowScene];
 }
 
 -(void)dismissKeyboard

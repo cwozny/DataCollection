@@ -244,15 +244,18 @@ bool isLocationUpdating = false;
                                 style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction * action)
                                 {
-                                    MFMailComposeViewController *mailComposer;
-                                    mailComposer  = [[MFMailComposeViewController alloc] init];
-                                    [mailComposer setMailComposeDelegate:self];
-                                    [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
-                                    [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"Subject", nil)]];
-                                    [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBody", nil)] isHTML:YES];
-                                    NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
-                                    [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.csv",dateString]];
-                                    [self presentViewController:mailComposer animated:YES completion:nil];
+                                    if ([MFMailComposeViewController canSendMail])
+                                    {
+                                        MFMailComposeViewController *mailComposer;
+                                        mailComposer  = [[MFMailComposeViewController alloc] init];
+                                        [mailComposer setMailComposeDelegate:self];
+                                        [mailComposer setModalPresentationStyle:UIModalPresentationFormSheet];
+                                        [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"Subject", nil)]];
+                                        [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBody", nil)] isHTML:YES];
+                                        NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
+                                        [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.csv",dateString]];
+                                        [self presentViewController:mailComposer animated:YES completion:nil];
+                                    }
                                 }];
     
     UIAlertAction* noButton = [UIAlertAction

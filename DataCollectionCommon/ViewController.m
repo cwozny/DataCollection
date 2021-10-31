@@ -256,6 +256,10 @@ bool isLocationUpdating = false;
                                         [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.csv",dateString]];
                                         [self presentViewController:mailComposer animated:YES completion:nil];
                                     }
+                                    else
+                                    {
+                                        NSLog(@"Attempted to send email, but canSendMail returned false");
+                                    }
                                 }];
     
     UIAlertAction* noButton = [UIAlertAction

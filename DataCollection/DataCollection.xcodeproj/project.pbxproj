@@ -406,7 +406,7 @@
 		9406F1221453B93A00A3DEC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -460,7 +460,7 @@
 		9477FD541469FBD20075AF5C /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;

@@ -328,16 +328,16 @@
 		94B34D421523AB9000C8181F /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Christopher Wozny";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Christopher Wozny";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = FREE_VERSION;
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70406BF5-D502-4D13-A87C-AFECAD7D9BB2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "70406BF5-D502-4D13-A87C-AFECAD7D9BB2";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
@@ -407,8 +407,8 @@
 		94CD38021509446B0068BB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Wozny (TBTV766NH7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christopher Wozny (TBTV766NH7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -419,8 +419,8 @@
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BCB8C130-2466-4446-907F-6FC48B0E76B7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BCB8C130-2466-4446-907F-6FC48B0E76B7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
@@ -429,16 +429,16 @@
 		94CD38031509446B0068BB5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Christopher Wozny";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Christopher Wozny";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = FREE_VERSION;
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70406BF5-D502-4D13-A87C-AFECAD7D9BB2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "70406BF5-D502-4D13-A87C-AFECAD7D9BB2";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -171,14 +171,9 @@
 			attributes = {
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Chris Wozny";
-				TargetAttributes = {
-					9406F0E91453B93900A3DEC5 = {
-						DevelopmentTeam = E43C8EG48H;
-					};
-				};
 			};
 			buildConfigurationList = 9406F0E41453B93900A3DEC5 /* Build configuration list for PBXProject "DataCollection" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -393,11 +388,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.15;
+				DEVELOPMENT_TEAM = E43C8EG48H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
@@ -415,11 +411,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.15;
+				DEVELOPMENT_TEAM = E43C8EG48H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
@@ -490,11 +487,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.15;
+				DEVELOPMENT_TEAM = E43C8EG48H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;

@@ -407,7 +407,7 @@ double startup = 0;
 #ifdef FREE_VERSION
 -(IBAction)userClickedRateUs:(id)sender
 {
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/data-collection-free/id485523535"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id485523535"]];
 }
 
 #pragma mark ADBannerViewDelegate

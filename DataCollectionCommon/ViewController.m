@@ -58,20 +58,9 @@ double startup = 0;
         self.y_gyro.progress = ABS(q)/M_PI;
         self.z_gyro.progress = ABS(r)/M_PI;
         
-        if(p < 0)
-            self.x_gyro.progressTintColor = [UIColor redColor];
-        else
-            self.x_gyro.progressTintColor = [UIColor blueColor];
-        
-        if(q < 0)
-            self.y_gyro.progressTintColor = [UIColor redColor];
-        else
-            self.y_gyro.progressTintColor = [UIColor blueColor];
-        
-        if(r < 0)
-            self.z_gyro.progressTintColor = [UIColor redColor];
-        else
-            self.z_gyro.progressTintColor = [UIColor blueColor];
+        self.x_gyro.progressTintColor = (p < 0) ? [UIColor redColor] : [UIColor blueColor];
+        self.y_gyro.progressTintColor = (q < 0) ? [UIColor redColor] : [UIColor blueColor];
+        self.z_gyro.progressTintColor = (r < 0) ? [UIColor redColor] : [UIColor blueColor];
     }
 }
 
@@ -94,20 +83,9 @@ double startup = 0;
         self.y_accel.progress = ABS(y);
         self.z_accel.progress = ABS(z);
         
-        if(x < 0)
-            self.x_accel.progressTintColor = [UIColor redColor];
-        else
-            self.x_accel.progressTintColor = [UIColor blueColor];
-        
-        if(y < 0)
-            self.y_accel.progressTintColor = [UIColor redColor];
-        else
-            self.y_accel.progressTintColor = [UIColor blueColor];
-        
-        if(z < 0)
-            self.z_accel.progressTintColor = [UIColor redColor];
-        else
-            self.z_accel.progressTintColor = [UIColor blueColor];
+        self.x_accel.progressTintColor = (x < 0) ? [UIColor redColor] : [UIColor blueColor];
+        self.y_accel.progressTintColor = (y < 0) ? [UIColor redColor] : [UIColor blueColor];
+        self.z_accel.progressTintColor = (z < 0) ? [UIColor redColor] : [UIColor blueColor];
     }
 }
 
@@ -130,20 +108,9 @@ double startup = 0;
         self.y_mag.progress = ABS(y)/300;
         self.z_mag.progress = ABS(z)/300;
         
-        if(x < 0)
-            self.x_mag.progressTintColor = [UIColor redColor];
-        else
-            self.x_mag.progressTintColor = [UIColor blueColor];
-        
-        if(y < 0)
-            self.y_mag.progressTintColor = [UIColor redColor];
-        else
-            self.y_mag.progressTintColor = [UIColor blueColor];
-        
-        if(z < 0)
-            self.z_mag.progressTintColor = [UIColor redColor];
-        else
-            self.z_mag.progressTintColor = [UIColor blueColor];
+        self.x_mag.progressTintColor = (x < 0) ? [UIColor redColor] : [UIColor blueColor];
+        self.y_mag.progressTintColor = (y < 0) ? [UIColor redColor] : [UIColor blueColor];
+        self.z_mag.progressTintColor = (z < 0) ? [UIColor redColor] : [UIColor blueColor];
     }
 }
 

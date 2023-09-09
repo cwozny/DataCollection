@@ -105,7 +105,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *magnetometerLabel;
 @property (nonatomic, retain) IBOutlet UILabel *gyroscopeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *recordingLabel;
-@property (nonatomic) int freq;
+@property (nonatomic) float freq;
 #ifdef FREE_VERSION
 @property (nonatomic, strong) IBOutlet ADBannerView *bannerView;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *rateButton;

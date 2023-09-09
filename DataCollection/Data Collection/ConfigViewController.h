@@ -8,7 +8,6 @@
 
 @interface ConfigViewController : UIViewController
 {
-    UISlider *sliderRate;
     UITextField *textRate;
     UILabel *setRate;
     UILabel *noteText;
@@ -18,7 +17,6 @@
     UIButton *rateUsButton;
 }
 
-@property (nonatomic, retain) IBOutlet UISlider *sliderRate;
 @property (nonatomic, retain) IBOutlet UITextField *textRate;
 @property (nonatomic, retain) IBOutlet UILabel *setRate;
 @property (nonatomic, retain) IBOutlet UILabel *noteText;
@@ -27,7 +25,6 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *goButton;
 @property (nonatomic, retain) IBOutlet UIButton *rateUsButton;
 
--(IBAction)sliderChanged:(id)sender;
 -(IBAction)textChanged:(id)sender;
 -(IBAction)userClickedRateUs:(id)sender;
 -(void)dismissKeyboard;

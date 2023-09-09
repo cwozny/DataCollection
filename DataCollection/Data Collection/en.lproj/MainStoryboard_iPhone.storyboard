@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WxR-uL-nyL">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="WxR-uL-nyL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Info View Controller-->
@@ -14,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="HhK-K6-t0w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q7M-og-Sf2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="qweqwe" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-Jw-dEJ">
-                                <rect key="frame" x="14" y="52" width="293" height="178"/>
+                                <rect key="frame" x="41.5" y="52" width="293" height="178"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="178" id="fdr-5d-6jN"/>
                                     <constraint firstAttribute="width" constant="293" id="pTf-ap-RKw"/>
@@ -28,14 +32,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="axes.png" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-sI-SK0">
-                                <rect key="frame" x="49" y="250" width="223" height="210"/>
+                                <rect key="frame" x="76.5" y="437" width="223" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="223" id="2DO-ap-hBv"/>
                                     <constraint firstAttribute="height" constant="210" id="IKL-mT-VXi"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Z" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-Ub-Xhd">
-                                <rect key="frame" x="31" y="387" width="33" height="22"/>
+                                <rect key="frame" x="31" y="574" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="eb4-Q6-sq1"/>
                                 </constraints>
@@ -44,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-X" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-EP-JcV">
-                                <rect key="frame" x="42" y="312" width="33" height="22"/>
+                                <rect key="frame" x="42" y="499" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="3Yw-Pw-23O"/>
                                     <constraint firstAttribute="width" constant="33" id="CZ3-ps-sLR"/>
@@ -54,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Y" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="F6z-f9-j3j">
-                                <rect key="frame" x="161" y="229" width="33" height="22"/>
+                                <rect key="frame" x="216" y="416" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="hrh-0u-hx8"/>
                                 </constraints>
@@ -63,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Z" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-MS-afd">
-                                <rect key="frame" x="257" y="297" width="33" height="22"/>
+                                <rect key="frame" x="312" y="484" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="U3y-o8-bI0"/>
                                 </constraints>
@@ -72,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+X" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-Jk-HSU">
-                                <rect key="frame" x="257" y="381" width="33" height="22"/>
+                                <rect key="frame" x="312" y="568" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="8yJ-lu-oo4"/>
                                 </constraints>
@@ -81,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Y" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-x2-1IP">
-                                <rect key="frame" x="124" y="438" width="33" height="22"/>
+                                <rect key="frame" x="124" y="625" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="2fN-ER-vAl"/>
                                     <constraint firstAttribute="width" constant="33" id="a7r-J0-Jro"/>
@@ -91,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-NL-XO8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="qwe" id="ID3-pG-mFV">
                                         <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="gnV-24-Pe4" userLabel="InfoBackButton">
@@ -103,7 +107,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="F6z-f9-j3j" secondAttribute="bottom" constant="229" id="5z2-4P-rUJ"/>
                             <constraint firstItem="TMj-EP-JcV" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" constant="42" id="90p-hH-zDG"/>
@@ -152,11 +156,11 @@
                         <viewControllerLayoutGuide type="bottom" id="KQd-pn-cAj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fn1-GY-MrE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx0-jY-Q3f">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Configuration" id="WRb-gi-16p">
                                         <barButtonItem key="rightBarButtonItem" title="Go!" style="done" id="0qp-6A-6xb" userLabel="GoButton">
@@ -167,26 +171,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="1" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="yVM-aU-oFK" userLabel="SamplingRateSlider">
-                                <rect key="frame" x="18" y="128" width="227" height="34"/>
-                                <connections>
-                                    <action selector="sliderChanged:" destination="WxR-uL-nyL" eventType="valueChanged" id="LRb-w3-msC"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0m-CW-qcj" userLabel="SamplingRateText">
-                                <rect key="frame" x="251" y="123" width="49" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0m-CW-qcj" userLabel="SamplingRateText">
+                                <rect key="frame" x="20" y="123" width="335" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="Jei-O5-YEZ"/>
+                                    <constraint firstAttribute="width" constant="49" id="Jei-O5-YEZ" userLabel="width = 275"/>
                                     <constraint firstAttribute="height" constant="31" id="lA6-wA-Orr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="textChanged:" destination="WxR-uL-nyL" eventType="valueChanged" id="MCU-nQ-xeJ"/>
+                                    <action selector="textChanged:" destination="WxR-uL-nyL" eventType="editingDidEnd" id="0qf-zJ-Ti4"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please set the sampling rate in hertz:" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-yI-Tbv">
-                                <rect key="frame" x="20" y="57" width="240" height="58"/>
+                                <rect key="frame" x="20" y="57" width="238" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="pUO-6k-F4o"/>
                                 </constraints>
@@ -195,27 +193,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="cGz-Gd-SsT">
-                                <rect key="frame" x="20" y="158" width="280" height="122"/>
+                                <rect key="frame" x="20" y="158" width="335" height="122"/>
                                 <string key="text">NOTE: How quickly the device can sample is based on the load of the device (and the maximum sampling speed of the device.) For best performance, close all background apps before using.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qws-jj-xeY" userLabel="RateUsButton">
-                                <rect key="frame" x="68" y="344" width="185" height="34"/>
+                                <rect key="frame" x="95.5" y="531" width="185" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="Tbe-VH-BV7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Rate Usqweqweqwe">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="userClickedRateUs:" destination="WxR-uL-nyL" eventType="touchUpInside" id="i9v-EM-RSQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Like the app? Please rate it so that others can find out about it as well." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Cxt-L4-Zz8">
-                                <rect key="frame" x="20" y="386" width="280" height="74"/>
+                                <rect key="frame" x="20" y="573" width="335" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="gz9-lV-Pju"/>
                                 </constraints>
@@ -224,7 +222,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Cxt-L4-Zz8" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" id="6S2-Qv-RDg"/>
                             <constraint firstItem="cGz-Gd-SsT" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" id="HV4-Lf-13S"/>
@@ -233,17 +231,13 @@
                             <constraint firstItem="pDN-yI-Tbv" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" id="KAs-4l-HeI"/>
                             <constraint firstAttribute="trailing" secondItem="D0m-CW-qcj" secondAttribute="trailing" constant="20" symbolic="YES" id="MfK-6I-ouz"/>
                             <constraint firstItem="D0m-CW-qcj" firstAttribute="top" secondItem="pDN-yI-Tbv" secondAttribute="bottom" constant="8" symbolic="YES" id="NoJ-OP-ZLY"/>
-                            <constraint firstItem="yVM-aU-oFK" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" id="Nxx-jJ-uKx"/>
                             <constraint firstItem="pDN-yI-Tbv" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" constant="57" id="RcF-lj-aUu"/>
                             <constraint firstAttribute="trailing" secondItem="Cxt-L4-Zz8" secondAttribute="trailing" constant="20" symbolic="YES" id="S5h-N6-prX"/>
-                            <constraint firstItem="cGz-Gd-SsT" firstAttribute="top" secondItem="yVM-aU-oFK" secondAttribute="bottom" constant="8" symbolic="YES" id="UQS-OP-ACc"/>
                             <constraint firstItem="hx0-jY-Q3f" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" id="V2H-aq-g9k"/>
                             <constraint firstAttribute="trailing" secondItem="cGz-Gd-SsT" secondAttribute="trailing" constant="20" symbolic="YES" id="Xlh-kA-gC6"/>
-                            <constraint firstItem="yVM-aU-oFK" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" constant="128" id="e0C-BL-fIk"/>
                             <constraint firstItem="hx0-jY-Q3f" firstAttribute="trailing" secondItem="Fn1-GY-MrE" secondAttribute="trailing" id="hah-MM-vjg"/>
                             <constraint firstItem="cGz-Gd-SsT" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" constant="158" id="m1L-Jv-tGI"/>
                             <constraint firstAttribute="bottom" secondItem="Cxt-L4-Zz8" secondAttribute="bottom" constant="20" symbolic="YES" id="saE-km-Za9"/>
-                            <constraint firstItem="D0m-CW-qcj" firstAttribute="leading" secondItem="yVM-aU-oFK" secondAttribute="trailing" constant="8" symbolic="YES" id="vHJ-c8-1tR"/>
                             <constraint firstItem="Cxt-L4-Zz8" firstAttribute="top" secondItem="qws-jj-xeY" secondAttribute="bottom" constant="8" symbolic="YES" id="wf5-N4-lvU"/>
                         </constraints>
                     </view>
@@ -254,13 +248,12 @@
                         <outlet property="rateUsButton" destination="qws-jj-xeY" id="tuY-Yc-g10"/>
                         <outlet property="rateUsText" destination="Cxt-L4-Zz8" id="r9b-LX-W4z"/>
                         <outlet property="setRate" destination="pDN-yI-Tbv" id="bEg-MR-Ssl"/>
-                        <outlet property="sliderRate" destination="yVM-aU-oFK" id="8dw-aE-x41"/>
                         <outlet property="textRate" destination="D0m-CW-qcj" id="hO4-8E-Uy9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oac-Fy-oYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="102"/>
+            <point key="canvasLocation" x="-566.5" y="101.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5">
@@ -271,11 +264,11 @@
                         <viewControllerLayoutGuide type="bottom" id="dqd-xo-b7A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Record" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ArQ-Vm-ycW">
-                                <rect key="frame" x="248" y="409" width="52" height="21"/>
+                                <rect key="frame" x="303" y="596" width="52" height="21"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -306,9 +299,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P0W-n5-1PX">
-                                <rect key="frame" x="235" y="268" width="65" height="32"/>
+                                <rect key="frame" x="290" y="268" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ahJ-Og-3Hg"/>
@@ -318,9 +311,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="enb-XU-Ycb">
-                                <rect key="frame" x="235" y="292" width="65" height="32"/>
+                                <rect key="frame" x="290" y="292" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="jne-nP-1vL"/>
@@ -330,9 +323,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-n7-SNH">
-                                <rect key="frame" x="235" y="318" width="65" height="32"/>
+                                <rect key="frame" x="290" y="318" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Vki-wI-2Xa"/>
@@ -342,9 +335,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fqg-QC-4nW">
-                                <rect key="frame" x="235" y="170" width="65" height="32"/>
+                                <rect key="frame" x="290" y="170" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Nuj-ih-9ab"/>
@@ -354,9 +347,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XtA-M3-kmQ">
-                                <rect key="frame" x="235" y="196" width="65" height="32"/>
+                                <rect key="frame" x="290" y="196" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Ut7-uP-Avw"/>
@@ -366,9 +359,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="70w-mU-VDm">
-                                <rect key="frame" x="235" y="222" width="65" height="32"/>
+                                <rect key="frame" x="290" y="222" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="gJY-av-HQg"/>
@@ -378,9 +371,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXXº" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-22-EHq">
-                                <rect key="frame" x="69" y="379" width="41" height="22"/>
+                                <rect key="frame" x="69" y="566" width="41" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="41" id="rQy-st-gGq"/>
@@ -390,27 +383,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXXº" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-za-W5e">
-                                <rect key="frame" x="69" y="409" width="41" height="21"/>
+                                <rect key="frame" x="69" y="596" width="41" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XXXº" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-Sl-5zt">
-                                <rect key="frame" x="69" y="438" width="41" height="22"/>
+                                <rect key="frame" x="69" y="625" width="41" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Roll:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-YU-DgH">
-                                <rect key="frame" x="20" y="379" width="50" height="22"/>
+                                <rect key="frame" x="20" y="566" width="50" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="k7r-bl-OT7"/>
@@ -421,18 +414,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pitch:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="LQA-bZ-BtT">
-                                <rect key="frame" x="20" y="409" width="50" height="21"/>
+                                <rect key="frame" x="20" y="596" width="50" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="DfI-cC-C1P">
-                                <rect key="frame" x="20" y="438" width="50" height="22"/>
+                                <rect key="frame" x="20" y="625" width="50" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Kjy-aL-zUS"/>
@@ -442,9 +435,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XXX" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bPF-lN-a8D">
-                                <rect key="frame" x="177" y="379" width="63" height="22"/>
+                                <rect key="frame" x="232" y="566" width="63" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="yZA-3d-3CA"/>
@@ -454,18 +447,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XXX" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="yAj-uf-hKa">
-                                <rect key="frame" x="177" y="409" width="63" height="21"/>
+                                <rect key="frame" x="232" y="596" width="63" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-l2-4t4">
-                                <rect key="frame" x="177" y="438" width="63" height="22"/>
+                                <rect key="frame" x="232" y="625" width="63" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -478,9 +471,9 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-tH-rBn">
-                                <rect key="frame" x="235" y="71" width="65" height="32"/>
+                                <rect key="frame" x="290" y="71" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="FXh-3p-eq8"/>
@@ -491,9 +484,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xj1-PL-LVq">
-                                <rect key="frame" x="235" y="97" width="65" height="32"/>
+                                <rect key="frame" x="290" y="97" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="k8f-lQ-FhE"/>
@@ -503,9 +496,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-sN-USh">
-                                <rect key="frame" x="235" y="124" width="65" height="32"/>
+                                <rect key="frame" x="290" y="124" width="65" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="OWF-Ch-Si1"/>
@@ -583,9 +576,9 @@
                                 </constraints>
                             </progressView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lat:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="LK0-sQ-CTs">
-                                <rect key="frame" x="121" y="379" width="35" height="22"/>
+                                <rect key="frame" x="121" y="566" width="35" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="wsz-PG-FeO"/>
@@ -595,18 +588,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lon:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="AQT-Kx-H4C">
-                                <rect key="frame" x="121" y="409" width="35" height="21"/>
+                                <rect key="frame" x="121" y="596" width="35" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Alt:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gxm-L9-2Vv">
-                                <rect key="frame" x="121" y="438" width="35" height="22"/>
+                                <rect key="frame" x="121" y="625" width="35" height="22"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -694,7 +687,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLz-kw-Qzy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="qweqw" id="2hn-DT-OOK">
                                         <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="TPg-mG-ldS" userLabel="SensorBackButton">
@@ -704,15 +697,15 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" id="pnO-3u-c6N" userLabel="InfoButton">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="jOw-dv-F3r">
-                                                <rect key="frame" x="286" y="12" width="18" height="19"/>
+                                                <rect key="frame" x="341" y="12" width="18" height="19"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="V3O-zi-7u3" kind="modal" id="6yA-YF-ebv"/>
@@ -723,7 +716,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9CN-tH-rBn" firstAttribute="top" secondItem="3" secondAttribute="top" constant="71" id="09v-wG-77G"/>
                             <constraint firstItem="Zrc-yy-Lxy" firstAttribute="trailing" secondItem="aUC-PW-rnG" secondAttribute="trailing" id="0Ar-E1-zBi"/>
@@ -907,6 +900,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

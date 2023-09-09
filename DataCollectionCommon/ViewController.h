@@ -2,7 +2,7 @@
 //  Data Collection
 //
 //  Created by Chris Wozny on 10/22/11.
-//  Copyright (c) 2013 Chris Wozny. All rights reserved.
+//  Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
@@ -12,11 +12,7 @@
 #import <AddressBookUI/AddressBookUI.h>
 
 @interface ViewController : UIViewController
-#ifdef FREE_VERSION
-<UIAlertViewDelegate,MFMailComposeViewControllerDelegate>
-#else
 <UIAlertViewDelegate,MFMailComposeViewControllerDelegate,CLLocationManagerDelegate>
-#endif
 {
     UIProgressView  *x_accel;
     UIProgressView  *y_accel;
@@ -56,15 +52,11 @@
     
     UISwitch *recording;
 
-#ifdef FREE_VERSION
-    UIBarButtonItem *rateButton;
-#else
     CLLocationManager *locMan;
     UILabel *latitude,*latitudeLabel;
     UILabel *longitude,*longitudeLabel;
     UILabel *altitude,*altitudeLabel;
     UIBarButtonItem *back;
-#endif
     UIButton *info;
 }
 
@@ -101,11 +93,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *gyroscopeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *recordingLabel;
 @property (nonatomic) float freq;
-#ifdef FREE_VERSION
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *rateButton;
-
--(IBAction)userClickedRateUs:(id)sender;
-#else
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *back;
 @property (nonatomic, retain) CLLocationManager *locMan;
 @property (nonatomic, retain) IBOutlet UILabel *latitude;
@@ -114,7 +101,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *latitudeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *longitudeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *altitudeLabel;
-#endif
 
 // Function that is called when the UISwitch recordData is toggled.
 -(IBAction)isRecording:(id)sender;
@@ -124,9 +110,7 @@
 -(void)accelUpdate:(double)x y:(double)y z:(double)z;
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z;
 -(void)attitudeUpdate:(double)p rollValue:(double)r yawValue:(double)y;
-#ifndef FREE_VERSION
 -(void)setSamplingRate:(float)frequency;
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt;
-#endif
 
 @end

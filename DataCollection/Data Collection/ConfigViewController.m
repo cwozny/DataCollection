@@ -2,7 +2,7 @@
 //  DataCollection
 //
 //  Created by Chris Wozny on 2/28/12.
-//  Copyright (c) 2013 Chris Wozny. All rights reserved.
+//  Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
 
 #import "ConfigViewController.h"
 #import "ViewController.h"
@@ -23,7 +23,7 @@ float samplingFrequency = 1.0f;
 
 -(IBAction)userClickedRateUs:(id)sender
 {
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id479348835"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id479348835"] options:@{} completionHandler:nil];
 }
 
 -(void)dismissKeyboard
@@ -57,7 +57,6 @@ float samplingFrequency = 1.0f;
 {
     [super viewDidLoad];
     samplingFrequency = 120;
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [textRate addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -75,22 +74,9 @@ float samplingFrequency = 1.0f;
     [rateUsButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)] forState:UIControlStateNormal];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

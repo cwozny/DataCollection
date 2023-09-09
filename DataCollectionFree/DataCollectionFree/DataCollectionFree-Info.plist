@@ -9,23 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>Default.png</string>
-				<string>Default@2x.png</string>
-				<string>Default-Portrait@2x~ipad.png</string>
-				<string>Default-Portrait@2x~ipad.png</string>
-				<string>Default-Portrait~ipad.png</string>
-				<string>57x57_icon_free.png</string>
-				<string>114x114_icon_free.png</string>
-				<string>72x72_icon_free.png</string>
-				<string>144x144_icon_free.png</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>com.wozny.datacollectionfree</string>
 	<key>CFBundleInfoDictionaryVersion</key>

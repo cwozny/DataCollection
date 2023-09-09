@@ -3,7 +3,7 @@
 //  DataCollection
 //
 //  Created by Chris Wozny on 2/28/12.
-//  Copyright (c) 2012 Chris Wozny. All rights reserved.
+//  Copyright (c) 2013 Chris Wozny. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -230,7 +230,7 @@ double startup = 0;
     
     if([mgr isAccelerometerAvailable])
     {        
-        [self accelUpdate:mgr.accelerometerData.acceleration.x y:mgr.accelerometerData.acceleration.y z:mgr.accelerometerData.acceleration.z];
+        [self accelUpdate:mgr.accelerometerData.acceleration.x*-1 y:mgr.accelerometerData.acceleration.y*-1 z:mgr.accelerometerData.acceleration.z*-1];
     }
     else
     {

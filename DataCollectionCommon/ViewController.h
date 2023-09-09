@@ -11,13 +11,9 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-#ifdef FREE_VERSION
-#import <iAd/iAd.h>
-#endif
-
 @interface ViewController : UIViewController
 #ifdef FREE_VERSION
-<ADBannerViewDelegate, UIAlertViewDelegate,MFMailComposeViewControllerDelegate>
+<UIAlertViewDelegate,MFMailComposeViewControllerDelegate>
 #else
 <UIAlertViewDelegate,MFMailComposeViewControllerDelegate,CLLocationManagerDelegate>
 #endif
@@ -61,7 +57,6 @@
     UISwitch *recording;
 
 #ifdef FREE_VERSION
-    ADBannerView *bannerView;
     UIBarButtonItem *rateButton;
 #else
     CLLocationManager *locMan;
@@ -107,7 +102,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *recordingLabel;
 @property (nonatomic) float freq;
 #ifdef FREE_VERSION
-@property (nonatomic, strong) IBOutlet ADBannerView *bannerView;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *rateButton;
 
 -(IBAction)userClickedRateUs:(id)sender;

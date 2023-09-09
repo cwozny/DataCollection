@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment version="4144" identifier="iOS"/>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -374,16 +374,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="lU2-13-3u2">
-                                <rect key="frame" x="0.0" y="958" width="480" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="480" id="qLm-H4-64z"/>
-                                    <constraint firstAttribute="height" constant="66" id="yaj-Zf-PoT"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="5" id="DZj-13-c7c"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -417,7 +407,6 @@
                             <constraint firstItem="XfH-p5-5TA" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" id="FoP-ne-HRC"/>
                             <constraint firstItem="6in-0r-PiI" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="GGJ-9e-T7V"/>
                             <constraint firstItem="N8R-4C-FFx" firstAttribute="trailing" secondItem="7bM-5S-4wc" secondAttribute="trailing" id="GkY-Fh-D4J"/>
-                            <constraint firstItem="lU2-13-3u2" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="GoC-AA-EkY"/>
                             <constraint firstItem="0qP-Lf-iYN" firstAttribute="leading" secondItem="gbT-Es-5Kn" secondAttribute="leading" id="Gr6-2m-ohP"/>
                             <constraint firstItem="MBz-JR-SKm" firstAttribute="leading" secondItem="bKl-kG-hrx" secondAttribute="leading" id="H0a-Ig-Eb2"/>
                             <constraint firstItem="8rb-Hd-7lU" firstAttribute="trailing" secondItem="TId-v8-9fI" secondAttribute="trailing" id="HpS-yM-WSV"/>
@@ -478,7 +467,6 @@
                             <constraint firstAttribute="bottom" secondItem="XO4-dt-VHo" secondAttribute="bottom" constant="225" id="d49-46-1if"/>
                             <constraint firstItem="oVS-Ht-BVF" firstAttribute="top" secondItem="5" secondAttribute="top" constant="488" id="dUp-ip-BGN"/>
                             <constraint firstItem="1Ax-bj-JfH" firstAttribute="top" secondItem="5" secondAttribute="top" constant="152" id="drw-bS-kIN"/>
-                            <constraint firstItem="lU2-13-3u2" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" id="eP6-jR-XD9"/>
                             <constraint firstItem="0bH-uH-eGV" firstAttribute="baseline" secondItem="TId-v8-9fI" secondAttribute="baseline" id="ejH-kA-o5g"/>
                             <constraint firstItem="qa3-Aw-SBH" firstAttribute="top" secondItem="Net-EA-wP3" secondAttribute="top" id="epF-ZA-A0s"/>
                             <constraint firstItem="4IG-aN-NIj" firstAttribute="baseline" secondItem="jnE-ok-aqa" secondAttribute="baseline" id="f4j-qV-5Kj"/>
@@ -510,7 +498,6 @@
                             <constraint firstItem="MBz-JR-SKm" firstAttribute="baseline" secondItem="PNI-b8-CUw" secondAttribute="baseline" id="u6U-sZ-kff"/>
                             <constraint firstItem="1Mn-6i-KkY" firstAttribute="top" secondItem="bKl-kG-hrx" secondAttribute="top" id="vKq-O7-AsR"/>
                             <constraint firstItem="oVS-Ht-BVF" firstAttribute="leading" secondItem="URw-y7-jfA" secondAttribute="leading" id="vWx-ri-qOz"/>
-                            <constraint firstItem="lU2-13-3u2" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" id="vxP-GG-PhU"/>
                             <constraint firstItem="PNI-b8-CUw" firstAttribute="trailing" secondItem="1Mn-6i-KkY" secondAttribute="trailing" id="wC1-kA-q2G"/>
                             <constraint firstItem="AK1-dl-qsy" firstAttribute="trailing" secondItem="eNw-LV-dkD" secondAttribute="trailing" id="wCi-1b-Cjm"/>
                             <constraint firstItem="05U-9W-8IR" firstAttribute="leading" secondItem="3yY-1d-Gjd" secondAttribute="leading" id="wKK-0d-kuv"/>
@@ -532,7 +519,6 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="accelerometerLabel" destination="ni5-Sw-45C" id="Dqe-eM-N8e"/>
-                        <outlet property="bannerView" destination="lU2-13-3u2" id="Ibf-lk-b5V"/>
                         <outlet property="gyroscopeLabel" destination="aAB-Vx-igJ" id="FbC-tq-NuS"/>
                         <outlet property="info" destination="Pc3-Ws-ynP" id="pbo-JT-nCb"/>
                         <outlet property="magnetometerLabel" destination="Ein-zo-M1W" id="WOo-Ve-k4E"/>
@@ -666,16 +652,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-QW-6Sc">
-                                <rect key="frame" x="0.0" y="958" width="480" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="Ghl-6Z-xEL"/>
-                                    <constraint firstAttribute="width" constant="480" id="UxF-EI-DLn"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="gPc-0B-2ut" id="HOc-py-64y"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -696,19 +672,15 @@
                             <constraint firstItem="piM-T1-x2d" firstAttribute="trailing" secondItem="gPc-0B-2ut" secondAttribute="trailing" id="VaY-0B-vlL"/>
                             <constraint firstItem="LZI-45-GJA" firstAttribute="leading" secondItem="gPc-0B-2ut" secondAttribute="leading" constant="20" symbolic="YES" id="YDD-fY-I5A"/>
                             <constraint firstItem="LZI-45-GJA" firstAttribute="top" secondItem="gPc-0B-2ut" secondAttribute="top" constant="66" id="cAC-Fr-Fec"/>
-                            <constraint firstItem="Oud-QW-6Sc" firstAttribute="bottom" secondItem="gPc-0B-2ut" secondAttribute="bottom" id="cxD-Gg-nKL"/>
                             <constraint firstItem="O8s-Gk-WFb" firstAttribute="top" secondItem="gPc-0B-2ut" secondAttribute="top" constant="403" id="kig-5l-f0c"/>
                             <constraint firstItem="Uei-CS-9Cu" firstAttribute="top" secondItem="gPc-0B-2ut" secondAttribute="top" constant="287" id="lH2-rq-Vli"/>
                             <constraint firstItem="O8s-Gk-WFb" firstAttribute="leading" secondItem="gPc-0B-2ut" secondAttribute="leading" constant="213" id="nAe-bm-9sQ"/>
-                            <constraint firstItem="Oud-QW-6Sc" firstAttribute="bottom" secondItem="gPc-0B-2ut" secondAttribute="bottom" id="sls-ee-9oT"/>
                             <constraint firstItem="ib3-P2-knt" firstAttribute="trailing" secondItem="WPt-kS-Dl0" secondAttribute="trailing" id="uFa-YH-TfW"/>
                             <constraint firstItem="c4v-za-MJT" firstAttribute="trailing" secondItem="7dJ-cZ-JNx" secondAttribute="trailing" id="uTL-w6-44p"/>
-                            <constraint firstItem="Oud-QW-6Sc" firstAttribute="leading" secondItem="gPc-0B-2ut" secondAttribute="leading" id="xi6-P1-HRD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="lId-7y-H49" id="1GY-R9-6QE"/>
-                        <outlet property="bannerView" destination="Oud-QW-6Sc" id="aK8-ac-0b2"/>
                         <outlet property="infoText" destination="LZI-45-GJA" id="omy-dV-9Fm"/>
                         <outlet property="navTitle" destination="q5m-Ej-fN6" id="4tS-V5-YdC"/>
                     </connections>

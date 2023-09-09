@@ -20,7 +20,7 @@
 @synthesize accelerometerLabel, gyroscopeLabel, magnetometerLabel,recordingLabel;
 @synthesize navTitle;
 #ifdef FREE_VERSION
-@synthesize bannerView,rateButton;
+@synthesize rateButton;
 
 int iterations = 0;
 #else
@@ -341,8 +341,6 @@ double startup = 0;
 #ifdef FREE_VERSION
     freq = 10;
     rateButton.title = [NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)];
-    [bannerView setDelegate:self];
-    bannerView = [[ADBannerView alloc] init];
 #else
     // Initialize the location manager and set the delegate to us.
 	locMan = [[CLLocationManager alloc] init];
@@ -408,18 +406,6 @@ double startup = 0;
 -(IBAction)userClickedRateUs:(id)sender
 {
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id485523535"]];
-}
-
-#pragma mark ADBannerViewDelegate
-
--(void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-	[bannerView setHidden:NO];
-}
-
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-  	[bannerView setHidden:YES];  
 }
 
 #else

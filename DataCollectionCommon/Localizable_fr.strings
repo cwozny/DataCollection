@@ -18,8 +18,8 @@
 "ConfigTitle" = "Configuration";
 "SetRateText" = "S'il vous plaît régler le taux d'échantillonnage en hertz:";
 "NoteText" = "REMARQUE: En combien de temps l'appareil peut goûter est basé sur la charge de l'appareil (et la vitesse d'échantillonnage maximale de l'appareil.) Pour de meilleures performances, fermez toutes les applications d'arrière-plan avant d'utiliser.";
-"RateUsText" = "Comme l'application? S'il vous plaît noter que d'autres puissent savoir à ce sujet aussi.";
-"RateUsButton" = "Taux Nous";
+"RateUsText" = "Aimez l'application? S'il vous plaît noter que d'autres puissent savoir à ce sujet aussi.";
+"RateUsButton" = "Classez Nous";
 
 // Sensor View
 "SensorTitle" = "Capteurs";
@@ -28,8 +28,8 @@
 "MagnetometerLabel" = "Magnétomètre (μT)";
 "RecordingLabel" = "Registrer";
 "Unavailable" = "Indisponible";
-"Pitch" = "Hauteur:";
-"Roll" = "Rouler:";
+"Pitch" = "Tangage:";
+"Roll" = "Roulis:";
 "Yaw" = "Lacet:";
 "Latitude" = "Lat:";
 "Longitude" = "Lon:";
@@ -42,5 +42,5 @@
 "No" = "Non";
 "SubjectFree" = "Données de l'accéléromètre, gyroscope, et magnétomètre de Data Collection Free App";
 "SubjectPaid" = "Les données de l'accéléromètre, gyroscope, magnétomètre et un GPS de Data Collection App";
-"MessageBodyPaid" = "J'ai joint les données recueillies à partir de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (degrés / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). GPS est ordonné que la latitude, la longitude et l'altitude (en mètres). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">ici</a>.";
-"MessageBodyFree" = "J'ai joint 10 secondes de données collectées à partir de la version gratuite de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (degrés / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">ici</a>.";
+"MessageBodyPaid" = "J'ai joint les données recueillies à partir de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (rad / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). GPS est ordonné que la latitude, la longitude et l'altitude (en mètres). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">ici</a>.";
+"MessageBodyFree" = "J'ai joint 10 secondes de données collectées à partir de la version gratuite de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (rad / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">ici</a>.";

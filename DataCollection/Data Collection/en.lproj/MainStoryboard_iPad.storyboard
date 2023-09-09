@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16G29" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tls-nd-WLq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Tls-nd-WLq">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Config View Controller-->
@@ -17,23 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="1" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="7iY-EG-4Lp" userLabel="SamplingRateSlider">
-                                <rect key="frame" x="53" y="156" width="608" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="604" id="VRZ-TT-4W8"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderChanged:" destination="Tls-nd-WLq" eventType="valueChanged" id="zyt-c7-KS2"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-5j-GBN" userLabel="SamplingRateText">
-                                <rect key="frame" x="667" y="151" width="46" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-5j-GBN" userLabel="SamplingRateText">
+                                <rect key="frame" x="666" y="151" width="46" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="HnS-Lt-gZa"/>
                                     <constraint firstAttribute="width" constant="46" id="XZ9-kB-Rnd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="textChanged:" destination="Tls-nd-WLq" eventType="valueChanged" id="8N9-DO-w7B"/>
                                 </connections>
@@ -57,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="658" translatesAutoresizingMaskIntoConstraints="NO" id="CXv-zr-Gi4">
-                                <rect key="frame" x="55" y="200" width="658" height="92"/>
+                                <rect key="frame" x="56" y="200" width="656" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="Im1-Kq-hFG"/>
                                 </constraints>
@@ -72,14 +67,14 @@
                                     <constraint firstAttribute="width" constant="181" id="7HM-Fy-5wd"/>
                                 </constraints>
                                 <state key="normal" title="qweqweqweqweqwe">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="userClickedRateUs:" destination="Tls-nd-WLq" eventType="touchUpInside" id="s3Z-bH-taZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Like the app? Please rate it so that other's can find out about it as well." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="658" translatesAutoresizingMaskIntoConstraints="NO" id="2RS-zr-TW9">
-                                <rect key="frame" x="55" y="787" width="658" height="43"/>
+                                <rect key="frame" x="56" y="787" width="656" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="an1-nA-dr7"/>
                                 </constraints>
@@ -88,24 +83,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lr8-kD-bUs" firstAttribute="leading" secondItem="gsH-5H-IEC" secondAttribute="leading" id="1op-B2-hqR"/>
                             <constraint firstItem="RSV-bF-Lgy" firstAttribute="top" secondItem="gsH-5H-IEC" secondAttribute="top" constant="118" id="2hm-vg-YS4"/>
                             <constraint firstItem="vPJ-5j-GBN" firstAttribute="top" secondItem="gsH-5H-IEC" secondAttribute="top" constant="151" id="3N8-Is-zMD"/>
                             <constraint firstItem="2RS-zr-TW9" firstAttribute="leading" secondItem="CXv-zr-Gi4" secondAttribute="leading" id="6ja-M4-yaq"/>
                             <constraint firstAttribute="bottom" secondItem="2RS-zr-TW9" secondAttribute="bottom" constant="194" id="AeH-cu-yCG"/>
-                            <constraint firstItem="vPJ-5j-GBN" firstAttribute="leading" secondItem="7iY-EG-4Lp" secondAttribute="trailing" constant="8" symbolic="YES" id="DBb-aU-u1i"/>
                             <constraint firstItem="RSV-bF-Lgy" firstAttribute="centerX" secondItem="CXv-zr-Gi4" secondAttribute="centerX" id="DCN-Yc-zdP"/>
                             <constraint firstItem="G1r-tr-ejI" firstAttribute="centerX" secondItem="2RS-zr-TW9" secondAttribute="centerX" id="EsV-cU-Jzo"/>
-                            <constraint firstItem="7iY-EG-4Lp" firstAttribute="top" secondItem="gsH-5H-IEC" secondAttribute="top" constant="156" id="G1a-cm-63I"/>
                             <constraint firstItem="2RS-zr-TW9" firstAttribute="top" secondItem="G1r-tr-ejI" secondAttribute="bottom" constant="8" symbolic="YES" id="O1h-zN-JDb"/>
                             <constraint firstItem="RSV-bF-Lgy" firstAttribute="centerX" secondItem="lr8-kD-bUs" secondAttribute="centerX" id="RzC-3k-bp4"/>
                             <constraint firstItem="CXv-zr-Gi4" firstAttribute="top" secondItem="gsH-5H-IEC" secondAttribute="top" constant="200" id="YYR-NO-aYA"/>
                             <constraint firstItem="lr8-kD-bUs" firstAttribute="top" secondItem="gsH-5H-IEC" secondAttribute="top" id="gh3-ZP-nDD"/>
                             <constraint firstItem="lr8-kD-bUs" firstAttribute="trailing" secondItem="gsH-5H-IEC" secondAttribute="trailing" id="iUm-8u-52u"/>
                             <constraint firstItem="vPJ-5j-GBN" firstAttribute="trailing" secondItem="CXv-zr-Gi4" secondAttribute="trailing" id="jeT-1C-RhW"/>
-                            <constraint firstItem="CXv-zr-Gi4" firstAttribute="leading" secondItem="7iY-EG-4Lp" secondAttribute="leading" id="n5K-ym-FSl"/>
                             <constraint firstItem="2RS-zr-TW9" firstAttribute="trailing" secondItem="CXv-zr-Gi4" secondAttribute="trailing" id="xJz-wo-z93"/>
                         </constraints>
                     </view>
@@ -116,7 +108,6 @@
                         <outlet property="rateUsButton" destination="G1r-tr-ejI" id="VAF-In-mDo"/>
                         <outlet property="rateUsText" destination="2RS-zr-TW9" id="e1S-CK-TMb"/>
                         <outlet property="setRate" destination="RSV-bF-Lgy" id="XWJ-0H-X5w"/>
-                        <outlet property="sliderRate" destination="7iY-EG-4Lp" id="6ZV-aO-jzx"/>
                         <outlet property="textRate" destination="vPJ-5j-GBN" id="tjh-WK-gt4"/>
                     </connections>
                 </viewController>
@@ -398,7 +389,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Z" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XO4-dt-VHo">
-                                <rect key="frame" x="397" y="812" width="33" height="22"/>
+                                <rect key="frame" x="397" y="811" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="lbN-nE-bdp"/>
                                 </constraints>
@@ -439,11 +430,11 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="sed-u4-mng" kind="modal" modalTransitionStyle="coverVertical" id="ukZ-Hk-Xl4"/>
@@ -562,7 +553,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3jW-ae-CGT" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" id="0F9-i0-L5o"/>
                             <constraint firstItem="Net-EA-wP3" firstAttribute="trailing" secondItem="8rb-Hd-7lU" secondAttribute="trailing" id="0Lp-IZ-tvz"/>
@@ -847,7 +838,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7dJ-cZ-JNx" firstAttribute="leading" secondItem="gPc-0B-2ut" secondAttribute="leading" constant="362" id="0K8-lO-yoi"/>
                             <constraint firstItem="piM-T1-x2d" firstAttribute="leading" secondItem="gPc-0B-2ut" secondAttribute="leading" id="5es-Cl-ess"/>
@@ -887,4 +878,9 @@
     <resources>
         <image name="axes.png" width="320" height="360"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

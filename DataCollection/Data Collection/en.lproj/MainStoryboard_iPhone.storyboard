@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WxR-uL-nyL">
+    <dependencies>
+        <development version="4500" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="mOE-tH-8rH">
+            <objects>
+                <viewController id="V3O-zi-7u3" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7M-og-Sf2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-Jw-dEJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="Waq-Xo-IEC"/>
+                                    <constraint firstAttribute="width" constant="293" id="pTf-ap-RKw"/>
+                                </constraints>
+                                <string key="text">This app records sensor data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="axes.png" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-sI-SK0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="2DO-ap-hBv"/>
+                                    <constraint firstAttribute="height" constant="210" type="user" id="IKL-mT-VXi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Z" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-Ub-Xhd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" type="user" id="eb4-Q6-sq1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-X" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-EP-JcV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="3Yw-Pw-23O"/>
+                                    <constraint firstAttribute="width" constant="33" id="CZ3-ps-sLR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+Y" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="F6z-f9-j3j">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="hrh-0u-hx8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Z" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-MS-afd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="U3y-o8-bI0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+X" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-Jk-HSU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" type="user" id="8yJ-lu-oo4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-Y" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-x2-1IP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" type="user" id="2fN-ER-vAl"/>
+                                    <constraint firstAttribute="width" constant="33" id="a7r-J0-Jro"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-NL-XO8">
+                                <items>
+                                    <navigationItem title="Info" id="ID3-pG-mFV">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="gnV-24-Pe4">
+                                            <connections>
+                                                <action selector="goBack" destination="V3O-zi-7u3" id="aqz-rI-Zcc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TMj-EP-JcV" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" constant="42" id="90p-hH-zDG"/>
+                            <constraint firstItem="7EI-sI-SK0" firstAttribute="bottom" secondItem="8v9-x2-1IP" secondAttribute="bottom" type="user" id="AMZ-m5-3PH"/>
+                            <constraint firstAttribute="trailing" secondItem="PsP-MS-afd" secondAttribute="trailing" constant="30" id="B9S-K0-koG"/>
+                            <constraint firstItem="F6z-f9-j3j" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q7M-og-Sf2" secondAttribute="top" constant="200" type="user" id="Ceu-qN-vBY"/>
+                            <constraint firstItem="8v9-x2-1IP" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="400" type="user" id="Dth-LB-TDM"/>
+                            <constraint firstItem="TMj-EP-JcV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q7M-og-Sf2" secondAttribute="top" constant="274" type="user" id="E8w-fP-uEu"/>
+                            <constraint firstItem="PsP-MS-afd" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="259" id="Hes-Dp-0g3"/>
+                            <constraint firstItem="7EI-sI-SK0" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="212" type="user" id="IP6-v0-emq"/>
+                            <constraint firstItem="gdA-NL-XO8" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" type="default" id="Lo9-Yj-hnV"/>
+                            <constraint firstItem="TMj-EP-JcV" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="274" id="Onu-WT-GWb"/>
+                            <constraint firstItem="PsP-MS-afd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q7M-og-Sf2" secondAttribute="top" constant="259" type="user" id="Qbm-wJ-LKt"/>
+                            <constraint firstAttribute="trailing" secondItem="F6z-f9-j3j" secondAttribute="trailing" constant="122" id="S5q-Lb-KTZ"/>
+                            <constraint firstItem="gdA-NL-XO8" firstAttribute="trailing" secondItem="q7M-og-Sf2" secondAttribute="trailing" type="default" id="Xb2-Bx-mMv"/>
+                            <constraint firstItem="PsP-MS-afd" firstAttribute="leading" secondItem="zIS-Jk-HSU" secondAttribute="leading" type="default" id="b6C-n2-YFJ"/>
+                            <constraint firstItem="Qa1-Jw-dEJ" firstAttribute="centerX" secondItem="7EI-sI-SK0" secondAttribute="centerX" type="default" id="e8a-cy-Qoh"/>
+                            <constraint firstItem="c9I-Ub-Xhd" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" constant="31" id="eTR-XB-cj0"/>
+                            <constraint firstItem="Qa1-Jw-dEJ" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="52" id="eVG-mS-1kW"/>
+                            <constraint firstItem="gdA-NL-XO8" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" type="default" id="enN-bm-E05"/>
+                            <constraint firstItem="F6z-f9-j3j" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="200" id="eqP-rA-zWi"/>
+                            <constraint firstItem="8v9-x2-1IP" firstAttribute="leading" secondItem="q7M-og-Sf2" secondAttribute="leading" constant="124" id="iA8-oO-UTV"/>
+                            <constraint firstItem="zIS-Jk-HSU" firstAttribute="trailing" secondItem="PsP-MS-afd" secondAttribute="trailing" type="default" id="nBB-Yk-rQH"/>
+                            <constraint firstItem="gdA-NL-XO8" firstAttribute="centerX" secondItem="Qa1-Jw-dEJ" secondAttribute="centerX" type="default" id="nEq-Rs-4Ew"/>
+                            <constraint firstItem="c9I-Ub-Xhd" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="349" type="user" id="sRk-rD-c45"/>
+                            <constraint firstItem="zIS-Jk-HSU" firstAttribute="top" secondItem="q7M-og-Sf2" secondAttribute="top" constant="343" type="user" id="xDb-5a-QkO"/>
+                            <constraint firstItem="7EI-sI-SK0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q7M-og-Sf2" secondAttribute="top" constant="212" type="user" id="yRk-w9-i9E"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGn-sz-o50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="102"/>
+        </scene>
+        <!--Config View Controller-->
+        <scene sceneID="PKj-H3-GCA">
+            <objects>
+                <viewController id="WxR-uL-nyL" customClass="ConfigViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fn1-GY-MrE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx0-jY-Q3f">
+                                <items>
+                                    <navigationItem title="Configuration" id="WRb-gi-16p">
+                                        <barButtonItem key="rightBarButtonItem" title="Go!" style="done" id="0qp-6A-6xb">
+                                            <connections>
+                                                <segue destination="2" kind="modal" identifier="SendFrequency" id="GPB-Oi-ckQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="1" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="yVM-aU-oFK">
+                                <connections>
+                                    <action selector="sliderChanged:" destination="WxR-uL-nyL" eventType="valueChanged" id="LRb-w3-msC"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0m-CW-qcj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Jei-O5-YEZ"/>
+                                    <constraint firstAttribute="height" constant="31" id="lA6-wA-Orr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="WxR-uL-nyL" eventType="valueChanged" id="MCU-nQ-xeJ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please set the sampling rate in hertz:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-yI-Tbv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="cGz-Gd-SsT">
+                                <string key="text">NOTE: How quickly the device can sample is based on the load of the device (and the maximum sampling speed of the device.) For best performance, close all background apps before using.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qws-jj-xeY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="qbt-O0-rxf"/>
+                                    <constraint firstAttribute="width" constant="93" id="sVJ-Un-nuF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Rate Us">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userClickedRateUs:" destination="WxR-uL-nyL" eventType="touchUpInside" id="i9v-EM-RSQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Like the app? Please rate it so that other's can find out about it as well." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Cxt-L4-Zz8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="dcB-Hk-lvd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cxt-L4-Zz8" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6S2-Qv-RDg"/>
+                            <constraint firstItem="D0m-CW-qcj" firstAttribute="top" secondItem="pDN-yI-Tbv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7Jg-Fa-FBM"/>
+                            <constraint firstItem="yVM-aU-oFK" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" constant="91" id="9PY-R8-d76"/>
+                            <constraint firstAttribute="bottom" secondItem="qws-jj-xeY" secondAttribute="bottom" constant="90" type="user" id="9ah-fY-IdB"/>
+                            <constraint firstAttribute="trailing" secondItem="cGz-Gd-SsT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="G1n-AD-LbM"/>
+                            <constraint firstItem="cGz-Gd-SsT" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HV4-Lf-13S"/>
+                            <constraint firstItem="hx0-jY-Q3f" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" type="default" id="Jiz-6Z-cN3"/>
+                            <constraint firstItem="pDN-yI-Tbv" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KAs-4l-HeI"/>
+                            <constraint firstAttribute="trailing" secondItem="D0m-CW-qcj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MfK-6I-ouz"/>
+                            <constraint firstItem="yVM-aU-oFK" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Nxx-jJ-uKx"/>
+                            <constraint firstItem="pDN-yI-Tbv" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" constant="57" id="RcF-lj-aUu"/>
+                            <constraint firstItem="cGz-Gd-SsT" firstAttribute="top" secondItem="yVM-aU-oFK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UQS-OP-ACc"/>
+                            <constraint firstItem="hx0-jY-Q3f" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" type="default" id="V2H-aq-g9k"/>
+                            <constraint firstItem="Cxt-L4-Zz8" firstAttribute="centerX" secondItem="qws-jj-xeY" secondAttribute="centerX" type="default" id="ZVf-IJ-c2p"/>
+                            <constraint firstAttribute="trailing" secondItem="Cxt-L4-Zz8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gGJ-Df-D75"/>
+                            <constraint firstItem="hx0-jY-Q3f" firstAttribute="trailing" secondItem="Fn1-GY-MrE" secondAttribute="trailing" type="default" id="hah-MM-vjg"/>
+                            <constraint firstAttribute="bottom" secondItem="Cxt-L4-Zz8" secondAttribute="bottom" constant="20" type="user" id="u0j-Ea-ssL"/>
+                            <constraint firstItem="D0m-CW-qcj" firstAttribute="leading" secondItem="yVM-aU-oFK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vHJ-c8-1tR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sliderRate" destination="yVM-aU-oFK" id="8dw-aE-x41"/>
+                        <outlet property="textRate" destination="D0m-CW-qcj" id="hO4-8E-Uy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oac-Fy-oYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="102"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recording" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ArQ-Vm-ycW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="4MP-56-qJS"/>
+                                    <constraint firstAttribute="height" constant="21" id="FLg-mp-GuZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Accelerometer" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiA-CW-iSo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" type="user" id="SmS-lK-clv"/>
+                                    <constraint firstAttribute="width" constant="111" id="i2h-kD-HaH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gyroscope" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9a-uU-hSK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" type="user" id="Ebv-vd-ht7"/>
+                                    <constraint firstAttribute="width" constant="84" id="UIi-mZ-bhL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Magnetometer" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-QN-EkF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="c41-mE-WQS"/>
+                                    <constraint firstAttribute="height" constant="21" id="cv4-5Q-avV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P0W-n5-1PX">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ahJ-Og-3Hg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="enb-XU-Ycb">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" type="user" id="jne-nP-1vL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-n7-SNH">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" type="user" id="Vki-wI-2Xa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fqg-QC-4nW">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Nuj-ih-9ab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XtA-M3-kmQ">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Ut7-uP-Avw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="70w-mU-VDm">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="gJY-av-HQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Roll:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-22-EHq">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="RUA-wY-5r3"/>
+                                    <constraint firstAttribute="height" constant="21" id="zXd-5s-9LZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pitch:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-za-W5e">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="42K-Ob-ig7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yaw:" lineBreakMode="tailTruncation" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-Sl-5zt">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="S3P-MJ-TnX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-pP-DFi">
+                                <connections>
+                                    <action selector="isRecording:" destination="2" eventType="valueChanged" id="oYE-Er-kbK"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-tH-rBn">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FXh-3p-eq8"/>
+                                    <constraint firstAttribute="width" constant="120" id="Le2-b7-8n5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xj1-PL-LVq">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="k8f-lQ-FhE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-sN-USh">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" type="user" id="OWF-Ch-Si1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dKV-LT-6tC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="4AS-WI-1fm"/>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="9iq-tb-GMl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" type="user" id="Fcw-pX-QHK"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-Av-XEy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="U76-wQ-Xkm"/>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="mEJ-Fr-OqL"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gan-ef-3ug">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="DfL-Sk-Tw2"/>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="IVW-lp-Ill"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NXA-tF-6Xt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="8as-EE-tOc"/>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="GQr-SG-iSH"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zrc-yy-Lxy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="O1D-Nc-fX4"/>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="UrP-FX-ql0"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aUC-PW-rnG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="AIh-Rb-nUP"/>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="hCf-bn-hM5"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-lp-yq5">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="9" type="user" id="IfW-8W-A4d"/>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="Rvd-Zz-Tzh"/>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="dtl-YG-6RP"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ous-R2-gGU">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="9" type="user" id="Ck7-71-ylW"/>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="Zs6-88-6Wm"/>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="yXO-mc-lty"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="M9b-yr-Nfa">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="9" type="user" id="2ek-jZ-OHC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="9" type="user" id="RHA-Pv-Ifa"/>
+                                    <constraint firstAttribute="height" constant="9" type="user" id="Srb-Pe-SoO"/>
+                                    <constraint firstAttribute="width" constant="185" type="user" id="tGa-8i-m1h"/>
+                                </constraints>
+                            </progressView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLz-kw-Qzy">
+                                <items>
+                                    <navigationItem title="Sensors" id="2hn-DT-OOK">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="TPg-mG-ldS">
+                                            <connections>
+                                                <action selector="goBack" destination="2" id="tGo-FF-wzQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" id="pnO-3u-c6N">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="jOw-dv-F3r">
+                                                <rect key="frame" x="297" y="12" width="18" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="V3O-zi-7u3" kind="modal" id="6yA-YF-ebv"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zrc-yy-Lxy" firstAttribute="trailing" secondItem="aUC-PW-rnG" secondAttribute="trailing" type="user" id="0Ar-E1-zBi"/>
+                            <constraint firstItem="Ous-R2-gGU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="302" type="user" id="1lM-Am-J4w"/>
+                            <constraint firstItem="yxe-lp-yq5" firstAttribute="trailing" secondItem="Ous-R2-gGU" secondAttribute="trailing" type="user" id="1mT-Qi-Xre"/>
+                            <constraint firstItem="P0W-n5-1PX" firstAttribute="leading" secondItem="enb-XU-Ycb" secondAttribute="leading" type="default" id="2mf-ia-5Z4"/>
+                            <constraint firstItem="XtA-M3-kmQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="195" type="user" id="37G-P2-7sZ"/>
+                            <constraint firstItem="GLz-kw-Qzy" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="3Lu-xl-PBQ"/>
+                            <constraint firstItem="6B4-pP-DFi" firstAttribute="top" secondItem="ArQ-Vm-ycW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3h4-XK-xr7"/>
+                            <constraint firstItem="4Yj-za-W5e" firstAttribute="leading" secondItem="xvV-Sl-5zt" secondAttribute="leading" type="default" id="3hV-aC-OUq"/>
+                            <constraint firstItem="enb-XU-Ycb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="291" type="user" id="3rB-YJ-6me"/>
+                            <constraint firstItem="iCy-Av-XEy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="107" id="4QO-ub-cb4"/>
+                            <constraint firstItem="fqg-QC-4nW" firstAttribute="leading" secondItem="O5O-sN-USh" secondAttribute="leading" type="default" id="53f-e9-OHr"/>
+                            <constraint firstItem="4Yj-za-W5e" firstAttribute="top" secondItem="fsI-22-EHq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6MH-qd-1vb"/>
+                            <constraint firstItem="KiA-CW-iSo" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="47" id="6XM-zg-Ifp"/>
+                            <constraint firstItem="Gan-ef-3ug" firstAttribute="top" secondItem="3" secondAttribute="top" constant="134" type="user" id="72D-zo-nX5"/>
+                            <constraint firstItem="NXA-tF-6Xt" firstAttribute="leading" secondItem="Gan-ef-3ug" secondAttribute="leading" type="user" id="8zN-Tj-i2P"/>
+                            <constraint firstItem="dKV-LT-6tC" firstAttribute="top" secondItem="3" secondAttribute="top" constant="81" type="user" id="9Df-Rp-KXd"/>
+                            <constraint firstItem="Zrc-yy-Lxy" firstAttribute="leading" secondItem="aUC-PW-rnG" secondAttribute="leading" type="user" id="9cI-H4-O1N"/>
+                            <constraint firstItem="GLz-kw-Qzy" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ADA-hd-Yi9"/>
+                            <constraint firstItem="Ous-R2-gGU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="302" type="user" id="AqK-jf-zij"/>
+                            <constraint firstItem="Xj1-PL-LVq" firstAttribute="leading" secondItem="9CN-tH-rBn" secondAttribute="leading" type="default" id="B96-sU-uX9"/>
+                            <constraint firstItem="aUC-PW-rnG" firstAttribute="leading" secondItem="yxe-lp-yq5" secondAttribute="leading" type="user" id="BDT-Of-Pc4"/>
+                            <constraint firstItem="Ous-R2-gGU" firstAttribute="trailing" secondItem="M9b-yr-Nfa" secondAttribute="trailing" type="user" id="DUU-ta-K4e"/>
+                            <constraint firstItem="KiA-CW-iSo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="52" type="user" id="FKz-pa-Chl"/>
+                            <constraint firstItem="4Yj-za-W5e" firstAttribute="trailing" secondItem="xvV-Sl-5zt" secondAttribute="trailing" type="default" id="Gm8-4O-PuM"/>
+                            <constraint firstItem="6B4-pP-DFi" firstAttribute="leading" secondItem="ArQ-Vm-ycW" secondAttribute="leading" type="default" id="Gs8-cn-O9t"/>
+                            <constraint firstItem="Xj1-PL-LVq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="96" type="user" id="Hjp-xz-6Ll"/>
+                            <constraint firstItem="6bK-n7-SNH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="317" type="user" id="IFa-p2-Hfy"/>
+                            <constraint firstItem="GNs-QN-EkF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="42" id="IPg-Eb-6zS"/>
+                            <constraint firstItem="Gan-ef-3ug" firstAttribute="centerY" secondItem="O5O-sN-USh" secondAttribute="centerY" type="user" id="JPV-m0-Frd"/>
+                            <constraint firstItem="aUC-PW-rnG" firstAttribute="trailing" secondItem="yxe-lp-yq5" secondAttribute="trailing" type="user" id="JnV-ai-Hb2"/>
+                            <constraint firstItem="Zrc-yy-Lxy" firstAttribute="trailing" secondItem="NXA-tF-6Xt" secondAttribute="trailing" type="user" id="Jv1-Dw-6qE"/>
+                            <constraint firstItem="XtA-M3-kmQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="195" id="JwB-wm-uZT"/>
+                            <constraint firstItem="NXA-tF-6Xt" firstAttribute="trailing" secondItem="Gan-ef-3ug" secondAttribute="trailing" type="user" id="KRC-ME-SyJ"/>
+                            <constraint firstItem="dKV-LT-6tC" firstAttribute="trailing" secondItem="iCy-Av-XEy" secondAttribute="trailing" type="user" id="LNL-o7-tyJ"/>
+                            <constraint firstItem="M9b-yr-Nfa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="328" type="user" id="LNy-6V-ujF"/>
+                            <constraint firstItem="Xj1-PL-LVq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="96" id="LT7-hP-I9Z"/>
+                            <constraint firstItem="O5O-sN-USh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="122" type="user" id="LhF-iN-JhH"/>
+                            <constraint firstItem="E9a-uU-hSK" firstAttribute="centerX" secondItem="KiA-CW-iSo" secondAttribute="centerX" type="default" id="MCi-4q-h7s"/>
+                            <constraint firstItem="fsI-22-EHq" firstAttribute="leading" secondItem="M9b-yr-Nfa" secondAttribute="leading" type="default" id="N7r-Mg-3pn"/>
+                            <constraint firstItem="fqg-QC-4nW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="169" id="ND8-mD-8gn"/>
+                            <constraint firstAttribute="trailing" secondItem="ArQ-Vm-ycW" secondAttribute="trailing" constant="4" id="OkG-zk-U0Z"/>
+                            <constraint firstItem="P0W-n5-1PX" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="OsA-bI-CxO"/>
+                            <constraint firstItem="P0W-n5-1PX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="267" type="user" id="P4C-LZ-Sr4"/>
+                            <constraint firstItem="dKV-LT-6tC" firstAttribute="top" secondItem="KiA-CW-iSo" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="P7V-gM-RBA"/>
+                            <constraint firstItem="fsI-22-EHq" firstAttribute="trailing" secondItem="4Yj-za-W5e" secondAttribute="trailing" type="default" id="Pib-Kx-wS5"/>
+                            <constraint firstItem="XtA-M3-kmQ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="QHg-aI-mXw"/>
+                            <constraint firstItem="enb-XU-Ycb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="QMP-QX-XpN"/>
+                            <constraint firstItem="Zrc-yy-Lxy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="206" type="user" id="QOp-vH-qBy"/>
+                            <constraint firstItem="XtA-M3-kmQ" firstAttribute="leading" secondItem="70w-mU-VDm" secondAttribute="leading" type="default" id="R0K-QV-4t6"/>
+                            <constraint firstItem="6bK-n7-SNH" firstAttribute="leading" secondItem="enb-XU-Ycb" secondAttribute="leading" type="default" id="RPy-Ug-zRy"/>
+                            <constraint firstItem="Xj1-PL-LVq" firstAttribute="leading" secondItem="O5O-sN-USh" secondAttribute="leading" type="default" id="RXv-XE-PjT"/>
+                            <constraint firstItem="aUC-PW-rnG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="232" type="user" id="Rb9-i4-KcN"/>
+                            <constraint firstItem="M9b-yr-Nfa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="328" type="user" id="Sys-gi-9pb"/>
+                            <constraint firstItem="xvV-Sl-5zt" firstAttribute="top" secondItem="4Yj-za-W5e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UH1-ts-0Zi"/>
+                            <constraint firstItem="70w-mU-VDm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="221" type="user" id="WMK-Go-M0R"/>
+                            <constraint firstItem="yxe-lp-yq5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="278" type="user" id="Wey-oa-2IR"/>
+                            <constraint firstItem="70w-mU-VDm" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="YJ4-JE-rVa"/>
+                            <constraint firstItem="iCy-Av-XEy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="107" type="user" id="ZDF-ar-ACf"/>
+                            <constraint firstItem="GLz-kw-Qzy" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="aYb-r1-wCp"/>
+                            <constraint firstItem="NXA-tF-6Xt" firstAttribute="leading" secondItem="Zrc-yy-Lxy" secondAttribute="leading" type="user" id="cXX-kC-FPL"/>
+                            <constraint firstItem="fsI-22-EHq" firstAttribute="leading" secondItem="4Yj-za-W5e" secondAttribute="leading" type="default" id="cnK-9K-ZgR"/>
+                            <constraint firstItem="9CN-tH-rBn" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="dPM-H6-CPy"/>
+                            <constraint firstItem="NXA-tF-6Xt" firstAttribute="top" secondItem="E9a-uU-hSK" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="eGh-HK-gZq"/>
+                            <constraint firstItem="iCy-Av-XEy" firstAttribute="leading" secondItem="Gan-ef-3ug" secondAttribute="leading" type="user" id="eye-hR-x5p"/>
+                            <constraint firstItem="iCy-Av-XEy" firstAttribute="leading" secondItem="dKV-LT-6tC" secondAttribute="leading" type="user" id="fXl-1x-QUa"/>
+                            <constraint firstItem="fqg-QC-4nW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="169" type="user" id="fjV-UA-Jz2"/>
+                            <constraint firstItem="O5O-sN-USh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="foP-eW-eP0"/>
+                            <constraint firstItem="70w-mU-VDm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="221" id="gUR-d0-Ev4"/>
+                            <constraint firstItem="E9a-uU-hSK" firstAttribute="top" secondItem="Gan-ef-3ug" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="gcd-1x-3fH"/>
+                            <constraint firstItem="6bK-n7-SNH" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jWN-BN-Vik"/>
+                            <constraint firstItem="yxe-lp-yq5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="278" type="user" id="k5L-A0-bCJ"/>
+                            <constraint firstItem="fqg-QC-4nW" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="kF1-ro-Svz"/>
+                            <constraint firstItem="yxe-lp-yq5" firstAttribute="leading" secondItem="Ous-R2-gGU" secondAttribute="leading" type="user" id="kZU-GG-mfe"/>
+                            <constraint firstItem="9CN-tH-rBn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="70" type="user" id="kuW-hC-N6N"/>
+                            <constraint firstItem="KiA-CW-iSo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="52" type="user" id="lwm-qp-3q9"/>
+                            <constraint firstItem="aUC-PW-rnG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="232" type="user" id="mCf-cE-fBN"/>
+                            <constraint firstItem="iCy-Av-XEy" firstAttribute="trailing" secondItem="Gan-ef-3ug" secondAttribute="trailing" type="user" id="mVf-Ks-2yU"/>
+                            <constraint firstItem="Ous-R2-gGU" firstAttribute="leading" secondItem="M9b-yr-Nfa" secondAttribute="leading" type="user" id="nCj-ks-egJ"/>
+                            <constraint firstItem="O5O-sN-USh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="122" type="user" id="nCm-Cf-fJp"/>
+                            <constraint firstItem="P0W-n5-1PX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="267" id="qgd-Gv-vDd"/>
+                            <constraint firstItem="GNs-QN-EkF" firstAttribute="top" secondItem="aUC-PW-rnG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="rNE-9x-ShR"/>
+                            <constraint firstItem="NXA-tF-6Xt" firstAttribute="top" secondItem="3" secondAttribute="top" constant="180" type="user" id="s94-18-24g"/>
+                            <constraint firstItem="70w-mU-VDm" firstAttribute="leading" secondItem="P0W-n5-1PX" secondAttribute="leading" type="default" id="tir-r8-dZz"/>
+                            <constraint firstItem="fqg-QC-4nW" firstAttribute="leading" secondItem="XtA-M3-kmQ" secondAttribute="leading" type="default" id="uZv-MC-F2h"/>
+                            <constraint firstAttribute="bottom" secondItem="6B4-pP-DFi" secondAttribute="bottom" constant="20" type="user" id="ucm-3f-R48"/>
+                            <constraint firstAttribute="bottom" secondItem="xvV-Sl-5zt" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="v6I-Fk-zw6"/>
+                            <constraint firstItem="Xj1-PL-LVq" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="vlj-03-L4f"/>
+                            <constraint firstItem="Zrc-yy-Lxy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="206" id="wcB-4s-2fd"/>
+                            <constraint firstItem="GNs-QN-EkF" firstAttribute="top" secondItem="3" secondAttribute="top" constant="249" type="user" id="xBk-r6-u9H"/>
+                            <constraint firstItem="GNs-QN-EkF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3" secondAttribute="top" constant="249" type="user" id="ypu-dh-DcD"/>
+                            <constraint firstItem="9CN-tH-rBn" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="ysV-wH-k8P"/>
+                            <constraint firstItem="dKV-LT-6tC" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="8" id="ysa-U5-OOP"/>
+                            <constraint firstItem="E9a-uU-hSK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="151" type="user" id="zog-Hv-rXj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="TPg-mG-ldS" id="NcT-oE-Hu5"/>
+                        <outlet property="info" destination="jOw-dv-F3r" id="Lyl-N6-l8J"/>
+                        <outlet property="pitch" destination="4Yj-za-W5e" id="V0x-go-sbC"/>
+                        <outlet property="recording" destination="6B4-pP-DFi" id="rvC-fC-P9m"/>
+                        <outlet property="roll" destination="fsI-22-EHq" id="zT9-04-g6f"/>
+                        <outlet property="x_accel" destination="dKV-LT-6tC" id="LbJ-Q8-M4Q"/>
+                        <outlet property="x_accel_label" destination="9CN-tH-rBn" id="Vlv-jg-Ggl"/>
+                        <outlet property="x_gyro" destination="NXA-tF-6Xt" id="J6e-Ez-Xrn"/>
+                        <outlet property="x_gyro_label" destination="fqg-QC-4nW" id="Whv-WO-NTC"/>
+                        <outlet property="x_mag" destination="yxe-lp-yq5" id="tXE-oC-VjS"/>
+                        <outlet property="x_mag_label" destination="P0W-n5-1PX" id="00H-O4-cQN"/>
+                        <outlet property="y_accel" destination="iCy-Av-XEy" id="pZB-WR-NxI"/>
+                        <outlet property="y_accel_label" destination="Xj1-PL-LVq" id="cov-om-jEe"/>
+                        <outlet property="y_gyro" destination="Zrc-yy-Lxy" id="KKd-gM-DwT"/>
+                        <outlet property="y_gyro_label" destination="XtA-M3-kmQ" id="iiM-IG-ps3"/>
+                        <outlet property="y_mag" destination="Ous-R2-gGU" id="yq5-mg-iA3"/>
+                        <outlet property="y_mag_label" destination="enb-XU-Ycb" id="cbd-JP-kRs"/>
+                        <outlet property="yaw" destination="xvV-Sl-5zt" id="1mM-Bx-HjO"/>
+                        <outlet property="z_accel" destination="Gan-ef-3ug" id="k3r-hy-fNd"/>
+                        <outlet property="z_accel_label" destination="O5O-sN-USh" id="uh4-1h-7Kf"/>
+                        <outlet property="z_gyro" destination="aUC-PW-rnG" id="gWN-ha-zik"/>
+                        <outlet property="z_gyro_label" destination="70w-mU-VDm" id="A4T-X0-Kzp"/>
+                        <outlet property="z_mag" destination="M9b-yr-Nfa" id="JK4-zV-xIO"/>
+                        <outlet property="z_mag_label" destination="6bK-n7-SNH" id="vY5-fY-88P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="axes.png" width="320" height="360"/>
+    </resources>
+    <classes>
+        <class className="ConfigViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConfigViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sliderChanged:"/>
+                <relationship kind="action" name="textChanged:"/>
+                <relationship kind="action" name="userClickedRateUs:"/>
+                <relationship kind="outlet" name="sliderRate" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="textRate" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goBack"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailResults"/>
+                <relationship kind="action" name="isRecording:"/>
+                <relationship kind="action" name="userClickedRateUs:"/>
+                <relationship kind="outlet" name="back" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="info" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pitch" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recording" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="roll" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="x_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="x_mag_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="y_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="y_mag_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yaw" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_accel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_accel_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_gyro" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_gyro_label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="z_mag" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="z_mag_label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

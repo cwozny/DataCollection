@@ -3,7 +3,7 @@
  DataCollection
  
  Created by Chris Wozny on 4/13/13.
- Copyright (c) 2013 Chris Wozny. All rights reserved.
+ Copyright (c) 2013, 2018 Chris Wozny. All rights reserved.
  */
 
 // Common
@@ -41,4 +41,4 @@
 "Yes" = "Ja";
 "No" = "Nicht";
 "SubjectPaid" = "Beschleunigungsmesser, Kreisel, Magnetometer und GPS-Daten von Data Collection App";
-"MessageBody" = "Ich habe die gesammelten Daten aus dem Data Collection App angebracht. Sie können die App <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">hier bekommen</a>.";
+"MessageBody" = "Ich habe die gesammelten Daten aus dem Data Collection App angebracht. Sie können die App <a href=\"http://itunes.apple.com/de/app/data-collection/id479348835\">hier bekommen</a>.";

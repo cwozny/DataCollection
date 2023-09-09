@@ -381,7 +381,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goBack"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="infoText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navTitle" candidateClass="UINavigationItem"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
@@ -390,15 +393,25 @@
                 <relationship kind="action" name="emailResults"/>
                 <relationship kind="action" name="isRecording:"/>
                 <relationship kind="action" name="userClickedRateUs:"/>
+                <relationship kind="outlet" name="accelerometerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="altitude" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="altitudeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="back" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="gyroscopeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="info" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="latitude" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitude" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="magnetometerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navTitle" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="pitch" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pitchLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="recording" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="recordingLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="roll" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rollLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="x_accel" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="x_accel_label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="x_gyro" candidateClass="UIProgressView"/>
@@ -412,6 +425,7 @@
                 <relationship kind="outlet" name="y_mag" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="y_mag_label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="yaw" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yawLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="z_accel" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="z_accel_label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="z_gyro" candidateClass="UIProgressView"/>

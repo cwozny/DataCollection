@@ -14,10 +14,11 @@
 @synthesize x_gyro, y_gyro, z_gyro, x_gyro_label, y_gyro_label, z_gyro_label;
 @synthesize x_mag, y_mag, z_mag, x_mag_label, y_mag_label, z_mag_label;
 @synthesize recording;
-@synthesize pitch,roll,yaw;
+@synthesize pitch,roll,yaw,pitchLabel,rollLabel,yawLabel;
 @synthesize freq;
 @synthesize info,back;
-@synthesize latitudeLabel, longitudeLabel, altitudeLabel;
+@synthesize latitude,latitudeLabel, longitude, longitudeLabel, altitude, altitudeLabel, accelerometerLabel, gyroscopeLabel, magnetometerLabel,recordingLabel;
+@synthesize navTitle;
 #ifdef FREE_VERSION
 @synthesize bannerView;
 
@@ -39,9 +40,9 @@ double startup = 0;
 -(void)gyroUpdate:(double)p q:(double)q r:(double)r
 {
     // Sets the labels to the respective values of the axes gyro rates.
-    x_gyro_label.text = [NSString stringWithFormat:@"%@%1.2f rad/s", @"X: ", p];
-    y_gyro_label.text = [NSString stringWithFormat:@"%@%1.2f rad/s", @"Y: ", q];
-    z_gyro_label.text = [NSString stringWithFormat:@"%@%1.2f rad/s", @"Z: ", r];
+    x_gyro_label.text = [NSString stringWithFormat:@"%1.2f", p];
+    y_gyro_label.text = [NSString stringWithFormat:@"%1.2f", q];
+    z_gyro_label.text = [NSString stringWithFormat:@"%1.2f", r];
     
     // Sets the value of the progress bar to the absolute value of the gyro rates for each respective axis.
     self.x_gyro.progress = ABS(p)/M_PI;
@@ -73,9 +74,9 @@ double startup = 0;
 -(void)accelUpdate:(double)x y:(double)y z:(double)z
 {
     // Sets the labels to the respective values of the axes acceleration.
-    x_accel_label.text = [NSString stringWithFormat:@"%@%1.2f g", @"X: ", x];
-    y_accel_label.text = [NSString stringWithFormat:@"%@%1.2f g", @"Y: ", y];
-    z_accel_label.text = [NSString stringWithFormat:@"%@%1.2f g", @"Z: ", z];
+    x_accel_label.text = [NSString stringWithFormat:@"%1.2f", x];
+    y_accel_label.text = [NSString stringWithFormat:@"%1.2f", y];
+    z_accel_label.text = [NSString stringWithFormat:@"%1.2f", z];
     
     // Sets the value of the progress bar to the absolute value of the acceleration for each respective axis.
     self.x_accel.progress = ABS(x);
@@ -107,9 +108,9 @@ double startup = 0;
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z
 {    
     // Sets the labels to the respective values of the axes gyro rates.
-    x_mag_label.text = [NSString stringWithFormat:@"%@%1.2f", @"X: ", x];
-    y_mag_label.text = [NSString stringWithFormat:@"%@%1.2f", @"Y: ", y];
-    z_mag_label.text = [NSString stringWithFormat:@"%@%1.2f", @"Z: ", z];
+    x_mag_label.text = [NSString stringWithFormat:@"%1.2f", x];
+    y_mag_label.text = [NSString stringWithFormat:@"%1.2f", y];
+    z_mag_label.text = [NSString stringWithFormat:@"%1.2f", z];
     
     // Sets the value of the progress bar to the absolute value of the gyro rates for each respective axis.
     self.x_mag.progress = ABS(x)/300;
@@ -140,9 +141,9 @@ double startup = 0;
 
 -(void)attitudeUpdate:(double)p rollValue:(double)r yawValue:(double)y
 {
-    pitch.text = [NSString stringWithFormat:@"%@%1.0f°", @"Pitch: ", p];
-    roll.text = [NSString stringWithFormat:@"%@%1.0f°", @"Roll: ",r];
-    yaw.text = [NSString stringWithFormat:@"%@%1.0f°", @"Yaw: ",y];
+    pitch.text = [NSString stringWithFormat:@"%1.0f°", p];
+    roll.text = [NSString stringWithFormat:@"%1.0f°", r];
+    yaw.text = [NSString stringWithFormat:@"%1.0f°", y];
     
     if(recording.on)
     {
@@ -154,9 +155,9 @@ double startup = 0;
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt
 {
     // Set the latitude, longitude, and altitude everytime the locationManager updates to a new location.
-	latitudeLabel.text = [NSString stringWithFormat:@"%@ %1.3f", @"Lat:",lat];
-    longitudeLabel.text = [NSString stringWithFormat:@"%@ %1.3f", @"Lon:",lon];
-    altitudeLabel.text = [NSString stringWithFormat:@"%@ %1.2f", @"Alt:",alt];
+	latitude.text = [NSString stringWithFormat:@"%1.3f", lat];
+    longitude.text = [NSString stringWithFormat:@"%1.3f", lon];
+    altitude.text = [NSString stringWithFormat:@"%1.2f m", alt];
     
     if(recording.on)
     {
@@ -185,9 +186,9 @@ double startup = 0;
 		locMan = nil;
 	}
     
-    latitudeLabel.text = [NSString stringWithFormat:@"Lat: Unavailable"];
-    longitudeLabel.text = [NSString stringWithFormat:@"Lon: Unavailable"];
-    altitudeLabel.text = [NSString stringWithFormat:@"Alt: Unavailable"];
+    latitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
+    longitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
+    altitude.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
 }
 #endif
 
@@ -210,9 +211,9 @@ double startup = 0;
     }
     else
     {
-        pitch.text = [NSString stringWithFormat:@"%@", @"Pitch: N/A"];
-        roll.text = [NSString stringWithFormat:@"%@", @"Roll: N/A"];
-        yaw.text =[NSString stringWithFormat:@"%@", @"Yaw: N/A"];
+        pitch.text = [NSString stringWithFormat:@"%@", @"N/A"];
+        roll.text = [NSString stringWithFormat:@"%@", @"N/A"];
+        yaw.text =[NSString stringWithFormat:@"%@", @"N/A"];
     }
     
     if([mgr isAccelerometerAvailable])
@@ -221,7 +222,7 @@ double startup = 0;
     }
     else
     {
-        x_accel_label.text = y_accel_label.text = z_accel_label.text = [NSString stringWithFormat:@"Unavailable"];
+        x_accel_label.text = y_accel_label.text = z_accel_label.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
         self.x_accel.progress = self.y_accel.progress = self.z_accel.progress = 0;
     }
     
@@ -231,7 +232,7 @@ double startup = 0;
     }
     else
     {
-        x_gyro_label.text = y_gyro_label.text = z_gyro_label.text = [NSString stringWithFormat:@"Unavailable"];
+        x_gyro_label.text = y_gyro_label.text = z_gyro_label.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
         self.x_gyro.progress = self.y_gyro.progress = self.z_gyro.progress = 0;
     }
     
@@ -241,7 +242,7 @@ double startup = 0;
     }
     else
     {
-        x_mag_label.text = y_mag_label.text = z_mag_label.text = [NSString stringWithFormat:@"Unavailable"];
+        x_mag_label.text = y_mag_label.text = z_mag_label.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
         self.x_mag.progress = self.y_mag.progress = self.z_mag.progress = 0;
     }
 }
@@ -366,8 +367,19 @@ double startup = 0;
 	locMan.desiredAccuracy = kCLLocationAccuracyBest;
 	// Start updating the GPS location.
 	[locMan startUpdatingLocation];
+    back.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
 #endif
-    
+    navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"SensorTitle", nil)];
+    accelerometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"AccelerometerLabel", nil)];
+    gyroscopeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"GyroscopeLabel", nil)];
+    magnetometerLabel.text = [NSString stringWithFormat:NSLocalizedString(@"MagnetometerLabel", nil)];
+    recordingLabel.text = [NSString stringWithFormat:NSLocalizedString(@"RecordingLabel", nil)];
+    pitchLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Pitch", nil)];
+    rollLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Roll", nil)];
+    yawLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Yaw", nil)];
+    latitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Latitude", nil)];
+    longitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Longitude", nil)];
+    altitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Altitude", nil)];
     mgr = [[CMMotionManager alloc] init];
     
     [mgr startAccelerometerUpdates];

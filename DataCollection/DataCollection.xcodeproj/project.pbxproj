@@ -23,6 +23,7 @@
 		945C8D01170BCD68006D09DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C8D00170BCD68006D09DE /* AppDelegate.m */; };
 		945C8D04170BCEE8006D09DE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C8D03170BCEE8006D09DE /* InfoViewController.m */; };
 		945C8D07170BCFD2006D09DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C8D06170BCFD1006D09DE /* ViewController.m */; };
+		945E8D711719130F00D329C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945E8D731719130F00D329C0 /* Localizable.strings */; };
 		94B34D361523A73800C8181F /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B34D351523A73800C8181F /* Default-Portrait~ipad.png */; };
 		94B34D381523A74000C8181F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B34D371523A74000C8181F /* Default@2x.png */; };
 		94B34D3A1523A74300C8181F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B34D391523A74300C8181F /* Default.png */; };
@@ -58,6 +59,8 @@
 		945C8D03170BCEE8006D09DE /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = ../../DataCollectionCommon/InfoViewController.m; sourceTree = "<group>"; };
 		945C8D05170BCFD1006D09DE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../DataCollectionCommon/ViewController.h; sourceTree = "<group>"; };
 		945C8D06170BCFD1006D09DE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../DataCollectionCommon/ViewController.m; sourceTree = "<group>"; };
+		945E8D721719130F00D329C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		945E8D7417191E8F00D329C0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94B34D351523A73800C8181F /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		94B34D371523A74000C8181F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		94B34D391523A74300C8181F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 		9406F0F51453B93900A3DEC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				945E8D731719130F00D329C0 /* Localizable.strings */,
 				94B53201170BDD3F0004E3D4 /* 144x144_icon.png */,
 				94B531FF170BDD390004E3D4 /* 72x72_icon.png */,
 				94B531FD170BDD2F0004E3D4 /* 114x114_icon.png */,
@@ -204,6 +208,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 9406F0DF1453B93900A3DEC5;
 			productRefGroup = 9406F0EB1453B93900A3DEC5 /* Products */;
@@ -233,6 +238,7 @@
 				94B531FE170BDD2F0004E3D4 /* 114x114_icon.png in Resources */,
 				94B53200170BDD390004E3D4 /* 72x72_icon.png in Resources */,
 				94B53202170BDD3F0004E3D4 /* 144x144_icon.png in Resources */,
+				945E8D711719130F00D329C0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +282,15 @@
 				9406F1041453B93900A3DEC5 /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		945E8D731719130F00D329C0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945E8D721719130F00D329C0 /* en */,
+				945E8D7417191E8F00D329C0 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

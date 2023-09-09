@@ -8,6 +8,9 @@
 
 @implementation InfoViewController
 
+@synthesize infoText;
+@synthesize navTitle;
+@synthesize backButton;
 #ifdef FREE_VERSION
 @synthesize bannerView;
 #endif
@@ -42,6 +45,9 @@
 #ifdef FREE_VERSION
     bannerView = [[ADBannerView alloc] init];
 #endif
+    infoText.text = [NSString stringWithFormat:NSLocalizedString(@"InfoText", nil)];
+    backButton.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
+    navTitle.title = [NSString stringWithFormat:NSLocalizedString(@"InfoTitle", nil)];
 }
 
 - (void)viewDidUnload

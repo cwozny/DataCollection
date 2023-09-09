@@ -197,6 +197,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "BAE Systems";
+				TargetAttributes = {
+					94CD37DF1509446A0068BB5A = {
+						DevelopmentTeam = E43C8EG48H;
+					};
+				};
 			};
 			buildConfigurationList = 94CD37DA1509446A0068BB5A /* Build configuration list for PBXProject "DataCollectionFree" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -328,13 +333,13 @@
 		94B34D421523AB9000C8181F /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = FREE_VERSION;
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -417,7 +422,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -429,13 +434,13 @@
 		94CD38031509446B0068BB5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCollectionFree/DataCollectionFree-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = FREE_VERSION;
 				INFOPLIST_FILE = "DataCollectionFree/DataCollectionFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

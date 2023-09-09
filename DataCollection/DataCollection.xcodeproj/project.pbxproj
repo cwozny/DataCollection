@@ -23,6 +23,7 @@
 		945E8D711719130F00D329C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945E8D731719130F00D329C0 /* Localizable.strings */; };
 		94B5320C170BDE570004E3D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B5320B170BDE570004E3D4 /* main.m */; };
 		94E0FA6914FDBD0800FEE207 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E0FA6814FDBD0800FEE207 /* ConfigViewController.m */; };
+		B371FB4C272F5B1E00EDDE8F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B371FB4B272F5B1E00EDDE8F /* StoreKit.framework */; };
 		B3E7A869207A747700E3B9B5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E7A868207A747700E3B9B5 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		94E0FA6814FDBD0800FEE207 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		B3008CBB25706FAF00831A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B3008CBC25706FAF00831A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		B371FB4B272F5B1E00EDDE8F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B3E7A868207A747700E3B9B5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				944554EE1718E991006A31A6 /* CoreLocation.framework in Frameworks */,
 				94260B1C1469D2480006EB49 /* MessageUI.framework in Frameworks */,
 				9406F1271453BD9200A3DEC5 /* CoreMotion.framework in Frameworks */,
+				B371FB4C272F5B1E00EDDE8F /* StoreKit.framework in Frameworks */,
 				9406F0EF1453B93900A3DEC5 /* UIKit.framework in Frameworks */,
 				9406F0F11453B93900A3DEC5 /* Foundation.framework in Frameworks */,
 			);
@@ -94,6 +97,7 @@
 		9406F0ED1453B93900A3DEC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B371FB4B272F5B1E00EDDE8F /* StoreKit.framework */,
 				944554ED1718E991006A31A6 /* CoreLocation.framework */,
 				94260B1B1469D2480006EB49 /* MessageUI.framework */,
 				9406F1261453BD9200A3DEC5 /* CoreMotion.framework */,

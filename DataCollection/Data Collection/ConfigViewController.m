@@ -1,10 +1,8 @@
-//
 //  ConfigViewController.m
 //  DataCollection
 //
 //  Created by Chris Wozny on 2/28/12.
 //  Copyright (c) 2013 Chris Wozny. All rights reserved.
-//
 
 #import "ConfigViewController.h"
 #import "ViewController.h"

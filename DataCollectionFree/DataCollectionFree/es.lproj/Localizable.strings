@@ -10,7 +10,7 @@
 "BackButton" = "Respaldar";
 
 // Info View
-"InfoText" = "Este acelerómetro App registros, giroscopio, magnetómetro, y los datos del GPS y lo escribe en un archivo en el directorio de las aplicaciones sobre los documentos. Puede recuperar el archivo a través de iTunes. Una imagen de referencia para los ejes de dispositivo se muestra a continuación:";
+"InfoText" = "Este acelerómetro App registros, giroscopio, y los datos del magnetómetro durante 10 segundos y se escribe en un archivo en el directorio de las aplicaciones sobre los documentos. Puede recuperar el archivo a través de iTunes. Una imagen de referencia para los ejes de dispositivo se muestra a continuación:";
 "InfoTitle" = "Información";
 
 // Config View

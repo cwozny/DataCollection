@@ -125,16 +125,11 @@
 		9406F0F41453B93900A3DEC5 /* Data Collection */ = {
 			isa = PBXGroup;
 			children = (
-				945C8D05170BCFD1006D09DE /* ViewController.h */,
-				945C8D06170BCFD1006D09DE /* ViewController.m */,
-				945C8CFF170BCD68006D09DE /* AppDelegate.h */,
-				945C8D00170BCD68006D09DE /* AppDelegate.m */,
+				945E8D6B1719100100D329C0 /* Common */,
 				9406F1001453B93900A3DEC5 /* MainStoryboard_iPhone.storyboard */,
 				9406F1031453B93900A3DEC5 /* MainStoryboard_iPad.storyboard */,
 				94E0FA6714FDBD0800FEE207 /* ConfigViewController.h */,
 				94E0FA6814FDBD0800FEE207 /* ConfigViewController.m */,
-				945C8D02170BCE4B006D09DE /* InfoViewController.h */,
-				945C8D03170BCEE8006D09DE /* InfoViewController.m */,
 				9406F0F51453B93900A3DEC5 /* Supporting Files */,
 			);
 			path = "Data Collection";
@@ -143,7 +138,6 @@
 		9406F0F51453B93900A3DEC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				94B5320B170BDE570004E3D4 /* main.m */,
 				94B53201170BDD3F0004E3D4 /* 144x144_icon.png */,
 				94B531FF170BDD390004E3D4 /* 72x72_icon.png */,
 				94B531FD170BDD2F0004E3D4 /* 114x114_icon.png */,
@@ -159,6 +153,20 @@
 				9406F0FC1453B93900A3DEC5 /* DataCollection-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		945E8D6B1719100100D329C0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				94B5320B170BDE570004E3D4 /* main.m */,
+				945C8D05170BCFD1006D09DE /* ViewController.h */,
+				945C8D06170BCFD1006D09DE /* ViewController.m */,
+				945C8CFF170BCD68006D09DE /* AppDelegate.h */,
+				945C8D00170BCD68006D09DE /* AppDelegate.m */,
+				945C8D02170BCE4B006D09DE /* InfoViewController.h */,
+				945C8D03170BCEE8006D09DE /* InfoViewController.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

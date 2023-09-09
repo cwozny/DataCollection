@@ -525,7 +525,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="kjJ-hU-zK2"/>
                                 </constraints>
-                                <string key="text">This app records accelerometer, gyroscope, and magnetometer data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
+                                <string key="text">This app records accelerometer, gyroscope, magnetometer, and GPS data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:</string>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

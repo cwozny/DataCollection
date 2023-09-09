@@ -197,7 +197,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Like the app? Please rate it so that others can find out about it as well." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Cxt-L4-Zz8">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="93" id="Ejx-b3-jNW"/>
+                                    <constraint firstAttribute="height" constant="74" id="gz9-lV-Pju"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -219,11 +219,11 @@
                             <constraint firstItem="cGz-Gd-SsT" firstAttribute="top" secondItem="yVM-aU-oFK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UQS-OP-ACc"/>
                             <constraint firstItem="hx0-jY-Q3f" firstAttribute="leading" secondItem="Fn1-GY-MrE" secondAttribute="leading" type="default" id="V2H-aq-g9k"/>
                             <constraint firstAttribute="trailing" secondItem="cGz-Gd-SsT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Xlh-kA-gC6"/>
-                            <constraint firstItem="Cxt-L4-Zz8" firstAttribute="top" secondItem="qws-jj-xeY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ctI-T8-xQQ"/>
                             <constraint firstItem="yVM-aU-oFK" firstAttribute="top" secondItem="Fn1-GY-MrE" secondAttribute="top" constant="128" id="e0C-BL-fIk"/>
                             <constraint firstItem="hx0-jY-Q3f" firstAttribute="trailing" secondItem="Fn1-GY-MrE" secondAttribute="trailing" type="default" id="hah-MM-vjg"/>
                             <constraint firstAttribute="bottom" secondItem="Cxt-L4-Zz8" secondAttribute="bottom" constant="20" type="user" id="u0j-Ea-ssL"/>
                             <constraint firstItem="D0m-CW-qcj" firstAttribute="leading" secondItem="yVM-aU-oFK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vHJ-c8-1tR"/>
+                            <constraint firstItem="Cxt-L4-Zz8" firstAttribute="top" secondItem="qws-jj-xeY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wf5-N4-lvU"/>
                         </constraints>
                     </view>
                     <connections>

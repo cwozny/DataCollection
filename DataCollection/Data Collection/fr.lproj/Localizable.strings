@@ -7,40 +7,40 @@
  */
 
 // Common
-"BackButton" = "Back";
+"BackButton" = "Reculer";
 
 // Info View
-"InfoText" = "This app records accelerometer, gyroscope, magnetometer, and GPS data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:";
-"InfoTitle" = "Information";
+"InfoText" = "Cet accéléromètre application enregistrements, gyroscope, magnétomètre, et les données GPS et l'écrit dans un fichier dans le répertoire des applications «Documents. Vous pouvez récupérer le fichier via iTunes. Une image de référence pour les axes périphériques est illustré ci-dessous:";
+"InfoTitle" = "Renseignements";
 
 // Config View
-"GoButton" = "Go!";
+"GoButton" = "Aller!";
 "ConfigTitle" = "Configuration";
-"SetRateText" = "Please set the sampling rate in hertz:";
-"NoteText" = "NOTE: How quickly the device can sample is based on the load of the device (and the maximum sampling speed of the device.) For best performance, close all background apps before using.";
-"RateUsText" = "Like the app? Please rate it so that others can find out about it as well.";
-"RateUsButton" = "Rate Us";
+"SetRateText" = "S'il vous plaît régler le taux d'échantillonnage en hertz:";
+"NoteText" = "REMARQUE: En combien de temps l'appareil peut goûter est basé sur la charge de l'appareil (et la vitesse d'échantillonnage maximale de l'appareil.) Pour de meilleures performances, fermez toutes les applications d'arrière-plan avant d'utiliser.";
+"RateUsText" = "Comme l'application? S'il vous plaît noter que d'autres puissent savoir à ce sujet aussi.";
+"RateUsButton" = "Taux Nous";
 
 // Sensor View
-"SensorTitle" = "Sensors";
-"AccelerometerLabel" = "Accelerometer (g)";
+"SensorTitle" = "Capteurs";
+"AccelerometerLabel" = "Accéléromètre (g)";
 "GyroscopeLabel" = "Gyroscope (rad/s)";
-"MagnetometerLabel" = "Magnetometer (μT)";
-"RecordingLabel" = "Record";
-"Unavailable" = "Unavailable";
-"Pitch" = "Pitch:";
-"Roll" = "Roll:";
-"Yaw" = "Yaw:";
+"MagnetometerLabel" = "Magnétomètre (μT)";
+"RecordingLabel" = "Registrer";
+"Unavailable" = "Indisponible";
+"Pitch" = "Hauteur:";
+"Roll" = "Rouler:";
+"Yaw" = "Lacet:";
 "Latitude" = "Lat:";
 "Longitude" = "Lon:";
 "Altitude" = "Alt:";
 
 // Mail View
-"Results" = "Results";
-"Email" = "Would you like to email the collected data?";
-"Yes" = "Yes";
-"No" = "No";
-"SubjectFree" = "Accelerometer, Gyroscope, and Magnetometer data from Data Collection Free App";
-"SubjectPaid" = "Accelerometer, Gyroscope, Magnetometer, and GPS data from Data Collection App";
-"MessageBodyPaid" = "I've attached the collected data from the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) GPS is ordered as latitude, longitude, and altitude (meters). You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">here</a>.";
-"MessageBodyFree" = "I've attached 10 seconds of collected data from the free version of the Data Collection app. The raw values are ordered as x, y, and z for gyro (deg/s), magnetometers (microteslas), and accelerometers (g-force). Attitude (degrees) is ordered as pitch, roll, and yaw (if available.) You can get the app <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">here</a>.";
+"Results" = "Résultats";
+"Email" = "Voulez-vous envoyer les données collectées?";
+"Yes" = "Oui";
+"No" = "Non";
+"SubjectFree" = "Données de l'accéléromètre, gyroscope, et magnétomètre de Data Collection Free App";
+"SubjectPaid" = "Les données de l'accéléromètre, gyroscope, magnétomètre et un GPS de Data Collection App";
+"MessageBodyPaid" = "J'ai joint les données recueillies à partir de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (degrés / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). GPS est ordonné que la latitude, la longitude et l'altitude (en mètres). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection/id479348835\">ici</a>.";
+"MessageBodyFree" = "J'ai joint 10 secondes de données collectées à partir de la version gratuite de l'application de collecte de données. Les valeurs brutes sont classés en tant que x, y et z pour gyro (degrés / s), magnétomètres (microteslas), et des accéléromètres (g-force). Attitude (degrés) est commandé en tangage, de roulis et de lacet (si disponible). Vous pouvez obtenir l'application <a href=\"http://itunes.apple.com/us/app/data-collection-free/id485523535\">ici</a>.";

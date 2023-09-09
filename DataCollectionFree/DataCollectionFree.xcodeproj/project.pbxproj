@@ -36,8 +36,11 @@
 
 /* Begin PBXFileReference section */
 		940EB8981509455700645E70 /* axes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = axes.png; sourceTree = "<group>"; };
-		943DD3DF1719487800F5C732 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		943DD3E11719488600F5C732 /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943DD3DF1719487800F5C732 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943DD3E11719488600F5C732 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943E3A901719549A00EA1A89 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943E3A91171954A700EA1A89 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943E3A92171954B500EA1A89 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9453394E150945B3009D4E97 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
 		9453394F150945B3009D4E97 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		94533950150945B3009D4E97 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -202,6 +205,9 @@
 			knownRegions = (
 				en,
 				es,
+				pl,
+				fr,
+				de,
 			);
 			mainGroup = 94CD37D51509446A0068BB5A;
 			productRefGroup = 94CD37E11509446A0068BB5A /* Products */;
@@ -257,6 +263,9 @@
 			children = (
 				943DD3DF1719487800F5C732 /* en */,
 				943DD3E11719488600F5C732 /* es */,
+				943E3A901719549A00EA1A89 /* pl */,
+				943E3A91171954A700EA1A89 /* fr */,
+				943E3A92171954B500EA1A89 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

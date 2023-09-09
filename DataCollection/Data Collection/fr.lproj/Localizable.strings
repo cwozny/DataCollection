@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  DataCollection
+
+  Created by Chris Wozny on 4/13/13.
+  Copyright (c) 2013 Chris Wozny. All rights reserved.
+*/
+
+// Common
+"BackButton" = "Back";
+
+// Info View
+"InfoText" = "This app records accelerometer, gyroscope, magnetometer, and GPS data and writes it to a file in the applications' Documents Directory. You can retrieve the file via iTunes. A reference image for the device axes is shown below:";
+"InfoTitle" = "Information";
+
+// Config View
+"GoButton" = "Go!";
+"ConfigTitle" = "Configuration";
+"SetRateText" = "Please set the sampling rate in hertz:";
+"NoteText" = "NOTE: How quickly the device can sample is based on the load of the device (and the maximum sampling speed of the device.) For best performance, close all background apps before using.";
+"RateUsText" = "Like the app? Please rate it so that others can find out about it as well.";
+"RateUsButton" = "Rate Us";
+
+// Sensor View
+"SensorTitle" = "Sensors";
+"AccelerometerLabel" = "Accelerometer (g)";
+"GyroscopeLabel" = "Gyroscope (rad/s)";
+"MagnetometerLabel" = "Magnetometer (μT)";
+"RecordingLabel" = "Record";
+"Unavailable" = "Unavailable";
+"Pitch" = "Pitch:";
+"Roll" = "Roll:";
+"Yaw" = "Yaw:";
+"Latitude" = "Lat:";
+"Longitude" = "Lon:";
+"Altitude" = "Alt:";

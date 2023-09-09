@@ -52,6 +52,9 @@
 		94260B181469D23A0006EB49 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		94260B1B1469D2480006EB49 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9433A2E3160FE1B1008D7E7F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		943E3A93171954E700EA1A89 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943E3A94171954EE00EA1A89 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		943E3A95171954F400EA1A89 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		944554ED1718E991006A31A6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		945C8CFF170BCD68006D09DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../DataCollectionCommon/AppDelegate.h; sourceTree = "<group>"; };
 		945C8D00170BCD68006D09DE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../DataCollectionCommon/AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +212,9 @@
 			knownRegions = (
 				en,
 				es,
+				fr,
+				pl,
+				de,
 			);
 			mainGroup = 9406F0DF1453B93900A3DEC5;
 			productRefGroup = 9406F0EB1453B93900A3DEC5 /* Products */;
@@ -289,6 +295,9 @@
 			children = (
 				945E8D721719130F00D329C0 /* en */,
 				945E8D7417191E8F00D329C0 /* es */,
+				943E3A93171954E700EA1A89 /* fr */,
+				943E3A94171954EE00EA1A89 /* pl */,
+				943E3A95171954F400EA1A89 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

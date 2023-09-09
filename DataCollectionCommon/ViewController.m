@@ -142,10 +142,11 @@ int filesWritten = 0;
 
 - (void)updateCounter:(NSTimer*)timer
 {
-    double attitude[3];
-    double accel[3];
-    double rotation[3];
-    double magnetic[3];
+    double attitude[3] = {NAN, NAN, NAN};
+    double accel[3] = {NAN, NAN, NAN};
+    double rotation[3] = {NAN, NAN, NAN};
+    double magnetic[3] = {NAN, NAN, NAN};
+    double lla[3] = {NAN, NAN, NAN};
     
     if([mgr isDeviceMotionAvailable] && [mgr isDeviceMotionActive])
     {
@@ -204,7 +205,24 @@ int filesWritten = 0;
         self.x_mag.progress = self.y_mag.progress = self.z_mag.progress = 0;
     }
     
+    lla[0] = locMan.location.coordinate.latitude;
+    lla[1] = locMan.location.coordinate.longitude;
+    lla[2] = locMan.location.altitude;
     
+    // Append time
+    [data appendString:[NSString stringWithFormat:@"%f,", CFAbsoluteTimeGetCurrent()]];
+    // Append attitude
+    [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", attitude[0], attitude[1], attitude[2]]];
+    // Append acceleration
+    [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", accel[0], accel[1], accel[2]]];
+    // Append rotation
+    [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", rotation[0], rotation[1], rotation[2]]];
+    // Append magnetic
+    [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", magnetic[0], magnetic[1], magnetic[2]]];
+    // Append GPS
+    [data appendString:[NSString stringWithFormat:@"%f,%f,%f,", lla[0], lla[1], lla[2]]];
+    // Append newline
+    [data appendString:@"\n"];
 }
 
 -(IBAction)emailResults
@@ -226,7 +244,7 @@ int filesWritten = 0;
                                     [mailComposer setSubject:[NSString stringWithFormat:NSLocalizedString(@"SubjectPaid", nil)]];
                                     [mailComposer setMessageBody:[NSString stringWithFormat:NSLocalizedString(@"MessageBodyPaid", nil)] isHTML:YES];
                                     NSData *attachmentData = [NSData dataWithContentsOfFile:fileName];
-                                    [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.txt",dateString]];
+                                    [mailComposer addAttachmentData:attachmentData mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"DataCollection_%@.csv",dateString]];
                                     [self presentViewController:mailComposer animated:YES completion:nil];
                                 }];
     
@@ -234,7 +252,7 @@ int filesWritten = 0;
                                actionWithTitle:[NSString stringWithFormat:NSLocalizedString(@"No", nil)]
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction * action) {
-                                   //Handle no, thanks button
+                                   // Do nothing if they say no
                                }];
     
     [alert addAction:yesButton];
@@ -258,7 +276,13 @@ int filesWritten = 0;
 		// Allocate memory for data string.
 		data = [[NSMutableString alloc] init];
         data = [NSMutableString stringWithString:@""];
-        [data appendString:[NSMutableString stringWithFormat:@"(Preferred) sampling frequency set to %f Hz.\nYour device may not support this sampling frequency, so always check your timestamps!\n",freq]];
+        [data appendString:@"Time (sec),"];
+        [data appendString:@"Pitch (deg),Roll (deg),Yaw(deg),"];
+        [data appendString:@"X-Acceleration (g),Y-Acceleration (g),Z-Acceleration (g),"];
+        [data appendString:@"Pitch Rate (deg/sec),Roll Rate (deg/sec),Yaw Rate (deg/sec),"];
+        [data appendString:@"Magnetic Field in X direction (uT),Magnetic Field in Y direction (uT),Magnetic Field in Z Direction (uT),"];
+        [data appendString:@"Latitude (deg),Longitude (deg),Altitude (m)"];
+        [data appendString:@"\n"];
         back.enabled = false;
         info.enabled = false;
 	}
@@ -280,7 +304,7 @@ int filesWritten = 0;
 		// Saves the current formatted date into dateString
 		dateString = [dateFormat stringFromDate:today];
 		// Sets the filename to the full path and filename appended.
-        fileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"DataCollection_%@.txt",dateString]];
+        fileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"DataCollection_%@.csv",dateString]];
         // Try getting a handle to the file.
 		NSFileHandle* outputFile = [NSFileHandle fileHandleForWritingAtPath:fileName];
         
@@ -364,7 +388,7 @@ int filesWritten = 0;
     }
     else
     {
-        NSLog(@"HH: Location services are disabled");
+        NSLog(@"Location services are disabled");
     }
 }
 

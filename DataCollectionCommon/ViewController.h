@@ -105,7 +105,6 @@
 // Function that is called when the UISwitch recordData is toggled.
 -(IBAction)isRecording:(id)sender;
 -(IBAction)emailResults;
--(void)writeData:(NSString*)type time:(double)timestamp firstValue:(double)val1 secondValue:(double)val2 thirdValue:(double)val3;
 -(void)gyroUpdate:(double)p q:(double)q r:(double)r;
 -(void)accelUpdate:(double)x y:(double)y z:(double)z;
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z;

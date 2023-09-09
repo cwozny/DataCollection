@@ -26,21 +26,10 @@ NSMutableString *data;
 NSString *dateString;
 NSString *fileName;
 int filesWritten = 0;
-double startup = 0;
-
--(void)writeData:(NSString*)type time:(double)timestamp firstValue:(double)val1 secondValue:(double)val2 thirdValue:(double)val3
-{
-    [data appendString:[NSString stringWithFormat:@"%@ %f %f %f %f\n", type, timestamp, val1, val2, val3]];
-}
 
 -(void)gyroUpdate:(double)p q:(double)q r:(double)r
 {
-    // If record data is on then write the gyro data to the NSArray.
-    if(recording.on)
-    {
-        [self writeData:@"GYRO" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:p secondValue:q thirdValue:r];
-    }
-    else
+    if(recording.on == false)
     {
         // Sets the labels to the respective values of the axes gyro rates.
         x_gyro_label.text = [NSString stringWithFormat:@"%1.2f", p];
@@ -60,12 +49,7 @@ double startup = 0;
 
 -(void)accelUpdate:(double)x y:(double)y z:(double)z
 {
-    // If record data is on then write the accelerometer data to the NSArray.
-    if(recording.on)
-    {
-        [self writeData:@"ACCEL" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:x secondValue:y thirdValue:z];
-    }
-    else
+    if(recording.on == false)
     {
         // Sets the labels to the respective values of the axes acceleration.
         x_accel_label.text = [NSString stringWithFormat:@"%1.2f", x];
@@ -85,12 +69,7 @@ double startup = 0;
 
 -(void)magnetoUpdate:(double)x y:(double)y z:(double)z
 {
-    // If record data is on then write the magnetometer data to the NSArray.
-    if(recording.on)
-    {
-        [self writeData:@"MAGNETO" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:x secondValue:y thirdValue:z];
-    }
-    else
+    if(recording.on == false)
     {
         // Sets the labels to the respective values of the axes gyro rates.
         x_mag_label.text = [NSString stringWithFormat:@"%1.2f", x];
@@ -110,29 +89,21 @@ double startup = 0;
 
 -(void)attitudeUpdate:(double)p rollValue:(double)r yawValue:(double)y
 {
-    if(recording.on)
+    if(recording.on == false)
     {
-        [self writeData:@"ATTITUDE" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:p secondValue:r thirdValue:y];
-    }
-    else
-    {
-        pitch.text = [NSString stringWithFormat:@"%1.0f°", p];
-        roll.text = [NSString stringWithFormat:@"%1.0f°", r];
-        yaw.text = [NSString stringWithFormat:@"%1.0f°", y];
+        pitch.text = [NSString stringWithFormat:@"%1.2f°", p];
+        roll.text = [NSString stringWithFormat:@"%1.2f°", r];
+        yaw.text = [NSString stringWithFormat:@"%1.2f°", y];
     }
 }
 
 -(void)gpsUpdate:(double)lat longitude:(double)lon altitude:(double)alt
 {
-    if(recording.on)
-    {
-        [self writeData:@"GPS" time:(CFAbsoluteTimeGetCurrent()-startup) firstValue:lat secondValue:lon thirdValue:alt];
-    }
-    else
+    if(recording.on == false)
     {
         // Set the latitude, longitude, and altitude everytime the locationManager updates to a new location.
-        latitude.text = [NSString stringWithFormat:@"%1.3f", lat];
-        longitude.text = [NSString stringWithFormat:@"%1.3f", lon];
+        latitude.text = [NSString stringWithFormat:@"%1.5f", lat];
+        longitude.text = [NSString stringWithFormat:@"%1.5f", lon];
         altitude.text = [NSString stringWithFormat:@"%1.2f m", alt];
     }
 }
@@ -171,9 +142,18 @@ double startup = 0;
 
 - (void)updateCounter:(NSTimer*)timer
 {
+    double attitude[3];
+    double accel[3];
+    double rotation[3];
+    double magnetic[3];
+    
     if([mgr isDeviceMotionAvailable] && [mgr isDeviceMotionActive])
     {
-        [self attitudeUpdate:mgr.deviceMotion.attitude.pitch*180/M_PI rollValue:mgr.deviceMotion.attitude.roll*180/M_PI yawValue:mgr.deviceMotion.attitude.yaw*180/M_PI];
+        attitude[0] = mgr.deviceMotion.attitude.pitch*180.0/M_PI;
+        attitude[1] = mgr.deviceMotion.attitude.roll*180.0/M_PI;
+        attitude[2] = mgr.deviceMotion.attitude.yaw*180.0/M_PI;
+        
+        [self attitudeUpdate:attitude[0] rollValue:attitude[1] yawValue:attitude[2]];
     }
     else
     {
@@ -183,8 +163,12 @@ double startup = 0;
     }
     
     if([mgr isAccelerometerAvailable])
-    {        
-        [self accelUpdate:mgr.accelerometerData.acceleration.x*-1 y:mgr.accelerometerData.acceleration.y*-1 z:mgr.accelerometerData.acceleration.z*-1];
+    {
+        accel[0] = mgr.accelerometerData.acceleration.x*-1;
+        accel[1] = mgr.accelerometerData.acceleration.y*-1;
+        accel[2] = mgr.accelerometerData.acceleration.z*-1;
+        
+        [self accelUpdate:accel[0] y:accel[1] z:accel[2]];
     }
     else
     {
@@ -194,7 +178,11 @@ double startup = 0;
     
     if([mgr isGyroAvailable])
     {
-        [self gyroUpdate:mgr.gyroData.rotationRate.x q:mgr.gyroData.rotationRate.y r:mgr.gyroData.rotationRate.z];
+        rotation[0] = mgr.gyroData.rotationRate.x;
+        rotation[1] = mgr.gyroData.rotationRate.y;
+        rotation[2] = mgr.gyroData.rotationRate.z;
+        
+        [self gyroUpdate:rotation[0] q:rotation[1] r:rotation[2]];
     }
     else
     {
@@ -204,13 +192,19 @@ double startup = 0;
     
     if([mgr isMagnetometerAvailable])
     {
-        [self magnetoUpdate:mgr.magnetometerData.magneticField.x y:mgr.magnetometerData.magneticField.y z:mgr.magnetometerData.magneticField.z];
+        magnetic[0] = mgr.magnetometerData.magneticField.x;
+        magnetic[1] = mgr.magnetometerData.magneticField.y;
+        magnetic[2] = mgr.magnetometerData.magneticField.z;
+        
+        [self magnetoUpdate:magnetic[0] y:magnetic[1] z:magnetic[2]];
     }
     else
     {
         x_mag_label.text = y_mag_label.text = z_mag_label.text = [NSString stringWithFormat:NSLocalizedString(@"Unavailable", nil)];
         self.x_mag.progress = self.y_mag.progress = self.z_mag.progress = 0;
     }
+    
+    
 }
 
 -(IBAction)emailResults
@@ -329,6 +323,9 @@ double startup = 0;
     
 	recording.on = false;
     
+    // Request user access for location services
+    [locMan requestWhenInUseAuthorization];
+    
     if([CLLocationManager locationServicesEnabled])
     {
         // Initialize the location manager and set the delegate to us.
@@ -338,8 +335,7 @@ double startup = 0;
         locMan.distanceFilter = kCLDistanceFilterNone;
         // Set the desired accuracy to the best possible accuracy.
         locMan.desiredAccuracy = kCLLocationAccuracyBest;
-        // Start updating the GPS location.
-        [locMan startUpdatingLocation];
+       
         back.title = [NSString stringWithFormat:NSLocalizedString(@"BackButton", nil)];
         latitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Latitude", nil)];
         longitudeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Longitude", nil)];
@@ -357,15 +353,14 @@ double startup = 0;
         [mgr startAccelerometerUpdates];
         [mgr startGyroUpdates];
         [mgr startMagnetometerUpdates];
-        [mgr startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical];
+        [mgr startDeviceMotionUpdates];
+        [locMan startUpdatingLocation];
         
         [NSTimer scheduledTimerWithTimeInterval:1.0/freq
                                          target:self
                                        selector:@selector(updateCounter:)
                                        userInfo:nil
                                         repeats:YES];
-        
-        startup = CFAbsoluteTimeGetCurrent();
     }
     else
     {

@@ -1,10 +1,8 @@
-//
 //  ViewController.m
 //  Data Collection
 //
 //  Created by Chris Wozny on 10/22/11.
 //  Copyright (c) 2013 Chris Wozny. All rights reserved.
-//
 
 #import "ViewController.h"
 #import "InfoViewController.h"
@@ -223,8 +221,6 @@ int iterations = 0;
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"User pressed button index %d\n",buttonIndex);
-    
     if(buttonIndex == 0)
     {
         MFMailComposeViewController *mailComposer; 

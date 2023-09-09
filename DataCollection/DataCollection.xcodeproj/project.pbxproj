@@ -429,7 +429,7 @@
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
 				PROVISIONING_PROFILE = "";
@@ -450,7 +450,7 @@
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
 				PROVISIONING_PROFILE = "";
@@ -515,7 +515,7 @@
 				GCC_PREFIX_HEADER = "Data Collection/DataCollection-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Data Collection/DataCollection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wozny.datacollection;
 				PRODUCT_NAME = DataCollection;
 				PROVISIONING_PROFILE = "";

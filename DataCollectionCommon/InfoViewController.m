@@ -43,6 +43,7 @@
 {
     [super viewDidLoad];
 #ifdef FREE_VERSION
+    [bannerView setDelegate:self];
     bannerView = [[ADBannerView alloc] init];
 #endif
     infoText.text = [NSString stringWithFormat:NSLocalizedString(@"InfoText", nil)];
@@ -69,12 +70,12 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-	bannerView.hidden = NO;
+	[bannerView setHidden:NO];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-	bannerView.hidden = YES;
+	[bannerView setHidden:YES];
 }
 #endif
 @end

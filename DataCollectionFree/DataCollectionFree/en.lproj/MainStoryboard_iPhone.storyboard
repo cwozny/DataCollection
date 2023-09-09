@@ -90,6 +90,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eF3-u9-XHh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="q7M-og-Sf2" id="4gH-wU-H5u"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -415,6 +418,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jbt-ce-9Pp"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="3" id="jfh-Uq-NOO"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

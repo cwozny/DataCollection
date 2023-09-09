@@ -364,6 +364,8 @@ double startup = 0;
 #ifdef FREE_VERSION
     freq = 10;
     rateButton.title = [NSString stringWithFormat:NSLocalizedString(@"RateUsButton", nil)];
+    [bannerView setDelegate:self];
+    bannerView = [[ADBannerView alloc] init];
 #else
     // Initialize the location manager and set the delegate to us.
 	locMan = [[CLLocationManager alloc] init];
@@ -399,9 +401,6 @@ double startup = 0;
                                    selector:@selector(updateCounter:)
                                    userInfo:nil
                                     repeats:YES];
-#ifdef FREE_VERSION
-    bannerView = [[ADBannerView alloc] init];
-#endif
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
@@ -431,15 +430,16 @@ double startup = 0;
 
 #pragma mark ADBannerViewDelegate
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-	bannerView.hidden = NO;
+	[bannerView setHidden:NO];
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-	bannerView.hidden = YES;
+  	[bannerView setHidden:YES];  
 }
+
 #else
 -(IBAction)goBack
 {
